@@ -1,0 +1,928 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Presentation token element (mo)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>7954a064-40bf-4f16-baf5-cae9cb44e896</md:uuid>
+</metadata>
+  <content>
+
+<section id="section-1">
+
+
+<para id="element-2">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> form </m:mi>
+        <m:mi> fence </m:mi> 
+        <m:mi> separator </m:mi>
+        <m:mi> lspace </m:mi> 
+        <m:mi> rspace  </m:mi>
+        <m:mi> stretchy </m:mi> 
+        <m:mi> symmetric </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+        <m:mtr>
+        <m:mtd>
+        <m:mphantom>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        </m:mphantom> 
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> maxsize </m:mi> 
+        <m:mi> minsize </m:mi> 
+        <m:mi> largeop </m:mi>
+        <m:mi> movablelimits </m:mi> 
+        <m:mi> accent </m:mi> 
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+
+</para>
+<para id="element-3">
+The “mo” element displays an operator or other representations, which are treated as an operator in mathematics. The term "operator" also includes fence, separator, accent, comma, semicolon, invisible characters etc. , some of which are used to provide new meaning to the ordinary operator. Hence, “operator” in MathML has wider meaning beyond ordinary operators,  consistent with the requirement of growing expanse of mathematical operations.   
+</para>
+<para id="element-4">
+Many of the important operators contained within “mo” element can be typed directly. They are available on key board; while many others have to be referenced through valid Unicode entity references. The operator symbols, which can be typed from the keyboard include “+”,  “-, ”/”, ”*”, ”(“, ”)”, ”{“, ”}”, ”[“, ”]”,  “.NOT.”, ”.OR.” etc. </para>
+
+<para id="element-5">
+Following example shows the display of operators by "mo" element.
+</para>
+
+<example id="display1">
+	<title>Displaying operators with “mo” element</title>
+	<para id="element-6">
+	  <code display="block" id="idp271216">
+	    
+    &lt;m:math display="block"&gt;
+&lt;m:mtable&gt;
+        &lt;m:mtr&gt;
+         &lt;m:mtd&gt;
+          &lt;m:mi&gt;Plus : &lt;/m:mi&gt;&lt;m:mo&gt;+&lt;/m:mo&gt; 
+          &lt;m:mi&gt; ;&lt;/m:mi&gt;
+          &lt;m:mi&gt;Increment : &lt;/m:mi&gt;&lt;m:mo&gt;++&lt;/m:mo&gt;
+          &lt;m:mi&gt; ;&lt;/m:mi&gt;
+          &lt;m:mi&gt;Logical not : &lt;/m:mi&gt;&lt;m:mo&gt;.NOT.&lt;/m:mo&gt; &lt;m:mi&gt; ;&lt;/m:mi&gt;
+         &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt; 
+        &lt;m:mtr&gt;
+         &lt;m:mtd&gt;        
+          &lt;m:mi&gt;Less than and equal : &lt;/m:mi&gt;&lt;m:mo&gt; &amp;le; &lt;/m:mo&gt;
+          &lt;m:mi&gt; ;&lt;/m:mi&gt;
+          &lt;m:mi&gt;Partial operator : &lt;/m:mi&gt;&lt;m:mo&gt; &amp;PartialD; &lt;/m:mo&gt;
+          &lt;m:mi&gt; ;&lt;/m:mi&gt;
+          &lt;m:mi&gt;Differentiation : &lt;/m:mi&gt;&lt;m:mo&gt; &amp;DifferentialD; &lt;/m:mo&gt;
+          &lt;m:mi&gt; ;&lt;/m:mi&gt;
+          &lt;m:mi&gt;Integration : &lt;/m:mi&gt;&lt;m:mo&gt; &amp;int; &lt;/m:mo&gt;
+         &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt; 
+      &lt;/m:mtable&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-7">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-8">
+    <m:math display="block">
+<m:mtable>
+        <m:mtr>
+         <m:mtd>
+          <m:mi>Plus : </m:mi><m:mo>+</m:mo> 
+          <m:mi> ;</m:mi>
+          <m:mi>Increment : </m:mi><m:mo>++</m:mo>
+          <m:mi> ;</m:mi>
+          <m:mi>Logical not : </m:mi><m:mo>.NOT.</m:mo> <m:mi> ;</m:mi>
+         </m:mtd>
+        </m:mtr> 
+        <m:mtr>
+         <m:mtd>        
+          <m:mi>Less than and equal : </m:mi><m:mo> ≤ </m:mo>
+          <m:mi> ;</m:mi>
+          <m:mi>Partial operator : </m:mi><m:mo> ∂ </m:mo>
+          <m:mi> ;</m:mi>
+          <m:mi>Differentiation : </m:mi><m:mo> ⅆ </m:mo>
+          <m:mi> ;</m:mi>
+          <m:mi>Integration : </m:mi><m:mo> ∫ </m:mo>
+         </m:mtd>
+        </m:mtr> 
+      </m:mtable>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-9">
+In the above example, we have used “mtable” (with “mtr” and “mtd” elements) element for controlling display. See that first three operators in above example have been typed directly from the keyboard; while others have been referenced by entity reference. 
+</para>
+
+<para id="element-10">
+MathML design of rendering an operator closely follows mathematical convention. It distinguishes between rendering a character with “mi” element and an operator with “mo” operator in many important ways for notational representation of mathematical expression. Two basic considerations are (i) to manage space around the operator, consistent with the context in which they are displayed and (ii) dimensional change (stretching) of operators in accordance with the dimension of other elements and terms. Space around an operator is managed by “form” attribute, while stretching is managed by “stretchy” attribute of “mo” element. A plus operator ("+") may ,for example, precede or follow an identifier or may lie between two operands. Depending upon its placement, the space around the operator "+" is determined. Similarly, size of a parentheses around an expression must stretch to the height of the expression as in <m:math display="inline">
+      <m:mrow> 
+        <m:mo>( </m:mo> 
+        <m:mfrac> 
+           <m:mi> a </m:mi> 
+           <m:mi> b </m:mi> 
+        </m:mfrac> 
+        <m:mo> ) </m:mo> 
+      </m:mrow> 
+    </m:math>
+.
+</para>
+
+<para id="element-11">
+MathML also allows improvisation of an operator rendered by “mo” element. This generally makes use of other characters rendering elements such as “mi” or "mn" elements in addition to "mo" element and their combination with layout elements like “mfrac” and scripting elements (“msub”, “msup” etc.) Simply put, MathML treats an expression with a “mo” element at core and improvised by other elements - as an operator of class known as “embellished” operator.  
+</para>
+
+<para id="element-12">
+Consider encoding for a differentiation operator 	  
+<code display="inline">
+  "&amp;DifferentialD;"  
+</code>
+. This operator when applied to a variable, say t, is represented as
+<m:math display="inline">
+<m:mo>ⅆ </m:mo> 
+<m:mi> t </m:mi> 
+</m:math>
+In mathematics, however, 
+<m:math display="inline">
+<m:mfrac> 
+<m:mo>ⅆ </m:mo> 
+<m:mrow>
+<m:mo>ⅆ </m:mo> 
+<m:mi> t </m:mi>
+</m:mrow>
+</m:mfrac> 
+</m:math>
+is itself considered to be an operator. The whole block consisting of “mfrac” element is, thus, an embellished operator. 
+</para>
+<para id="element-12a">
+<code display="block" id="idp12556640">
+  
+     &lt;m:mfrac&gt; 
+       &lt;m:mo&gt; &amp;DifferentialD; &lt;/m:mo&gt; 
+       &lt;m:mrow&gt;
+       &lt;m:mo&gt; &amp;DifferentialD; &lt;/m:mo&gt; 
+       &lt;m:mi&gt; x &lt;/m:mi&gt;
+       &lt;/m:mrow&gt;
+     &lt;/m:mfrac&gt; 
+
+</code>
+</para>
+
+<section id="section-1a">
+<title>Additional attribute : Default values</title>
+
+
+<para id="element-15">
+Default values to the attributes of  “mo” element are set in accordance with the values contained in “operator dictionary”, which specifies “form”, “fence”, “stretchy”, “lspace” and “rspace” attributes for different operators. The renderer maintains an operator dictionary for most of the operators. W3C recommends a prototype of operator dictionary. These recommendations can be viewed at  <link url="http://www.w3.org/TR/MathML2/appendixf.html"> www.w3.org/TR/MathML2/appendixf.html </link>. If the dictionary does not provide the value for the attribute, then attribute is set with default value as given here: 
+</para>
+<para id="element-16">
+	  <list id="list-1" list-type="enumerated">
+	    <title>Default values</title>
+	    <item>form : set by position/context</item> 
+	    <item>fence : false</item> 
+	    <item>separator : false</item>
+	    <item>lspace : thickmathspace</item>
+            <item>rspace : thickmathspace</item>
+	    <item>stretchy : false</item>
+            <item>symmetric : true</item>
+            <item>maxsize : infinity</item>
+            <item>minsize : 1</item>	 
+            <item>largeop : false</item>	  
+            <item>movablelimits : false</item>	  
+            <item>accent : false</item>	    
+	  </list>
+</para> 
+</section>
+<section id="section-1b">
+<title>Managing space around operators</title>
+
+
+<para id="element-19">
+<list id="list-2" list-type="bulleted">
+<title>Attribute value types</title>
+<item>form : prefix | infix | postfix</item>
+<item>lspace : number h-unit | namedspace</item>
+<item>rspace : number h-unit | namedspace</item>
+</list>
+</para>
+
+<para id="element-20">
+The "form" attribute specifies whether an operator shall be rendered as "prefix" or "postfix" or "infix" operator. These form types determine space around the operator (left and right of it). Each form type is associated with two attributes ("lspace" and "rspace"), which implements its left space ("lspace") and right space ("rspace").  It is important to understand that form types are basically specification about space around operator and about its role with respect to other elements. </para>
+
+<para id="element-21">
+
+The default value of “form” attribute is set in accordance with three rules, involving "mrow" element. The token elements, including "mo" element, is composed within explicit or inferred  "mrow" element. The position of an operator within the "mrow" in horizontal sequence determines the form type of the operator. If operator is the first element, then its form is inferred as "prefix"; if it is in the intermediate position, then its form is inferred as "infix”; and if it is in the end position, then  its form is inferred as "postfix". Corresponding to each form, operator library specifies "lspace" and "rspace". It is, however, not necessary that each of the operator has all the three form types. The nature of operator determines the type of forms that a particular operator should be associated with. For example, "+" operator has entries for "prefix" and "infix", but not for "postfix" in the operator dictionary, because "postfix" form of "+" operator is not expected to be placed at the end of an expression.</para> 
+<para id="element-21a">
+Now, consider the example of "+" operator appearing twice in an expression in the manner as typed below :
+</para>
+<para id="element-22">
+<code display="block" id="idp7927072">
+ +a + b 
+</code>
+</para>
+<para id="element-23">
+The first "+" sign in the above case assumes "prefix" form, while the second "+" sign assumes "infix" form. Once, the form of the operator is determined from the context within "mrow" element, spacing around the operator is determined as specified by "lspace" and "rspace" values given in the operator dictionary. The dictionary suggests following values for these forms of “+” operator :
+</para>
+<para id="element-24">
+<code display="block" id="idp8525808">
+
+"+"  form="infix"    lspace="mediummathspace" rspace="mediummathspace"
+"+"  form="prefix"   lspace="0em" rspace="veryverythinmathspace"
+
+</code>
+</para>
+<para id="element-25">
+Evidently, "infix" form separates its neighboring elements by "mediummathspace", whereas "prefix" form separates the following element with a very small space specified by "veryverythinmathspace".
+</para>
+<para id="element-26">
+Let us now code the example in MathML and see the output :
+</para>
+<example id="display2">
+	<title>Determining "form" of an operator</title>
+	<para id="element-27">
+	  <code display="block" id="idp269744">
+	    
+    &lt;m:math display="block"&gt;
+        &lt;m:mrow&gt;
+        &lt;m:mo&gt; + &lt;/m:mo&gt;
+        &lt;m:mi&gt; a &lt;/m:mi&gt;
+        &lt;m:mo&gt; + &lt;/m:mo&gt;
+        &lt;m:mi&gt; b &lt;/m:mi&gt;
+        &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-28">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-29">
+    <m:math display="block">
+        <m:mrow>
+        <m:mo> + </m:mo>
+        <m:mi> a </m:mi>
+        <m:mo> + </m:mo>
+        <m:mi> b </m:mi>
+        </m:mrow>
+    </m:math> 
+</para>
+</example>
+<para id="element-29a">
+As expected first “+” is almost attached to “a”, where as second instance of “+” renders some amount of space around itself. This type of detailing in rendering mathematical expression is vital and critical to maintain highest order of rendering consistencey, which is commensurate with the exact nature of mathematics and the meaning that a mathematical expression conveys. Note that the mark-up paradigm of MathML automatically forces codification in such a manner that no extra effort is required towards maintaining conventions of mathematical display - almost ruling out the possibilities that an expression is displayed in a non-conforming way.
+</para>
+
+<para id="element-30">
+A particular operator does not require to have entries for all the forms in the operator dictionary. Many of the operators in mathematics operate on other entities in forward direction. For example, integration, differentiation, partial differentiation etc. operates on identifiers following it. For this reason, such operators are inherently “prefix” in nature. On the other hand, operators classified as fences are either “prefix” or “postfix” commensurate with their role in mathematical expression. It is very unlikely that a closing bracket “]” is used in the beginning of an expression and as such it has “postfix” form. Dictionary entries for these operators are given here to understand : why there is very small space or no space between these operators and the identifiers on which they operate.
+</para>
+<para id="element-31">
+<code display="block" id="idp13460320">
+
+"&amp;DifferentialD;" form="prefix"  lspace="0em" rspace="verythinmathspace"
+"&amp;PartialD;"      form="prefix"  lspace="0em" rspace="verythinmathspace"
+"&amp;Integral;"      form="prefix"  largeop="true" stretchy="true" lspace="0em" 
+"("   form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+")"   form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"["   form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"]"   form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"{"   form="prefix"  fence="true" stretchy="true"  lspace="0em" rspace="0em"
+"}"   form="postfix" fence="true" stretchy="true"  lspace="0em" rspace="0em"
+
+</code>
+</para>
+
+<para id="element-32">
+We are at liberty to specify these attributes. It is, however, recommended that we leave the arrangement to the system, which is rendering the mathematical content. It shall ensure consistency in the display, which follows the convention of mathematics as implemented by a particular renderer. The example below demonstrates how we can change the spacing different to default and against the form values as inferred from the context :</para>
+<example id="display3">
+	<title>Determining "form" of an operator</title>
+	<para id="element-33">
+	  <code display="block" id="idp8493072">
+	    
+    &lt;m:math display="block"&gt;
+        &lt;m:mrow&gt;
+        &lt;m:mo form="infix" rspace="10pt"&gt; + &lt;/m:mo&gt;
+        &lt;m:mi&gt; a &lt;/m:mi&gt;
+        &lt;m:mo form="prefix"&gt; + &lt;/m:mo&gt;
+        &lt;m:mi&gt; b &lt;/m:mi&gt;
+        &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-34">
+Save the file after editing as “test.xml”. The display lokks like : 
+</para>
+<para id="element-35">
+    <m:math display="block">
+        <m:mrow>
+        <m:mo form="infix" rspace="10pt"> + </m:mo>
+        <m:mi> a </m:mi>
+        <m:mo form="prefix"> + </m:mo>
+        <m:mi> b </m:mi>
+        </m:mrow>
+    </m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-1c">
+<title>Stretching of operators </title>
+
+
+<para id="element-37">
+
+Four attributes of “mo” element control stretching of operators. These attributes may assume following values :
+</para> 
+<para id="element-38">
+<list id="list-3" list-type="bulleted">
+<title>Attribute value types</title>
+<item>stretchy : true | false</item>
+<item>symmetric : true | false</item>
+<item>maxsize : number [ v-unit | h-unit | namedspace | infinity</item>
+<item>minsize : number [ v-unit | h-unit | namedspace</item>
+
+</list>
+</para>
+
+<para id="element-39">
+Among the operators, the requirement for stretching of fences, arrows, accents (angular cap on identifier) and separators are most profound and visible in mathematical expressions. For this reason, “strechy” attribute of fence and accent operators are set “true” in operator dictionary. Stretching of operators in an expression is restricted by “minsize” and “maxsize” attributes. 
+</para>
+
+<para id="element-40">
+The stretchable operators are characterized as predominantly either vertically or horizontally stretchable. The fences, various kinds of vertical arrows (single or double), operators like ∏, ∑, ∫, “/” etc. are set to stretch vertically by default in operator directory. </para>
+
+<para id="element-41">
+When stretchable operator and non-stretchable terms are bounded by explicit or inferred “mrow” element, then the stretchable operator grows vertically to cover the non-stretchy term. Consider the example given here :  
+</para>
+<example id="display4">
+	<title>Vertical stretching</title>
+	<para id="element-42">
+	  <code display="block" id="idp7095824">
+	    
+    &lt;m:math display="block"&gt;
+     &lt;m:mrow&gt; 
+     &lt;m:mi&gt; x &lt;/m:mi&gt;
+     &lt;m:mo&gt; = &lt;/m:mo&gt;
+     &lt;m:mo&gt; ( &lt;/m:mo&gt;
+     &lt;m:mfrac&gt; 
+       &lt;m:mi&gt;a&lt;/m:mi&gt;
+       &lt;m:mi&gt;b&lt;/m:mi&gt;
+     &lt;/m:mfrac&gt; 
+     &lt;m:mo&gt; ) &lt;/m:mo&gt;
+     &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-43">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-44">
+    <m:math display="block">
+     <m:mrow> 
+     <m:mi> x </m:mi>
+     <m:mo> = </m:mo>
+     <m:mo> ( </m:mo>
+     <m:mfrac> 
+       <m:mi>a</m:mi>
+       <m:mi>b</m:mi>
+     </m:mfrac> 
+     <m:mo> ) </m:mo>
+     </m:mrow> 
+    </m:math> 
+</para>
+</example>
+<para id="element-49">
+We can, however, control the growth of parenthese by setting “maxsize” attribute to 1 i.e. equal to its normal size.
+</para>
+<example id="display6">
+	<title>Vertical stretching</title>
+	<para id="element-50">
+	  <code display="block" id="idp9384928">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+      &lt;m:mi&gt; x &lt;/m:mi&gt;
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mo maxsize="1"&gt; ( &lt;/m:mo&gt;
+      &lt;m:mfrac&gt; 
+       &lt;m:mi&gt;a&lt;/m:mi&gt;
+       &lt;m:mi&gt;b&lt;/m:mi&gt;
+      &lt;/m:mfrac&gt; 
+      &lt;m:mo maxsize="1"&gt; ) &lt;/m:mo&gt;
+      &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-51">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-52">
+    <m:math display="block">
+      <m:mrow> 
+      <m:mi> x </m:mi>
+      <m:mo> = </m:mo>
+      <m:mo maxsize="1"> ( </m:mo>
+      <m:mfrac> 
+       <m:mi>a</m:mi>
+       <m:mi>b</m:mi>
+      </m:mfrac> 
+      <m:mo maxsize="1"> ) </m:mo>
+      </m:mrow>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-45">
+Thus, setting "maxsize" attribute overrides the default behavior, which allows the parentheses to strech and cover the non-stretchy expression. Let us, now experiment with other than fence character like ∑ and observe their behavior with other terms :
+</para>
+
+<example id="display5">
+	<title>Vertical stretching</title>
+	<para id="element-46">
+	  <code display="block" id="idp8401088">
+	    
+    &lt;m:math display="block"&gt;
+     &lt;m:mrow&gt; 
+     &lt;m:mo&gt; &amp;sum; &lt;/m:mo&gt;
+     &lt;m:mo&gt; ( &lt;/m:mo&gt;
+     &lt;m:mfrac&gt;
+       &lt;m:mi&gt;A&lt;/m:mi&gt;
+       &lt;m:mi&gt;B&lt;/m:mi&gt;
+     &lt;/m:mfrac&gt; 
+     &lt;m:mo&gt; ) &lt;/m:mo&gt;
+     &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-47">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-48">
+    <m:math display="block">
+     <m:mrow> 
+     <m:mo> ∑ </m:mo>
+     <m:mo> ( </m:mo>
+     <m:mfrac>
+       <m:mi>A</m:mi>
+       <m:mi>B</m:mi>
+     </m:mfrac> 
+     <m:mo> ) </m:mo>
+     </m:mrow>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-53">
+Control for stretching can be selective as well. For example, we can set stretchy=”false” on the opening parenthesis to restrict it to grow.
+</para>
+<example id="display7">
+	<title>Vertical stretching</title>
+	<para id="element-54">
+	  <code display="block" id="idp10430640">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+      &lt;m:mi&gt; x &lt;/m:mi&gt;
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mo stretchy="false"&gt; ( &lt;/m:mo&gt;
+      &lt;m:mfrac&gt; 
+       &lt;m:mi&gt;a&lt;/m:mi&gt;
+       &lt;m:mi&gt;b&lt;/m:mi&gt;
+      &lt;/m:mfrac&gt; 
+      &lt;m:mo&gt; ) &lt;/m:mo&gt;
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-55">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-56">
+    <m:math display="block">
+      <m:mrow> 
+      <m:mi> x </m:mi>
+      <m:mo> = </m:mo>
+      <m:mo stretchy="false"> ( </m:mo>
+      <m:mfrac> 
+       <m:mi>a</m:mi>
+       <m:mi>b</m:mi>
+      </m:mfrac> 
+      <m:mo> ) </m:mo>
+      </m:mrow> 
+    </m:math> 
+</para>
+</example>
+
+<para id="element-57">
+In situation where, the expression bounded by “mrow” tags contains terms of different heights, the stretchable parentheses grow to cover the highest of the terms. 
+</para>
+<example id="display8">
+	<title>Vertical stretching</title>
+	<para id="element-58">
+	  <code display="block" id="idp9059888">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+      &lt;m:mi&gt; x &lt;/m:mi&gt;
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mo&gt; ( &lt;/m:mo&gt;
+      &lt;m:mfrac&gt; 
+       &lt;m:mi&gt;a&lt;/m:mi&gt;
+       &lt;m:mi&gt;b&lt;/m:mi&gt;
+      &lt;/m:mfrac&gt; 
+      &lt;m:mo&gt; + &lt;/m:mo&gt;
+      &lt;m:mfrac&gt; 
+      &lt;m:mrow&gt; 
+      &lt;m:mfrac&gt; 
+          &lt;m:mi&gt;c&lt;/m:mi&gt;
+          &lt;m:mi&gt;d&lt;/m:mi&gt;
+      &lt;/m:mfrac&gt; 
+      &lt;/m:mrow&gt; 
+      &lt;m:mi&gt;e&lt;/m:mi&gt;
+      &lt;/m:mfrac&gt; 
+      &lt;m:mo&gt; ) &lt;/m:mo&gt;
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-59">
+Save the file after editing as “test.xml”. The display lokks like : 
+</para>
+<para id="element-60">
+    <m:math display="block">
+      <m:mrow> 
+      <m:mi> x </m:mi>
+      <m:mo> = </m:mo>
+      <m:mo> ( </m:mo>
+      <m:mfrac> 
+       <m:mi>a</m:mi>
+       <m:mi>b</m:mi>
+      </m:mfrac> 
+      <m:mo> + </m:mo>
+      <m:mfrac> 
+      <m:mrow> 
+      <m:mfrac> 
+          <m:mi>c</m:mi>
+          <m:mi>d</m:mi>
+      </m:mfrac> 
+      </m:mrow> 
+      <m:mi>e</m:mi>
+      </m:mfrac> 
+      <m:mo> ) </m:mo>
+      </m:mrow> 
+    </m:math> 
+</para>
+</example>
+
+<para id="element-61">
+The symmetric attribute is designed to stretch operator in both vertical and horizontal direction from the axis of the characters in equal magnitude. The symmetric attribute applies only to characters, which can stretch vertically; otherwise this attribute is ignored. Usually, this attribute is set “true” for vertically stretchable operator, but in certain cases involving matrix of unequal size, we may prefer to set it “false” as demonstrated in the example here : 
+</para>
+<example id="display9">
+	<title>Vertical stretching</title>
+	<para id="element-62">
+	  <code display="block" id="idp6319952">
+	    
+    &lt;m:math display="block"&gt;
+       &lt;m:mrow&gt; 
+       &lt;m:mi&gt; x &lt;/m:mi&gt;
+       &lt;m:mo&gt; = &lt;/m:mo&gt;
+       &lt;m:mo symmetric="false"&gt; ( &lt;/m:mo&gt;
+        &lt;m:mtable align="bottom"&gt;
+          &lt;m:mtr&gt;
+           &lt;m:mtd&gt;
+            &lt;m:mi&gt;a&lt;/m:mi&gt;
+           &lt;/m:mtd&gt;
+           &lt;m:mtd&gt;
+            &lt;m:mi&gt;b&lt;/m:mi&gt;
+           &lt;/m:mtd&gt;
+          &lt;/m:mtr&gt;
+          &lt;m:mtr&gt;
+           &lt;m:mtd&gt;
+            &lt;m:mn&gt;d&lt;/m:mn&gt;
+           &lt;/m:mtd&gt;
+           &lt;m:mtd&gt;
+            &lt;m:mn&gt;e&lt;/m:mn&gt;
+           &lt;/m:mtd&gt;
+          &lt;/m:mtr&gt;
+       &lt;/m:mtable&gt; 
+        &lt;m:mo symmetric="false"&gt; ) &lt;/m:mo&gt;
+        &lt;m:mo symmetric="false"&gt; ( &lt;/m:mo&gt;
+       &lt;m:mtable align="bottom"&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;a&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;b&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;d&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;e&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+         &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;d&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;e&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+      &lt;m:mo symmetric="false"&gt; ) &lt;/m:mo&gt;
+      &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-63">
+Save the file after editing as “test.xml”. The display lokks like : 
+</para>
+<para id="element-64">
+    <m:math display="block">
+       <m:mrow> 
+       <m:mi> x </m:mi>
+       <m:mo> = </m:mo>
+       <m:mo symmetric="false"> ( </m:mo>
+        <m:mtable align="bottom">
+          <m:mtr>
+           <m:mtd>
+            <m:mi>a</m:mi>
+           </m:mtd>
+           <m:mtd>
+            <m:mi>b</m:mi>
+           </m:mtd>
+          </m:mtr>
+          <m:mtr>
+           <m:mtd>
+            <m:mn>d</m:mn>
+           </m:mtd>
+           <m:mtd>
+            <m:mn>e</m:mn>
+           </m:mtd>
+          </m:mtr>
+       </m:mtable> 
+        <m:mo symmetric="false"> ) </m:mo>
+        <m:mo symmetric="false"> ( </m:mo>
+       <m:mtable align="bottom">
+        <m:mtr>
+          <m:mtd>
+            <m:mi>a</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>b</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>d</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>e</m:mn>
+          </m:mtd>
+        </m:mtr>
+         <m:mtr>
+          <m:mtd>
+            <m:mn>d</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>e</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+      <m:mo symmetric="false"> ) </m:mo>
+      </m:mrow>    
+    </m:math> 
+</para>
+</example>
+
+<para id="element-65">
+Matrix operation of unequal sizes uses notation which is aligned to base. This type of controlling stretching in specific direction is, therefore, extremely useful in such situations.
+</para>
+
+<para id="element-65a">
+In case, the “mrow” domain contains non-stretchable terms of normal height and other stretchable terms, then all the terms, including the fence operator grows to the maximum normal height.
+</para>
+<example id="display10">
+	<title>Vertical stretching</title>
+	<para id="element-66">
+	  <code display="block" id="idp13299232">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+      &lt;m:mi&gt; x &lt;/m:mi&gt;
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mo&gt; ( &lt;/m:mo&gt;
+      &lt;m:mo&gt; &amp;int; &lt;/m:mo&gt;
+      &lt;m:mi&gt; f&lt;/m:mi&gt;
+      &lt;m:mo&gt; ( &lt;/m:mo&gt;
+      &lt;m:mi&gt; x &lt;/m:mi&gt;
+      &lt;m:mo&gt; ) &lt;/m:mo&gt;
+      &lt;m:mi&gt; &amp;DifferentialD; &lt;/m:mi&gt;
+      &lt;m:mi&gt; x &lt;/m:mi&gt;
+      &lt;m:mo&gt; ) &lt;/m:mo&gt;
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-67">
+Save the file after editing as “test.xml”. The display lokks like : 
+</para>
+<para id="element-68">
+    <m:math display="block">
+      <m:mrow> 
+      <m:mi> x </m:mi>
+      <m:mo> = </m:mo>
+      <m:mo> ( </m:mo>
+      <m:mo> ∫ </m:mo>
+      <m:mi> f</m:mi>
+      <m:mo> ( </m:mo>
+      <m:mi> x </m:mi>
+      <m:mo> ) </m:mo>
+      <m:mi> ⅆ </m:mi>
+      <m:mi> x </m:mi>
+      <m:mo> ) </m:mo>
+      </m:mrow>  
+    </m:math> 
+</para>
+</example>
+
+<para id="element-69">
+
+As against fence operator, the accent and horizontal arrows are stretchable in horizontal direction by default. The growth, in this case, is controlled by “munder”, “mover” and “munderover” elements, which contain the operator. The “munder”, “mover” and “munderover” elements, as the names suggest, allow drawing of an operator "under" or "over" or both about a character(s) or expresison. The  scripting elements takes a base argument about which the operator is to be drawn and one (“munder” and “mover”) operator or two (“munderover”) operators  for being placed about the base. We shall see that the operator grows horizontally to cover the other element. 
+</para>
+<example id="display11">
+	<title>Horizontal stretching</title>
+	<para id="element-70">
+	  <code display="block" id="idm987088">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mi&gt; A &lt;/m:mi&gt;
+      &lt;m:munderover&gt;
+       &lt;m:mo&gt; &amp;RightArrow; &lt;/m:mo&gt;
+       &lt;m:mtext&gt; 50 degree C &lt;/m:mtext&gt;
+       &lt;m:mtext&gt; 200 psi &lt;/m:mtext&gt;
+      &lt;/m:munderover&gt;
+      &lt;m:mi&gt; B &lt;/m:mi&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-71">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-72">
+    <m:math display="block">
+      <m:mi> A </m:mi>
+      <m:munderover>
+       <m:mo> → </m:mo>
+       <m:mtext> 50 degree C </m:mtext>
+       <m:mtext> 200 psi </m:mtext>
+      </m:munderover>
+      <m:mi> B </m:mi> 
+    </m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-1d">
+<title>Other attributes : largeop, movablelimits, accent, separator, fence</title>
+
+<para id="element-74">
+
+These attributes may assume following values :
+</para> 
+<para id="element-75">
+<list id="list-4" list-type="bulleted">
+<title>Attribute value types</title>
+<item>fence : true | false</item>
+<item>separator : true | false</item>
+<item>largeop : true | false</item>
+<item>movablelimits : true | false</item> 
+<item>accent : true | false</item>
+
+</list>
+</para>
+
+<para id="element-76">
+All these attributes accept boolean values “true” or “false”. The attribute “fence” is designed for non-visual rendering like audio rendering. As such, this attribute has no impact on the visual aspect of rendering. The role of “separator” attribute is also not significant and may be left to default value.
+</para>
+<para id="element-77">
+The “largeop” attribute determines the size of the operator. If it is true, then the operator is drawn larger than its normal size. For example, ∫ and ∏ operators are displayed as large operator as “largeop” attribute for these operators are set “true” by default. If we need to display the normal size, then  their "largeop" attribute is set to "false".
+</para>
+
+<example id="display12">
+	<title>Large operator</title>
+	<para id="element-78">
+	  <code display="block" id="idp305904">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+      &lt;m:mo&gt; &amp;prod; &lt;/m:mo&gt;
+      &lt;m:mo&gt; , &lt;/m:mo&gt;
+      &lt;m:mo&gt; &amp;int;  &lt;/m:mo&gt;
+      &lt;m:mo&gt; , &lt;/m:mo&gt;
+      &lt;m:mo largeop="false"&gt; &amp;prod; &lt;/m:mo&gt;
+      &lt;m:mo&gt; , &lt;/m:mo&gt;
+      &lt;m:mo largeop="false"&gt; &amp;int;  &lt;/m:mo&gt;
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-79">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-80">
+    <m:math display="block">
+      <m:mrow> 
+      <m:mo> ∏ </m:mo>
+      <m:mo> , </m:mo>
+      <m:mo> ∫  </m:mo>
+      <m:mo> , </m:mo>
+      <m:mo largeop="false"> ∏ </m:mo>
+      <m:mo> , </m:mo>
+      <m:mo largeop="false"> ∫  </m:mo>
+      </m:mrow> 
+    </m:math> 
+</para>
+</example>
+<para id="element-81">
+The movablelimits attribute allows underscripts and overscripts to be represented as subscript and superscript respectively. This rendering of under and over scripts as sub and super scripts is possible by seting this attribute to true. The implementation of this attribute by renderers is not yet consistent. 
+</para>
+<example id="display13">
+	<title>The "movablelimits" attribute</title>
+	<para id="element-82">
+	  <code display="block" id="idp12954112">
+	    
+    &lt;m:math display="block"&gt;
+       &lt;m:munderover&gt; 
+        &lt;m:mo movablelimits='true'&gt; &amp;sum; &lt;/m:mo&gt;
+        &lt;m:mi&gt; a &lt;/m:mi&gt;
+        &lt;m:mi&gt; b &lt;/m:mi&gt;
+      &lt;/m:munderover&gt; 
+      &lt;m:munderover&gt; 
+        &lt;m:mo movablelimits='false'&gt; &amp;sum; &lt;/m:mo&gt;
+        &lt;m:mi&gt; a &lt;/m:mi&gt;
+        &lt;m:mi&gt; b &lt;/m:mi&gt;
+      &lt;/m:munderover&gt; 
+    &lt;/m:math&gt; 
+	    
+	  </code>
+</para>
+<para id="element-83">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-84">
+    <m:math display="block">
+      <m:munderover> 
+        <m:mo movablelimits="true"> ∑ </m:mo>
+        <m:mi> a </m:mi>
+        <m:mi> b </m:mi>
+      </m:munderover> 
+      <m:munderover> 
+        <m:mo movablelimits="false"> ∑ </m:mo>
+        <m:mi> a </m:mi>
+        <m:mi> b </m:mi>
+      </m:munderover> 
+    </m:math> 
+</para>
+</example>
+
+<para id="element-85">
+The accent attribute determines whether an operator is treated as accent (diacritical mark) when used as an underscript or overscript.
+</para>
+</section>
+</section>
+
+</content>
+  
+</document>

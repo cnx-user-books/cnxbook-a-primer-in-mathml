@@ -1,0 +1,385 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>MathML infrastructure</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>12b0db51-a0bf-449b-afb0-b681e1f0db5a</md:uuid>
+</metadata>
+  <content>
+
+<para id="element-101">
+The MathML infrastructure comprises of three important segments of resource base :
+</para>
+
+<para id="element-102">
+<list id="list-101" list-type="bulleted">
+<title>MathML resource base</title>
+<item> Elements</item>
+<item> Unicode character set </item>
+<item> Attributes </item>
+</list>
+</para>
+
+
+<section id="section-1">
+<title>Elements</title>
+
+<para id="element-104">
+The MathML captures markup requirements for mathematical content display through layered encapsulation of markup design, using three groups of elements (token, layout and table elements).
+</para>
+ 
+<para id="element-105">
+The underlying philosophy of the mark up design is easily understood in terms of the implementation of a fraction in 
+<m:math>
+<m:mfrac>
+<m:mi>P </m:mi>
+<m:mi>Q </m:mi>
+</m:mfrac>
+</m:math>
+form. Once the basic form of the fraction is coded, then second layer of coding is taken up for the numerator expression, followed by third layer of coding for the denominator expression. Thus, we see that coding paradigm for a fraction in the form of
+
+<m:math>
+<m:mfrac>
+<m:mi>P </m:mi>
+<m:mi>Q </m:mi>
+</m:mfrac>
+</m:math>
+
+is layered over each other with the core of “mfrac” element. It must be emphasized that we refer layering in reference to the sequence of coding requirements, which should be written one after another and not the display, which is structured in two dimensions. The illustration shown in the figure displays a portion of “Rogers-Ramanujan identity” : 
+</para>
+
+<para id="element-106">
+<figure id="fig101">
+	    <title>Layered coding</title>
+	    <media id="idp5290912" alt=""><image src="../../media/layereddesign.gif" mime-type="image/gif"/></media>
+	    <caption>Coding is implemented around key layout elements</caption>
+	  </figure>
+</para>
+
+<para id="element-107">We see that “mfrac” element provides the core structure for nominator and denominator. Subsequently, either of numerator or denominator or both may have elements, which may further require display in two dimensions. Matter of fact, numerator expression, in the illustration above, consists of nested super scripts.
+ </para>
+
+<para id="element-108">This type of layered coding design is an immense help in generating code for MathML. In contrast to the two dimensional display requirements, the coding requirement is essentially linear. The display of “Rogers-Ramanujan identity” is a point in the case. The figure below outlines the coding sequence. Note that we proceed writing code from left to right, encapsulating two dimensional aspects along the way, such as subscripting and ratio formation with MathML constructors. And we do it all, one after another in sequence. 
+</para>
+
+<para id="element-109">
+<figure id="fig102">
+	    <title>Sequential coding </title>
+	    <media id="idm8575168" alt=""><image src="../../media/coding.gif" mime-type="image/gif"/></media>
+	    <caption>Coding is implemented in sequence</caption>
+	  </figure>
+</para>
+</section>
+
+
+
+<section id="section-2">
+<title>Unicode character set</title>
+
+<para id="element-15">
+
+The MathML displays data, symbols and text with the help of token elements, which are capable to render a set of certain characters. In all cases of rendering mechanism provided in MathML, the display output is a character or a series of characters.  These characters are defined as the Unicode set of characters – about 900 in numbers and growing all the time to meet the requirement of mathematics in conveying special meaning to its expressions. Different font variants of a letter are treated as separate symbols as they may represent different mathematical meaning/ concept/ idea. </para>
+
+<para id="element-16">
+
+There are three ways to encode Unicode characters with token elements specialized in displaying characters: </para>
+
+<para id="element-17">
+
+1: Use the keyboard and type the characters as available on the keyboard. </para>
+
+<para id="element-18">
+
+2: Use the name reference known as “entity reference”. Encode the entity reference preceded by "&amp;" and ending with semicolon “;”. For example, we would encode entity reference “beta” as "&amp;beta;" to represent “β”.</para>
+
+<para id="element-19">
+
+3: Use the corresponding Unicode numeric hexadecimal reference. For example, beta is encoded with its hexadecimal numeric reference "U003B2" as "&amp;x003B2;" to represent “β”.</para>
+
+<para id="element-20">It is evident that keyboard typing is the easiest option. The difficulty is that keyboard supports only a limited numbers of characters. We can type ASCII characters holding “Alt” key and typing numbers from the numeric key pad on the right side of the keyboard. However, this approach is not very helpful as we have no clue of the visual form of the character corresponding to a number. </para>
+
+<para id="element-21">
+
+The best approach for encoding Unicode characters is to create a XML file with extension "xml" in the desktop Word program as instructed earlier in the course. Then, select top level “Insert” menu of the MS Word program and choose “Symbol”. </para>
+
+<para id="element-22">
+<figure id="fig1">
+<title>Inserting symbols</title>
+<media id="idp974832" alt=""><image src="../../media/symbol1.JPG" mime-type="image/jpeg"/></media>
+
+</figure>
+</para>
+
+<para id="element-23">A “symbol” dialog box appears as shown below. It is important that we select the option “normal text” from the “Font” drop down list. Keep selecting and inserting the characters not available on the keyboard, but useful for our application as we forsee. Save the "xml" file under some meaningful name like "unicide characters" and reference the special characters as when required from the file. 
+</para>
+
+<para id="element-24">
+<figure id="fig2">
+<title>Inserting symbols</title>
+<media id="idm7325952" alt=""><image src="../../media/symbol2.JPG" mime-type="image/jpeg"/></media>
+
+</figure>
+</para>
+
+<para id="element-25">
+
+This technique serves a great part of requirement, but for the characters which do not have visual forms like “ThickSpace”, “ApplyFunction”, “nbsp” etc., which are called ”invisible” characters. But these invisible characters are few in numbers. As such,we can store their entity reference names for easy reference as and when required. </para>
+
+<para id="element-26">The second approach of using entity reference like "&amp;beta;" is the second best approach as the names suggest the visual forms for many important characters. The third alternative to use Unicode numeric reference in the form "&amp;x003B2;" is not desirable for those who intend to code MathML. Ofcourse, this could be the best approach for software developers – probably a numeric representation would be easier to handle in the programming algorithm. </para>
+
+<para id="element-27">
+
+A list of entity reference along with its display form is presented in the Appendix. The listing is divided in three modules <link document="m13564" target-id="para12">(A to H)</link> , <link document="m13566" target-id="para12">(I to Q)</link> and <link document="m13562" target-id="para12">(R to Z)</link> to accommodate about 900 Unicode characters. You may choose to visit these pages to have a first hand experience of what these characters look like and how they are named. </para>
+
+<para id="element-27ab">The example given here demonstrates character rendering, using each of the encoding techniques discussed above. </para>
+
+<example id="display3">
+	<title>Display using Unicode hexadecimal number</title>
+	<para id="element-27a">
+	  <code display="block" id="idm7983584">
+	    
+    &lt;m:math display="block"&gt;
+       &lt;m:mtext&gt;Alpha is displayed as :  &lt;/m:mtext&gt;
+       &lt;m:mi&gt; α&lt;/m:mi&gt;
+       &lt;m:mi&gt; &amp;alpha; &lt;/m:mi&gt;
+       &lt;m:mi&gt; &amp;#x003B1;&lt;/m:mi&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-27aa">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-27aaa">
+    <m:math display="block">
+       <m:mtext>Alpha is displayed as :  </m:mtext>
+       <m:mi> α</m:mi>
+       <m:mi> α </m:mi>
+       <m:mi> α</m:mi>
+
+    </m:math> 
+</para>
+</example>
+
+<para id="element-29">Some characters falling under “operator” category, beside dpsce rendering characters, do not have visual display. They are called non-marking characters and are used with “mo” element.  These characters are important for the quality of print or alternative rendering like audio rendering. They provide specific and consistent spacing on the operand on which they act, thus distinguishing the mathematical operation from normal character rendering. The non-marking operator are : </para>
+<para id="element-30">
+<code>
+
+"&amp;InvisibleTime;", "&amp;InvisibleComma;" and "&amp;ApplyFunction;"
+
+</code>
+</para>
+
+<para id="element-31">
+These non-marking characters must be distinguished from space or blank rendering characters, which are used to format display for improving readability like 
+<code>
+
+"&amp;nbsp;", "&amp;ThinSpace;" ,"&amp;emsp4;", "&amp;emsp13;"
+
+</code>
+ etc. In addition to these space rendering elements, “mspace” token element is handy, where we need to implement and  manage space. 
+</para>
+</section>
+
+<section id="section-3">
+<title>Managing attributes</title>
+
+<para id="element-33">MathML elements, including token elements, support an array of attributes. Its management is greatly simplified in a structured manner. There are four attribute classes and a specialized tool to manage attributes of the elements in MathML. It must, however, be emphasized these are not exclusive groups, but only they represent groups having certain common implementation features.
+</para>
+<para id="element-34">
+
+<list id="list-1" list-type="enumerated">
+<title>Attribute class</title>
+<item>Attributes common to all MathML elements</item>
+<item>Attributes inherited from the rendering enviornment</item>
+<item>Attributes common to a group of token elements</item>
+<item>Attributes specific to an element (additional attributes)</item>
+</list>
+</para>
+<para id="element-34a">
+All MathML elements supports “class”, “style”, “id”, “xlink:href” and  “xref” attributes in order to use style sheet mechanism. If the renderer does not use a style sheet, then these attributes may simply be ignored.  
+</para>
+<para id="element-35">The style attributes of MathML elements are inherited from the rendering environment. We can change these inherited attributes from the environment in two ways. First mechanism is provided by common attribute design for token elements. Second mechanism involves using “mstyle” element belonging to layout presentation category.</para>
+
+<section id="section-3a">
+<title>Attributes common to a group of token elements</title>
+
+
+<para id="element-37">
+Rendering by token elements is characterized by the default values used for attributes of these elements. Most of these attributes are inherited from the environment of renderer like a particular browser. </para>
+<para id="element-38">The style attributes of the individual element can, however, be set different to default values via a set of style attributes. To keep the matter simple, there is a group of attributes, which applies to five of the token elements all capable to render characters(“mi”, “mn”,”mo”, “mtext”, “ms”) and one layout element “mstyle”. 
+</para>
+<para id="element-39">The common attribute mechanism is a great help in managing and studying style attributes for the content display. This feature allows us to concentrate on specific attributes of the element while common attributes are managed with common names for six elements.</para>
+<para id="element-40">
+The common style attribute values are : 
+</para>
+<para id="element-41">
+<list id="list-3" list-type="bulleted">
+<title>Attribute values types</title>
+<item>mathvariant (default =normal for all, italic for “mi”) : normal | bold | italic | bold-italic | double-struck | bold-fraktur | script | bold-script | fraktur | sans-serif | bold-sans-serif | sans-serif-italic | sans-serif-bold-italic | monospace</item>
+<item>mathsize (default = inherited) : small | normal | big | number vertical unit</item>
+<item>mathcolor (default = inherited) : #rgb | #rrggbb | html-color-name</item>
+<item>mathbackground (default = inherited) : #rgb | #rrggbb | html-color-name</item>
+</list>
+</para>
+<para id="element-42">
+The example below sets most of these attribute values and is suggestive of the ways attributes are set, using common attributes.
+</para>
+<example id="display4">
+	<title>Using common attributes</title>
+	<para id="element-43">
+	  <code display="block" id="idp2006384">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+        &lt;m:mi mathvariant="bold" mathsize="2em" mathcolor="Blue"&gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="italic" mathsize="10pt" &gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="bold-italic"&gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="double-struck"&gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="bold-fraktur" mathbackground="red"&gt;  A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="script"&gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="fraktur" mathsize="1cm" mathcolor="1cm"&gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi mathvariant="sans-serif" mathsize=".2in" &gt; A &lt;/m:mi&gt; 
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-44">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-45">
+    <m:math display="block">
+      <m:mrow> 
+        <m:mi mathvariant="bold" mathsize="2em" mathcolor="Blue"> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="italic" mathsize="10pt"> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="bold-italic"> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="double-struck"> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="bold-fraktur" mathbackground="red">  A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="script"> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="fraktur" mathsize="1cm" mathcolor="1cm"> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi mathvariant="sans-serif" mathsize=".2in"> A </m:mi> 
+      </m:mrow> 
+    </m:math> 
+</para>
+</example>
+<para id="element-46">MathML also enables use of deprecated mechanism of setting common attributes. The deprecated attributes are :
+</para>
+
+<para id="element-47">
+<list id="list-4" list-type="bulleted">
+<title>Attribute values types</title>
+<item>Fontsize : number v-unit</item>
+<item>fontstyle(normal | italic)</item>
+<item>fontweight (normal | bold)</item>
+<item>color : #rgb | #rrggbb | html-color-name </item>
+<item>fontfamily : string  </item>
+</list>
+</para>
+<para id="element-48">However, if both mechanisms are used to set a particular attribute, then new mathstyle attribute prevails over deprecated mechanism.</para>
+</section>
+
+
+
+<section id="section-3b">
+<title>Specialized style setting tool</title>
+<para id="element-49">
+<m:math>
+<m:mstyle fontsize="12pt" fontweight="bold" fontstyle="normal" fontfamily="Helvetica">
+<m:mtext color="#f05">   </m:mtext>
+</m:mstyle>
+</m:math>
+</para>
+
+<para id="element-50">The only layout element “mstyle” in the common attribute group is a single point specialized tool to set varieties of style attributes to elements enclosed by “mstyle” element. This is kind of one go attribute setting mechanism, which can set not only the common attributes, but additional attributes inherited from the rendering environment. Further, “mstyle” element can be used to set style attributes on any MathML elements in addition to the five (5) token elements, which implement common token attibutes. In this sense, this element serves as an extremely powerful tool to manage style attributes in MathML. Let us consider setting attributes to token elements as shown here.
+</para>
+
+<example id="display5">
+	<title>Using common attributes</title>
+	<para id="element-51">
+	  <code display="block" id="idm7031216">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mstyle mathvariant="bold" color="blue" mathsize="1cm"&gt; 
+        &lt;m:mi&gt; A &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi&gt; B &lt;/m:mi&gt; 
+        &lt;/m:mstyle&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-52">
+Save the file after editing as “test.xml”. The "&amp;nbsp;" display looks like : 
+</para>
+<para id="element-53">
+    <m:math display="block">
+      <m:mstyle mathvariant="bold" color="blue" mathsize="1cm"> 
+        <m:mi> A </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi> B </m:mi> 
+
+        </m:mstyle> 
+    </m:math> 
+</para>
+</example>
+</section>
+</section>
+
+<section id="section-4">
+<title>Managing values</title>
+
+
+<para id="element-55">
+A lot of coding efficiency in mark up language like MathML depends on assigning appropriate values to the attributes. Usually, there exists more than one ways to assign attribute’s value. 
+</para>
+
+<para id="element-56">Size attributes may be expressed either in terms of predefined numeric values as “small”, “normal” or “big” or as numerical values. There are vareity of units available to express numerical values. These units are used on the basis of context, some of which are expressed in relative terms with respect to the normal size : “em” or “ex” or “%”. Others are absolute values like “pt” (for point; 1 point = 1/72 inch), “px” (for pixel), “pc” (for picas; 1 pica = 12 points), “in” (for inch), “mm” (for millimeter) and “cm” (for centimeter). 
+</para>
+
+<para id="element-56a">
+In some cases, number can be assigned to an attribute. The number indicates the relative size with respect to default implementation. The "mfrac" element for example implements "linethickness" attribute. A number, say, "2" indicated that the bar will be drawsn twice in thickness with respect to the default thickness as determined by a particular renderer. 
+</para>
+<para id="element-56ab">In some cases, like with "mo" element, we can assign terms of predertermined space to space controlling attributes like "lspace" and "rspace". These terms are called "named space". The named space used in MathML may be one of "veryverythinmathspace", "verythinmathspace", "thinmathspace", "mediummathspace", "thickmathspace", "verythickmathspace", or "veryverythickmathspace".
+</para> 
+<para id="element-57">
+The mathcolor or color is set in three possible ways :
+</para>
+
+<para id="element-58">
+1: rgb scheme : Color is considered to be composed of the components red, green and blue. The component colors may be mixed in various proportions. The components are represented by single hexadecimal digit (0,1,….,9,a,b,c,d,e,f). This number is then preceded by “#” and assigned as : mathcolor =”#00f”.
+</para>
+
+<para id="element-59">
+2: rrggbb scheme : This is a similar to the rgb scheme except that each of the component is represented by two digit hexadecimal number. Thus, smallest pair is “00” and largest pair is “ff”. This number is then preceded by “#” and assigned as : color =”#0000ff”.
+</para>
+<para id="element-60">
+3: html-color-name : We can assign mathcolor or color attribute with HTML color names : "aqua", "black", "blue", "fuchsia", "gray", "green", "lime", "maroon", "navy", "olive", "purple", "red", "silver", "teal", "white", and "yellow". 
+</para>
+
+<para id="element-61">
+The MathML provides control on individual levels of layout structure elements like "table" element. The control requires setting attributes on individual rows and columns. In such cases, attributes are provided with values, which are read in sequence and applied on consecutive rows and columns as the case may be.    
+</para>
+</section>
+
+
+
+
+  
+</content>
+  
+</document>

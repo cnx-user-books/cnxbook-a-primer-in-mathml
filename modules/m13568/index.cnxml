@@ -1,0 +1,370 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Introduction to the course in MathML</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>b52a593f-8108-452b-9d04-1be0192b9076</md:uuid>
+</metadata>
+  <content>
+<para id="element-2">
+The encoding of mathematics in a document has two perspectives. One is to present mathematical content in visual form; other is to convey mathematical content in a form that can be interpreted by other programs (software ) for use in a mathematical context. </para>
+<para id="element-3">
+The intent of the first is obvious and clearly understood. The second perspective is more complex and is targeted to create a language structure that can be used to exchange mathematics and its underlying concepts and ideas between different programs and systems. For example, MathML markups may result in a audio rendering system, which can read a mathematical expression like 
+<m:math>
+<m:mfrac bevelled="true">
+<m:mrow>
+<m:mo>ⅆ</m:mo>
+<m:mi>y</m:mi>
+</m:mrow>
+<m:mrow>
+<m:mo>ⅆ</m:mo>
+<m:mi>x</m:mi>
+</m:mrow>
+</m:mfrac>
+</m:math>
+:  “...it is a differentiation of first order of ‘y’ with respect ‘x’ ....“ or a program that could intelligently interact with the content coded in MathML and produce results or analysis.</para>
+<para id="element-4">
+In accordance with the intent, the MathML has two different encoding paradigms. The first caters to the requirement of  presentation and the other that of content. Here in the course, we restrict ourselves with presentation mark ups as this course is set out for beginners and who seek to write MathML for display purposes. 
+</para>
+
+
+<section id="section-1">
+
+<title>Why MathMl?</title>
+<para id="element-6">
+Let us have a look at a piece of encoding required to create a simple table (3 X 3) :
+</para>
+
+<example id="display1">
+	<title>Typical code lines MathML</title>
+	<para id="element-7">
+	  <code display="block" id="idp10376544">
+	    
+    &lt;m:math display="block"&gt;
+&lt;m:mtable frame="solid" columnlines="solid" rowlines="solid"&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;y&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;1&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-8">
+The display looks like : 
+</para>
+<para id="element-9">
+    <m:math display="block">
+<m:mtable frame="solid" columnlines="solid" rowlines="solid" rowalign="top baseline center" columnalign="left right">
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+     </m:math> 
+</para>
+</example>
+<para id="element-10">
+Looking at the above MathML encoding, we observe that codes are simply bulky and repetitive in nature.  This brings out the question : why to encode MathML, while we could have simply taken the snapshot of the mathematical content and put the same in light weight picture format like jpeg or gif !  The reasons, that this approach is not favored, are :</para>
+<para id="element-11">
+1: The picture files, even when light, would run in 100s of kilobytes, while the text part of the document would be hardly 15 – 20 Kilobytes.  This is a significant design problem – particularly for web rendering of courses like this one. If this module is interspersed with fictures for mathematical expressions, then the module would take much longer (10 to 15 times) to download; and the readers would be really irritated if the document consisted of cross references to other such documents, containing mathemtics in picture format.</para>
+<para id="element-12">
+2: It would be difficult and ugly to present mathematical content as part of the text, because picture renders with white space around itself. On the contrary, MathML allows to insert mathematical content, like <m:math display="inline"> <m:msup><m:mi>x</m:mi> <m:mo>5</m:mo> </m:msup></m:math>, right inside the text paragraph in an elegant manner.</para>
+<para id="element-13">
+3: It would not be possible to copy and paste the content and modify the same. This constitues a major handicap in treating mathematical content as picture. We can only select the picture file as a whole - not a part of it. (Try to copy  the right hand expression of the equation presented below.)
+<figure id="fig1">
+
+<media id="idp6269904" alt=""><image src="../../media/pictureformat1.JPG" mime-type="image/jpeg"/></media>
+
+</figure>
+</para>
+
+<para id="element-14">4: The problem with pictures is that they have an invisible box around them whose color remains that of the background at the time of its capture as picture. The color of the box is, thus, independent of background color of the rendering document. When the background color of the document (rendering system) is changed, mathematical content in ficture fromat pops up with the color of box surrounding it. </para>
+
+<para id="element-777">The dispay of the same mathematical content as rendendered with MathML encoding is presented here for comparison with the earlier display as picture :
+</para><para id="element-15">
+Display with MathML :
+<m:math display="block">
+      <m:mrow>
+      <m:msup>
+      <m:mi mathvariant="normal">α</m:mi>
+      <m:mo>2</m:mo>
+      </m:msup>
+      <m:mo>  +  </m:mo>
+      <m:msup>
+      <m:mi mathvariant="normal">β</m:mi>
+      <m:mo>2</m:mo>
+      </m:msup>
+      <m:mo>  +  </m:mo>
+      <m:mi mathvariant="normal">2α β</m:mi>
+      </m:mrow>
+</m:math>
+</para>
+</section>
+
+
+<section id="section-2">
+<title>Nature of mathematical expression</title>
+
+<para id="element-16">Mathematical content or expression differs significantly in comparison to normal text. We here present the major differences in the display requirement of the two types of presentation.</para>
+<para id="element-17">Mathematical expression is vastly different in the visual presentation and associated meaning that it conveys. Rendering of normal text in the newspaper or printed books or the ones typed in the standard text editor on the desk top - thanks to the beauty of the structure of the language - is limited to, may be, 50 characters. A change in font and style does not change the the meaning of the text (for exmaple what is said in a paragraph), whereas, mathematical expression is sensitive to the visual forms of font and accompanying style. A particular character style may be attached to the underlying mathematical meaning. For this reason, there are about 900 Unicode characters used in MathML – many of which may not of required in a particular context, but needed in the totality of mathematical expanse.</para>
+<para id="element-18">
+Normal text flows in horizontal rows. Each character, composing the text, comprises of a base line, which is used as reference for horizontal alignment. In the case of mathematical expressions, the bases of the constituent characters are not at the same level. Consider the limits assigned to an expression involving integration. </para>
+
+<para id="element-19"><m:math display="block">
+		<m:mrow>
+			<m:msubsup>
+				<m:mi> ∫ </m:mi>
+				<m:mi> a </m:mi>
+				<m:mi> b </m:mi>
+			</m:msubsup>
+			<m:mrow>
+				<m:msup>
+					<m:mi> ⅇ </m:mi>
+					<m:mi> x </m:mi>
+				</m:msup>
+				<m:mo> ⁢ </m:mo>
+				<m:mrow>
+					<m:mo> ⅆ </m:mo>
+					<m:mi> x </m:mi>
+				</m:mrow>
+			</m:mrow>
+		</m:mrow>
+	</m:math>
+</para>
+
+<para id="element-21">This difference in the structural levels of constituents may be repetitive as well : 
+</para>
+<para id="element-22">
+    <m:math display="block">
+
+              <m:mi>g</m:mi> 
+              <m:mo stretchy="false">(</m:mo> 
+              <m:mi>z</m:mi> 
+              <m:mo stretchy="false">)</m:mo> 
+              <m:mo>=</m:mo>
+         <m:mrow> 
+              <m:msubsup> 
+                <m:mi>e</m:mi> 
+                <m:mrow/> 
+                <m:mrow> 
+                  <m:mo>-</m:mo> 
+                  <m:munderover> 
+                    <m:mo>∑</m:mo> 
+                    <m:mrow> 
+                      <m:mi>i</m:mi> 
+                      <m:mo>=</m:mo> 
+                      <m:mn>0</m:mn> 
+                    </m:mrow> 
+                    <m:mi>∞</m:mi> 
+                  </m:munderover> 
+                  <m:msubsup> 
+                    <m:mi>z</m:mi> 
+                    <m:mi>i</m:mi> 
+                    <m:mn>2</m:mn> 
+                  </m:msubsup> 
+                </m:mrow> 
+              </m:msubsup> 
+      </m:mrow> 
+</m:math>  
+</para>
+<para id="element-23">The examples shown above highlight the two dimensional aspect of mathematical rendering. In the nutshell, normal text has a linear layout, whereas mathematical expression has two dimensional lay out. This aspect, in turn, introduces the requirement of alignment of characters along multiple horizontal and vertical lines. </para>
+<para id="element-24">Renderdering of expresion in the 
+      <m:math>
+		<m:mfrac bevelled="true">
+			<m:mi> P </m:mi>
+			<m:mi> Q </m:mi>
+		</m:mfrac>
+		<m:mi>   </m:mi>
+	</m:math>   format is typical of the requirement of presentation in  vertical direction. Presentation of <m:math display="inline">
+		<m:mi> x </m:mi>
+		<m:mo> = </m:mo>
+		<m:mfrac bevelled="true">
+			<m:mi> P </m:mi>
+			<m:mi> Q </m:mi>
+		</m:mfrac>
+		<m:mi>   </m:mi>
+	</m:math>, on the other hand, is actually a combination of single and two dimensional presentations, where linear (x =) and two dimensional elements (nominator and denominator parts above and below horizontal divider) are required to be aligned along a central horizontal line. 
+</para>
+
+<para id="element-25">
+      <m:math display="block">
+          <m:mi> x </m:mi>
+          <m:mo> = </m:mo>
+	<m:mfrac> 
+          <m:mi> a </m:mi> 
+          <m:mi> b </m:mi> 
+         </m:mfrac> 
+    </m:math>  
+</para>
+<para id="element-26">
+Further, repeated use of 
+<m:math display="inline">
+	<m:mfrac bevelled="true"> 
+          <m:mi> P </m:mi> 
+          <m:mi> Q </m:mi> 
+         </m:mfrac> 
+         <m:mi>   </m:mi>  
+    </m:math> form in the vertical direction involves alignment along multiple horizontal lines :
+</para>
+<para id="element-27">
+    <m:math display="block">
+          <m:mi> x </m:mi> 
+          <m:mo>  =  </m:mo> 
+	<m:mfrac linethickness="2"> 
+          <m:mrow> 
+          <m:mfrac> 
+          <m:mi> (a + b) </m:mi> 
+          <m:mi> (c + d) </m:mi> 
+         </m:mfrac>
+          <m:mo>  +  </m:mo>
+          <m:mfrac> 
+          <m:mi> (e + f) </m:mi> 
+          <m:mi> (g + h) </m:mi> 
+         </m:mfrac>          
+          </m:mrow> 
+         <m:mfrac> 
+          <m:mi> (i + j) </m:mi> 
+          <m:mi> (k + l) </m:mi> 
+         </m:mfrac> 
+        </m:mfrac>
+    </m:math>  
+</para>
+
+<para id="element-28">
+The MathML provides a simple logical construct to encapsulate these complex presentation requirements of mathematical content. Fortunately, this logical construct is linear in that we may proceed to write codes starting from left of the expression to the end of it. This is one important characteristic of mark up paradigm in MathML. Even when handling two dimensional structures, we put the element designed for two dimensional layout mark up at the center of coding theme for that particular term and proceed to write code linearly for vertical components of display like numerator and denominator. For example, expression <m:math display="inline">
+      <m:mfrac> 
+        <m:mrow> 
+        <m:mo> ⅆ </m:mo> 
+        <m:mi> x </m:mi> 
+        </m:mrow> 
+        <m:mrow> 
+          <m:mo> ⅆ </m:mo> 
+          <m:mi> t </m:mi> 
+        </m:mrow> 
+      </m:mfrac> 
+    </m:math>  
+         , is coded with “mfrac” element which provides the frame work to write two dimensional expression.
+</para>
+<para id="element-29">Apparently, going by the bulk of the code writing; writing MathML appears a difficult proposition, but thanks to the mark up design team at W3C, we would actually not require more than two dozens such mark up elements for most of the situations - out of which only 10 elements would be in regular use. This is the simplicity of the paradigm provided in MathML that must always be kept in mind. 
+</para>
+</section>
+
+
+<section id="section-3">
+<title>MathML and XML</title>
+
+<para id="element-35">MathML is a XML specification targeted to present mathematical content. In that sense, MathML may be considered as a subset of XML document. Mathematical content is is usually placed with normal text, figures and other elements of a document. For this reason, the MathML encoding leaves normal text/ picture rendering to the parent XML environment (DTD). As such, there is a document specifications in the corresponding Document Type Definition (DTD) file for XML and a document specifications in the corresponding DTD file for MathML.  
+</para> 
+<para id="element-36">
+</para> 
+
+<para id="element-37">As XML encompasses MathML, it is logical that the syntax and grammar of coding or marking up in MathML is similar as that of XML document. The syntax and grammar for the use of elements of both XML and MathML in a document are largely governed by the definition contained within XML DTD, except for few additional rules defined by MathML DTD. On the other hand, MathML provides the specific details of the functioning of MathML elements and few additional rules related to syntax and grammar for MathML markings. </para> 
+
+<para id="element-38">For reasons as detailed above, the document that includes MathML should contain DTD declaration for both XML and MathML. The top most structure level of the document is defined by XML’s “document” and “content” elements. The MathML codes are then inserted between the opening and closing tags of “content” element. </para> 
+
+<para id="element-39">
+
+A typical structure of a “xml” document containing MathML elements would look like :
+</para>
+<para id="element-40">
+	  <code display="block" id="idp5535136">
+	    
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!DOCTYPE math 
+    PUBLIC "-//W3C//DTD MathML 2.0//EN"
+           "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"
+&gt;
+
+&lt;document xmlns:m="http://www.w3.org/1998/Math/MathML"&gt;
+&lt;content&gt; 
+
+
+MathML code lines can be placed here.
+……………
+……………
+
+&lt;/content&gt;
+
+&lt;/document&gt;
+	    
+	  </code>
+</para>
+<para id="element-41">As pointed out, the MathML specification, in addition to providing details about its element, also defines additional syntax and grammar for MathML markings. First additional rule pertains to restriction on the assignment of the values to the attributes of the MathML element (say only a positive value). XML does not put this kind of restriction. The second additional rule pertains to the different treatments given to the child elements placed within a MathML element. Its order and uses are defined by MathML DTD. In MathML, we would require to place child elements in certain order to satisfy the requirement of necessary arguments in a particular order. </para>
+
+<para id="element-42">
+
+In the nutshell, we can conclude that syntax and grammar is largely defined by XML’s DTD; whereas details of MathML elements and few additional syntax and grammars are defined by MathML DTD.
+</para>
+</section>
+
+<section id="section-4">
+<title>Writing in mathML</title>
+
+
+<para id="element-31">
+Writing codes in MathML appears complex, but it is not so in practice when taken up with certain basic planning. In particular, following facts that makes this task easy are :</para> 
+<para id="element-32">
+(i)	Coding paradigm in MathML is linear which proceeds from left to right.</para> 
+<para id="element-33">(ii)	There are about 25 mark up elements to master to write MathML for most of the situations - out of which only 10 may be regularly used.</para> 
+<para id="element-30">
+(iii)	There are ways around via copy (ctrl+c) and paste (ctrl+v) to replicate  blocks of codes.
+</para> 
+</section>
+<section id="section-5">
+<title>A Foot note : why this  course?</title>
+
+<para id="element-660">I was initiated to write a physics course for higher secondary school students on the connexions platform. It appeared to be a great place to write modules, courses and books. The concept of publishing and sharing knowledge without going into the trouble of finding a publisher was heaven-sent.  I started with great energy and enthusiasm till I hit the road block of handling mathematics for my course. </para>
+
+<para id="element-111">There exists great many helps, tutorials, guides and “go around” suggestions splattered on the web site for using MathML, but it looked as if I needed a full dress down on this medium of mathematics for web publishing. By all counts, it appeared to be a real pain, constantly taking my attention away from the basic task of writing book/course on physics. I was just not satisfied with “work aorunds” - always fearing I might eventually run in to the dead end - right when I had finished creating bulk of the material for the course.</para>
+
+<para id="element-718">Eventually, what I wanted that I be sure of expressing MathML quickly and effectively. To this end, I have conjured up this tutorial that takes the help of familiar softwares available on the desktop to implement MathML.</para>
+
+<para id="element-843">In this course, we can begin with what is available on the desk top and what we had been using all along. Just we need to download a browser supporting MathML. In my case, the Internet explorer, on the desktop was out of the synch and so I downloaded Mozilla Firefox (easy to download from : http://www.mozilla.org). The newer version of IE also supports MathML. There is no preference. It is just a question of what you have. Then, using the MS Word - the standard text editor available on most desktops -  we can experiment through mathematical constructs and quickly acquire sufficient skills to go ahead with the electronic publication. </para>
+
+<para id="element-226">I would, however, be careful to spell out the limits on the coverage. Let us be clear that this course is not intended to be a comprehensive treatment on MathML. Instead, the coverage is restricted to areas, which form the basic part of the electronic publication of mathematical content. For this reason, not-so-useful details of attributes, parameters, options, tags, elements etc are simply spared. Further, the style of presentation is result oriented – not “teaching type”, and is solely based upon the perception of difficulties in presenting mathematics on web and its solution in using MathML. </para>
+
+
+<para id="element-300">It is my sincere endeavor to help authors, who feel the same about MathML and beginners who want to understand MathML paradigm in basic form. I am looking forward to <link url="mailto: sunilkr99@yahoo.com"> views and ways to improve </link> this course. </para>
+</section>
+
+
+
+  </content>
+  
+</document>

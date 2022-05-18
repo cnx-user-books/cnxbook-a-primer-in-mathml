@@ -1,0 +1,457 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Displaying mathematical content</title>
+  <metadata>
+  <md:content-id>m13539</md:content-id><md:title>Displaying mathematical content</md:title>
+  <md:abstract>The topmost element in mathML is "math" element.</md:abstract>
+  <md:uuid>052cce41-e65d-4dc3-8170-a5cd796ed0fa</md:uuid>
+</metadata>
+
+<content>
+
+
+<para id="element-253">We need to display mathematics in different situations and in different ways. When we do not specify how to display the content, then “math” element simply displays the mathematical content starting from the left side of the browser. We can, however, specify display by providing values to the “display” attribute of math element. This attribute takes two values : "inline" and "block".</para>
+
+<para id="element-1">It must be emphasized that "math" element is the top level element and serves as the constructor for all MathML elements. A MathML mark ups without this top level element would result in implementation error. 
+</para>
+
+
+
+<section id="section-1">
+<title>Inline display</title>
+
+<para id="element-305">Let us consider the implementation of "math" element with its "display" attribute set to the value "inline". The starting tag of "math" element looks like &lt;m:math display="inline"&gt; :</para>
+
+<example id="display1">
+	<title>Inline display</title>
+	<para id="reglist">
+	  <code id="id17433438" display="block">
+	    
+    &lt;m:math display="inline"&gt;
+           &lt;m:mrow&gt; 
+              &lt;m:mi mathvariant="bold"&gt;v&lt;/m:mi&gt;
+              &lt;m:mo&gt;=&lt;/m:mo&gt; 
+              &lt;m:mfrac&gt; 
+                &lt;m:mi mathvariant="bold"&gt;AB&lt;/m:mi&gt;
+                &lt;m:mi&gt;t&lt;/m:mi&gt;
+              &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt;
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-306">
+Save the file after editing as “test.xml”. The display looks like  :
+</para>
+<para id="element-307">
+    <m:math display="inline">
+           <m:mrow> 
+              <m:mi mathvariant="bold">v</m:mi>
+              <m:mo>=</m:mo> 
+              <m:mfrac> 
+                <m:mi mathvariant="bold">AB</m:mi>
+                <m:mi>t</m:mi>
+              </m:mfrac> 
+          </m:mrow>
+     </m:math> 
+</para>
+</example>
+
+
+<para id="element-308">  
+Now, we edit the above file, making a single change. We specify the start tag of the "math" element as &lt;m:math&gt;. We find that the display of the content in the browser with the edit affected is same as when "display" attribute was given "inline" value. This is because, the attribute value “inline” is actually the default value of “math” element. However, this left hand display in the browser is not the main feature of "inline" specification. More importantly, "inline" attribute allows us to display the math content embedded right into the bulk of text. See the code below to display two subscripted variables (for the time being, do not bother to know the elements used). Just copy the code and paste the same in a new MS Word document and save as “test.xml”. The display in the MathML enabled  browser is shown in the example here :
+</para>
+<example id="display2">
+	<title>Inline display</title>
+	<para id="reglist1">
+	  <code id="id18201341" display="block">
+	    
+&lt;para id="para1"
+The object is moving with two different speeds 
+&lt;m:math display="inline"&gt; 
+   &lt;m:msubsup&gt;
+     &lt;m:mi&gt;v&lt;/m:mi&gt;
+     &lt;m:mn&gt;1&lt;/m:mn&gt;
+     &lt;m:mrow/&gt;
+   &lt;/m:msubsup&gt;
+&lt;/m:math&gt;  and 
+&lt;m:math display="inline"&gt;
+    &lt;m:msubsup&gt;
+      &lt;m:mi&gt;v&lt;/m:mi&gt;
+      &lt;m:mn&gt; 2&lt;/m:mn&gt;
+      &lt;m:mrow/&gt;
+    &lt;/m:msubsup&gt;
+&lt;/m:math&gt; in two equal time intervals. Find the average speed.
+&lt;/para&gt;
+	    
+	  </code>
+</para>
+<para id="element-309">
+The display looks like  :
+</para>
+<para id="element-310">
+The object is moving with two different speeds <m:math display="inline"> <m:msubsup>	<m:mi>v</m:mi><m:mn>1</m:mn>	<m:mrow/></m:msubsup> </m:math>  and <m:math display="inline"> 	<m:msubsup> 	<m:mi>v</m:mi> <m:mn> 2</m:mn><m:mrow/></m:msubsup></m:math> in two equal time intervals. Find the average speed.
+</para>
+</example>
+</section>
+
+
+
+<section id="section-2">
+<title>Block display</title>
+
+<para id="element-312">
+Normally, mathematical content is displayed separated from the body of text as a  block. To facilitate this display, we need to provide "block" value to "display" attribute of the "math" element. 
+</para>
+
+<example id="display3">
+	<title>Block display</title>
+	<para id="reglist3">
+	  <code id="id18515223" display="block">
+	    
+The velocity is mathematically expressed in terms of displacement and time as :   
+&lt;m:math display="block"&gt;
+           &lt;m:mrow&gt; 
+              &lt;m:mi mathvariant="bold"&gt;v&lt;/m:mi&gt;
+              &lt;m:mo&gt;=&lt;/m:mo&gt; 
+              &lt;m:mfrac&gt; 
+                &lt;m:mi mathvariant="bold"&gt;AB&lt;/m:mi&gt;
+                &lt;m:mi&gt;t&lt;/m:mi&gt;
+              &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt;
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-314">
+Save the file after editing as “test.xml”. Note that the main body of the text is clearly separated from body of the text.
+</para>
+<para id="element-315"> The velocity is mathematically expressed in terms of displacement and time as :
+    <m:math display="block">
+           <m:mrow> 
+              <m:mi mathvariant="bold">v</m:mi>
+              <m:mo>=</m:mo> 
+              <m:mfrac> 
+                <m:mi mathvariant="bold">AB</m:mi>
+                <m:mi>t</m:mi>
+              </m:mfrac> 
+          </m:mrow>
+     </m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-2a">
+<title>MathML elements</title>
+
+<para id="element-317">There are scores of elements in MathML. They are grouped under two broad headings : 
+</para>
+
+<para id="element-317a">
+<list id="list-101" list-type="enumerated">
+
+<item>Presentation elements</item>
+<item>Content elements</item>
+</list>
+</para>
+
+<para id="element-318">
+Presentation elements describe visual represntation of mathematical notation or content in a two-dimensional plane. In other words, these elements emphasize the visual attributes like size, color, alignment and relative postions. The content elements, on the other hand, emphasize the mathematical “sense” of the expression. There are nearly 30 presentation elements and 50 attributes. Content elements are more in numbers - about 120, but they accept only about a dozen attributes. 
+</para>
+</section>
+
+
+<section id="section-3">
+<title>Presentation elements</title>
+
+
+<para id="element-320">
+Presentation elements fall under following categories :
+</para>
+
+<para id="element-321">
+1: Token elements : These elements display data and text. We must know that the  token elements are the only MathML elements permitted to contain character data.  It is relevant to know that MathML character data set is Unicode characters, which are about 900 in numbers. In total, the token elements are seven (7) in numbers. The names and their basic role in rendering content are listed here :
+</para>
+
+<para id="element-321a">
+<list id="list-1" list-type="bulleted">
+<title>Token elements</title>
+<item>mi : renders identifires and symbols</item>
+<item>mn : renders numbres</item>
+<item>mo : renders mathematical opreators</item>
+<item>mtext : renders text</item>
+<item>mspace : creates space in both horizontal and vertical directions</item>
+<item>ms : renders content for processing by other programs</item>
+<item>mglymph : enables creating new characters</item>
+</list>
+</para>
+
+
+<para id="element-322">
+2: Layout elements : They serve as placeholders for text and data at different levels of display matrix or as mechnism to distribute mathematical content in two dimensional space. There are three broad categories of layout elements : 
+</para>
+
+<para id="element-322a">
+(i) Basic layout elements : They provide basic frame work for structuring mathematical expression in two dimensional space. The basic layout elements are ten (10) in numbers. The names and their basic role in rendering layout are listed here :
+</para>
+
+<para id="element-322aa">
+<list id="list-2" list-type="enumerated">
+<title> Basic layout elements </title>
+<item>“mrow”  : makes horizontal groups of sub-expressions for variety of purposes</item> 
+<item> mfrac  : renders elements in <m:math display="inline"><m:mfrac><m:mi>P</m:mi><m:mi>Q</m:mi></m:mfrac></m:math> form </item> 
+<item> msqrt : renders a square root</item> 
+<item> mroot : renders a radical with an index</item> 
+<item> mstyle : sets style attributes for the enclosed elements</item> 
+<item> merror : enclose a syntax error message from a preprocessor</item> 
+<item>mpadded : manages space around content by manipulating the size of box surrounding content</item> 
+<item>mphantom : makes content invisible, while maintaining structure </item> 
+<item>mfenced : surrounds its content with a pair of fences and segregates content's terms with separators</item> 
+<item>menclose : enclose content with a stretching symbol </item> 
+</list>
+</para>
+
+
+<para id="element-322b">  
+(ii) Scripting elments : They provide the mechanism to render sub and super script, under and over scipt and such other scripting lay out. , under proviides For example, msup and msub provide mechanism to script a base character with a pair of scripting characters such as <m:math display="inline"> <m:msubsup>	<m:mi>v</m:mi><m:mrow/><m:mo>2</m:mo>	</m:msubsup> </m:math> and <m:math display="inline"> <m:msubsup>	<m:mi>A</m:mi><m:mo>1</m:mo><m:mrow/>	</m:msubsup> </m:math>. The scripting lay out elements are seven (7) in numbers. The names and their basic role in rendering layout are listed here : 
+</para>
+
+<para id="element-322bb">
+<list id="list-3" list-type="enumerated">
+<title> Basic layout elements </title>
+<item>msub  : displays subscript</item> 
+<item>msup  : displays superscript </item> 
+<item>msubsup : displays sub and super script simultaneously</item> 
+<item> munder : displays under script</item> 
+<item> mover : displays over script</item> 
+<item> munderover : displays under and over script simultaneously</item> 
+<item>mmultiscripts : displays multiple vertically sub and super scripts simultaneously</item> 
+</list>
+</para>
+
+<para id="element-322c">
+(iii) Table forming elements : They provide schemata for the formation of a table. They are six (6) in numbers : 
+</para>
+<para id="element-322cc">
+<list id="list-4" list-type="enumerated">
+<title> Table elements </title>
+<item>mtable  : creats table</item> 
+<item>mlabeledtr  : creats a labelled row </item> 
+<item>mtr : creates a row</item> 
+<item> mtd : creats a column</item> 
+<item> maligngroup : Grouping element</item> 
+<item> malignmark : creats alignment markings</item> 
+</list>
+</para>
+</section>
+<section id="section-3a">
+<title>Child elements and arguments</title>
+
+
+
+<para id="element-330">
+Most of the elements (other than empty elements in content MathML) enclose child elements. Some of the elements, however, require that certain numbers of child elements or blocks of child elements be present. In such cases, these conditional child elements or blocks of child elements are called arguments. 
+</para>
+
+<para id="element-334">
+Consider the example. Here “msub” element requires a minimum of two child elements. The child elements  “mo” and “mi” in this example are, therefore, called arguments.
+</para>
+<example id="display5">
+	<title>Arguments</title>
+	<para id="reglist5">
+	  <code id="id17540540" display="block">
+	    
+      &lt;m:math display="block"&gt;
+        &lt;m:msub&gt;
+          &lt;m:mi&gt; A &lt;/m:mi&gt;
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+        &lt;/m:msub&gt;
+      &lt;/m:math&gt; 
+ 	    
+	  </code>
+</para>
+<para id="element-335">
+Save the file after editing as “test1.xml” and see the display. The display looks like  :
+</para>
+<para id="element-336">
+    <m:math display="block">
+       <m:msub>
+         <m:mi> A </m:mi>
+         <m:mn> 1 </m:mn>
+       </m:msub>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-331">
+Consider another example given below. Here, “mfrac” element requires exactly two arguments. In case, there are more than two child elements, then “mrow” is to place child elements in two blocks as “mfrac” would take only two arguments –first block representing numerator and second block representing denominator of a ratio. The group of child elements enclosed within each pair of "mrow" tags consitutes one argument of the "mfrac" element. 
+</para>
+
+<example id="display4">
+	<title>Child elements</title>
+	<para id="reglist4">
+	  <code id="id18689297" display="block">
+	    
+    &lt;m:math display="block"&gt;
+           &lt;m:mrow&gt; 
+              &lt;m:mi&gt;v&lt;/m:mi&gt;
+              &lt;m:mo&gt;=&lt;/m:mo&gt; 
+              &lt;m:mfrac&gt; 
+           &lt;m:mrow&gt; 
+              &lt;m:mi&gt;a&lt;/m:mi&gt;
+	      &lt;m:mo&gt;+&lt;/m:mo&gt;
+              &lt;m:mi&gt;b&lt;/m:mi&gt;
+           &lt;/m:mrow&gt; 
+              &lt;m:mi&gt;c&lt;/m:mi&gt;
+              &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt;
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-332">
+Save the file after editing as “test.xml”. The display looks like  :
+</para>
+<para id="element-333">
+    <m:math display="block">
+           <m:mrow> 
+              <m:mi>v</m:mi>
+              <m:mo>=</m:mo> 
+              <m:mfrac> 
+           <m:mrow> 
+              <m:mi>a</m:mi>
+	      <m:mo>+</m:mo>
+              <m:mi>b</m:mi>
+           </m:mrow> 
+              <m:mi>c</m:mi>
+              </m:mfrac> 
+          </m:mrow>
+     </m:math> 
+</para>
+</example>
+</section>
+
+
+
+
+<section id="section-4">
+<title>Creating table</title>
+<para id="element-338">
+We have chosen this advance topic right in the beginning with a purpose. Matter of fact, it is important to introduce this topic from the point of view of presenting display of example output in a well structured form. The basic purpose here is to acquire capability to distribute display of math content in different parts of the browser window – without taking recourse to “xml” elements. Hence, our purpose is not to know the details of creating various types of tables in mathML (we shall learn this topic in details later), but to know only elementary idea about creating table so that we get the capability to format the mathematical content display as per the requirement in hand. 
+</para><para id="element-339">
+For the reason cited as above, the creation of table, is limited to creating invisible table (without border) with rows and columns so that mathematical expressions are suitably placed on the matrix of the browser and is not rendered simply as a continuous line of display. 
+</para><para id="element-340">
+The top most table element "mtable" contains "mtr" (row) and "mtd" (column) elements. A general construct for 2 rows 2 columns is given here. It is not very difficult to infer from the code lay out that "mtr" element, following "mtable" element defines a single row, which in turn, are split in columns as defined by "mtd" elements.
+
+</para>
+
+<example id="display6">
+	<title>Codes for creating table</title>
+	<para id="reglist6">
+	  <code id="id10880935" display="block">
+	    
+&lt;m:math display="block"&gt;
+&lt;m:mtable&gt;
+	&lt;m:mtr&gt;
+		&lt;m:mtd&gt;
+		....
+		&lt;/m:mtd&gt;
+		&lt;m:mtd&gt;
+		....
+		&lt;/m:mtd&gt;
+	&lt;/m:mtr&gt;
+	&lt;m:mtr&gt;
+		&lt;m:mtd&gt;
+		....
+		&lt;/m:mtd&gt;
+		&lt;m:mtd&gt;
+		....
+		&lt;/m:mtd&gt;
+	&lt;/m:mtr&gt;
+&lt;/m:mtable&gt;
+&lt;/m:math&gt; 
+ 	    
+	  </code>
+</para>
+</example>
+<para id="element-341">
+We can now use the table matrix to fill in with the mathematical content. A simple example is given below :
+</para>
+
+
+<example id="display7">
+	<title>Structured display</title>
+	<para id="reglist7">
+	  <code id="id16694876" display="block">
+	    
+      &lt;m:math display="block"&gt;
+    &lt;m:mtable&gt;
+      &lt;m:mtr&gt;
+	&lt;m:mtd&gt;
+	  &lt;m:mtext&gt;The value of x is :&lt;/m:mtext&gt;
+	&lt;/m:mtd&gt;
+	&lt;m:mtd&gt;
+	  &lt;m:mn&gt;10&lt;/m:mn&gt;
+	&lt;/m:mtd&gt;
+      &lt;/m:mtr&gt;
+      &lt;m:mtr&gt;
+	&lt;m:mtd&gt;
+	  &lt;m:mtext&gt;The value of y is :&lt;/m:mtext&gt;
+	&lt;/m:mtd&gt;
+	&lt;m:mtd&gt;
+	  &lt;m:mn&gt;20&lt;/m:mn&gt;
+        &lt;/m:mtd&gt;
+	&lt;/m:mtr&gt;
+    &lt;/m:mtable&gt;
+      &lt;/m:math&gt; 
+ 	    
+	  </code>
+</para>
+<para id="element-342">
+Save the file after editing as “test.xml”. The display looks like  :
+</para>
+<para id="element-343">
+  <m:math display="block">
+    <m:mtable>
+      <m:mtr>
+	<m:mtd>
+	  <m:mtext>The value of x is :</m:mtext>
+	</m:mtd>
+	<m:mtd>
+	  <m:mn>10</m:mn>
+	</m:mtd>
+      </m:mtr>
+      <m:mtr>
+	<m:mtd>
+	  <m:mtext>The value of y is :</m:mtext>
+	</m:mtd>
+	<m:mtd>
+	  <m:mn>20</m:mn>
+        </m:mtd>
+	</m:mtr>
+    </m:mtable>
+  </m:math>
+</para>
+</example>
+</section>
+
+<section id="section-5">
+<title>Grouping with mrow element</title>
+
+<para id="element-344b">
+This topic is also a preparatory in the sense that we encounter this element now and then in any of coding effort we undertake. Its primary function within a parent element is to combine child elements enclosed between its tags as one unit for the parent element and align them horizontally. This grouping is important in order to meet the requirement of elements, which takes certain number of arguments. 
+</para>
+
+<para id="element-344c">
+The MathML coding frame work, however, is aware of the cluttering of codes due to repetitive use of this element. For this reason, "mrow" element is inferred even if not applied with certain elements. It is not necessary to remember the list of these elements capable to infer "mrow" as the same is implied logically. The elements, which require zero or one or exactly one argument, enforce child elements inside it to be clubbed together as one argument. For this reason, elements, requiring zero or one or exactly one argument, infer “mrow” even without explicit "mrow" tags. A square root element, for example, takes zero or one argument and as such implements “mrow” impicitly. Similar is the case with “mtd” element and other elements, requiring one argument. It must be understood that if there is only one child element, then there is no need to implement "mrow" for grouping either inexplicitly or explicitly.
+</para>
+
+<para id="element-344d">
+Inferred “mrow” is a great help. Imagine if you were to write a pair of “mrow” tags for each of the “mtd” column tags for creating a simple table.
+</para>
+</section>
+</content>
+  
+</document>

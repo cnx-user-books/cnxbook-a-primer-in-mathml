@@ -1,0 +1,606 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Presentation layout elements (mrow, mfrac, msqrt, mroot)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>7cf8a312-27d5-4f40-a74c-262edff22ff8</md:uuid>
+</metadata>
+  <content>
+<para id="element-2">
+Layout elements control two dimensional layout of characters, symbols and composed expressions. There are three groups of elements that determine the two dimensional lay out of the mathematical content and affects its maangement. 
+</para>
+<para id="element-3">
+<list id="list-1" list-type="bulleted">
+<title>Layout element groups</title>
+<item>Basic layout elements </item> 
+
+<item>Scripting elements</item> 
+<item>Table elements</item> 
+</list>
+</para>
+
+<para id="element-4">
+Basic layout elements comprises of 10 elements. The names and their basic role in rendering layout are listed here :
+<list id="list-2" list-type="enumerated">
+<title> Basic layout elements </title>
+<item>“mrow”  : makes horizontal groups of sub-expressions for variety of purposes
+</item> 
+<item>“mfrac  : renders elements in P/Q form </item> 
+<item>“msqrt” : renders a square root
+</item> 
+<item> “mroot” : renders a radical with an index
+</item> 
+<item> “mstyle : set environment attributes for the enclosed elements
+</item> 
+<item> “merror : enclose a syntax error message from a preprocessor
+</item> 
+<item>“mpadded” : manages space around content
+</item> 
+<item>“mphantom” : makes content invisible, while maintaining structure </item> 
+<item>“mfenced” : Segregates terms with separators and surround its content with a pair of fences
+</item> 
+<item>“menclose” : enclose content with a stretching symbol </item> 
+</list>
+</para>
+
+<section id="section-1">
+<title> ”mrow” layout element </title>
+
+<para id="element-6">
+The “mrow” element is a horizontal sub-grouping facility. Grouping of sub expression is an important requirement for variety of reasons. Primarily, this element determines the relationship between an “operator” and “operand”. When there is single character “operator” and “operand” relationship, then grouping is not an issue. However, when there more than one “operand” in an expression, then grouping is required. 
+</para>
+
+<para id="element-7">
+Grouping of elements is also important where elements require certain numbers of argument. In such situation, it is possible that there are more child elements than the arguments required. Consider the example here, where child elements are grouped to meet the requirement of “mfrac” syntax for two arguments.
+</para>
+<example id="display1">
+	<title>"mfrac" layout element</title>
+	<para id="element-8">
+	  <code display="block" id="idp14157680">
+	    
+    &lt;m:math display="block"&gt;
+         &lt;m:mfrac&gt; 
+                  &lt;m:mrow&gt;
+                  &lt;m:mi&gt;x&lt;/m:mi&gt; 
+                  &lt;m:mo&gt;+&lt;/m:mo&gt; 
+                  &lt;m:mn&gt;y&lt;/m:mn&gt; 
+                  &lt;/m:mrow&gt;
+                  &lt;m:mn&gt;z&lt;/m:mn&gt; 
+         &lt;/m:mfrac&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para><para id="element-9">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-10">
+    <m:math display="block">
+         <m:mfrac> 
+                  <m:mrow>
+                  <m:mi>x</m:mi> 
+                  <m:mo>+</m:mo> 
+                  <m:mn>y</m:mn> 
+                  </m:mrow>
+                  <m:mn>z</m:mn> 
+         </m:mfrac>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-11">
+In the example above, “mrow” element is used to group the sub-expression “x + y” to be treated as numerator in “mfrac” implementation.
+</para>
+<para id="element-12">
+
+We have also seen earlier that “mrow” plays important role in determining the form of an operator. The form of an operator as “prefix” or “infix” or “postfix” is determined by the position of an operator in the group of sub expression defined by “mrow” element.
+</para>
+<para id="element-13">
+
+Grouping of elements, terms and sub-expressions (in yet another sub-expression) is a common requirement for meaningful mathematical expression. As such, MathML platform implements an inferred mechanism, whereby certain elements infer that the child elements are grouped with “mrow” in an implicit manner. This means that we may save on writing a pair of “mrow” tags in such situation. 
+</para>
+
+<para id="element-14">
+
+The elements, which implements inferred “mrow” are : “msqrt”, “mstyle”, “merror”, “menclose”, “mpadded”, “mphantom”, “mtd”, and “math”. Important to note here is the inclusion of top level “math” element in the list. It means that putting “mrow” tag just after “math” element is actually redundant.
+</para>
+
+<para id="element-15">
+If we look closely at the elements, which implement inferred “mrow”, then we observe that all these elements require to treat everything inside it as a single unit. This is the reason that they would otherwise require a pair of “mrow” tags to combine all child elements as one group. It is, therefore, good thinking on the part of MathML developers to enforce “mrow” inexplicitly and save on coding and avoid cluttering with “mrow” tags.
+</para>
+
+</section>
+<section id="section-2">
+<title> ”mfrac” layout element </title>
+
+<para id="element-17">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> linethickness </m:mi>
+        <m:mi> numalign </m:mi> 
+        <m:mi> denomalign </m:mi>
+        <m:mi> bevelled </m:mi> 
+        <m:mi> symmetric </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-18">
+The “mfrac” element renders fraction in <m:math display="inline"><m:mfrac bevelled="true"><m:mi>p </m:mi> <m:mi>q</m:mi> </m:mfrac> </m:math> form.  The element requires two arguments to implement the fraction. The first argument is numerator, while the second is denominator of the fraction. The syntax of the element is as given below :   
+</para>
+
+<para id="element-19">
+<code display="block" id="idp7349296">
+
+&lt;mfrac&gt; numerator denominator &lt;/mfrac&gt;
+
+</code>
+</para>
+
+
+<para id="element-20">
+The “mfrac” element is an extremely flexible element to produce very complicated fraction, in which numerator or denominator may themselves be a fraction. Such implementation is affected by nested “mfrac” as shown in the example here.    
+</para>
+
+<example id="display2">
+	<title>Nested "mfrac" display</title>
+	<para id="element-21">
+	  <code display="block" id="idp7735920">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mi&gt; x &lt;/m:mi&gt; 
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mfrac&gt; 
+
+          &lt;m:mrow&gt; 
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+          &lt;m:mo&gt; + &lt;/m:mo&gt;
+          &lt;m:mfrac&gt;
+           &lt;m:mn&gt; 3 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt; 
+          
+          &lt;m:mrow&gt; 
+          &lt;m:mfrac&gt;
+           &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 7 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;m:mo&gt; + &lt;/m:mo&gt;
+          &lt;m:mfrac&gt;
+           &lt;m:mn&gt; 12 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt; 
+
+      &lt;/m:mfrac&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para><para id="element-22">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-23">
+    <m:math display="block">
+      <m:mi> x </m:mi> 
+      <m:mo> = </m:mo>
+      <m:mfrac> 
+
+          <m:mrow> 
+          <m:mn> 1 </m:mn> 
+          <m:mo> + </m:mo>
+          <m:mfrac>
+           <m:mn> 3 </m:mn> 
+           <m:mn> 10 </m:mn> 
+          </m:mfrac> 
+          </m:mrow> 
+          
+          <m:mrow> 
+          <m:mfrac>
+           <m:mn> 2 </m:mn> 
+           <m:mn> 7 </m:mn> 
+          </m:mfrac> 
+          <m:mo> + </m:mo>
+          <m:mfrac>
+           <m:mn> 12 </m:mn> 
+           <m:mn> 5 </m:mn> 
+          </m:mfrac> 
+          </m:mrow> 
+
+      </m:mfrac> 
+    </m:math> 
+</para>
+</example>
+
+<para id="element-24">
+In the example, the numerator of the outermost “mfrac” element contains expression consisting of another “mfrac” element, while the denominator consists of two “mfrac” elements. Also note the use of “mrow” element to ensure that a “mfrac” elements takes exactly two arguments.  
+</para>
+<section id="section-2a">
+<title> Changing bar thickness </title>
+<para id="element-25">
+<m:math>
+<m:mstyle fontsize="12pt" fontweight="bold" fontstyle="normal" fontfamily="Helvetica">
+<m:mtext color="#f05"/>
+</m:mstyle>
+</m:math>
+</para>
+<para id="element-26">
+<list id="list-3" list-type="bulleted">
+<title>Attribute value types</title>
+<item> linethickness (default = 1) : number | thin | medium | thick </item>
+</list>
+</para>
+
+<para id="element-27">
+The fraction is displayed with a fraction bar or rule, separating numerator and denominator. Appearance of this bar can be changed using “linethickness” attribute. The default thickness of the bar is set by the rendering enviornment. When set to zero, no bar is shown. 
+</para>
+
+<para id="element-28">
+A thicker bar, in relation to default thickness, can be shown assigning values to “linethickness” attribute. MathML provides predetermined thin, medium and thick values, which is a preferred technique to display different thicknesses of the bar. This way, we can maintain uniformity in our display. Normally, bar thickness is not required to be changed except when nested “mfrac” is implemented. In that case, there are more than one bar and as such it may be required to distinguish the central bar from others. The example given here encapsulates these aspects of “mfrac” display.     
+.   
+</para>
+
+<example id="display3">
+	<title>Distinguishing line thichness in "mfrac" display</title>
+	<para id="element-29">
+	  <code display="block" id="idp11685232">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mi&gt; x &lt;/m:mi&gt; 
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mfrac linethickness="thick"&gt; 
+
+          &lt;m:mrow&gt; 
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+          &lt;m:mo&gt; + &lt;/m:mo&gt;
+          &lt;m:mfrac linethickness="medium"&gt;
+           &lt;m:mn&gt; 3 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt; 
+          
+          &lt;m:mrow&gt; 
+          &lt;m:mfrac&gt;
+           &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 7 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;m:mo&gt; + &lt;/m:mo&gt;
+          &lt;m:mfrac&gt;
+           &lt;m:mrow&gt;
+           &lt;m:mfrac linethickness="medium"&gt;
+             &lt;m:mn&gt; 8 &lt;/m:mn&gt; 
+             &lt;m:mn&gt; 11 &lt;/m:mn&gt; 
+           &lt;/m:mfrac&gt;
+           &lt;/m:mrow&gt;
+           &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt; 
+
+      &lt;/m:mfrac&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para><para id="element-30">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-31">
+    <m:math display="block">
+      <m:mi> x </m:mi> 
+      <m:mo> = </m:mo>
+      <m:mfrac linethickness="thick"> 
+
+          <m:mrow> 
+          <m:mn> 1 </m:mn> 
+          <m:mo> + </m:mo>
+          <m:mfrac linethickness="medium">
+           <m:mn> 3 </m:mn> 
+           <m:mn> 10 </m:mn> 
+          </m:mfrac> 
+          </m:mrow> 
+          
+          <m:mrow> 
+          <m:mfrac>
+           <m:mn> 2 </m:mn> 
+           <m:mn> 7 </m:mn> 
+          </m:mfrac> 
+          <m:mo> + </m:mo>
+          <m:mfrac>
+           <m:mrow>
+           <m:mfrac linethickness="medium">
+             <m:mn> 8 </m:mn> 
+             <m:mn> 11 </m:mn> 
+           </m:mfrac>
+           </m:mrow>
+           <m:mn> 5 </m:mn> 
+          </m:mfrac> 
+          </m:mrow> 
+      </m:mfrac>
+    </m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-2b">
+<title> Bevelled fraction and the alignment of rows  </title>
+
+
+<para id="element-33">
+<list id="list-4" list-type="bulleted">
+<title>Attribute value types</title>
+<item> numalign (default = center) : left | center | right </item>
+<item> denomalign (default = center) : left | center | right </item>
+<item> bevelled (default = false) : true | false </item>
+</list>
+</para>
+
+<para id="element-34">
+The “numalign” and “demoalign” affects alignment of numerator and denominator with respect to the bar. In most of the case, we do not change the default “center” element as this is the manner in which expressions are written in mathematics. 
+</para>
+
+<para id="element-35">
+The “bevelled” attribute provides an alternate form for rendering fraction. In beveled form, the bar is a slant line, in stead of a horizontal line. This form is useful, when we want to include fraction inside the text as its default form takes more vertical space than that of the text, disturbing line spacing between text lines. More significantly, this reduces vertical space of an intensively nested expression. 
+</para>
+
+<example id="display4">
+	<title>Bevelled "mfrac" display</title>
+	<para id="element-36">
+	  <code display="block" id="idp13100608">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mi&gt; x &lt;/m:mi&gt; 
+      &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mfrac bevelled="true" linethickness="thick"&gt; 
+
+          &lt;m:mrow&gt; 
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+          &lt;m:mo&gt; + &lt;/m:mo&gt;
+          &lt;m:mfrac linethickness="medium"&gt;
+           &lt;m:mn&gt; 3 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt; 
+          
+          &lt;m:mrow&gt; 
+          &lt;m:mfrac&gt;
+           &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+           &lt;m:mn&gt; 7 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;m:mo&gt; + &lt;/m:mo&gt;
+          &lt;m:mfrac&gt;
+           &lt;m:mrow&gt;
+           &lt;m:mfrac bevelled="true" linethickness="medium"&gt;
+             &lt;m:mn&gt; 8 &lt;/m:mn&gt; 
+             &lt;m:mn&gt; 11 &lt;/m:mn&gt; 
+           &lt;/m:mfrac&gt;
+           &lt;/m:mrow&gt;
+           &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+          &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt; 
+
+      &lt;/m:mfrac&gt;   
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para><para id="element-37">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-38">
+    <m:math display="block">
+      <m:mi> x </m:mi> 
+      <m:mo> = </m:mo>
+      <m:mfrac bevelled="true" linethickness="thick"> 
+
+          <m:mrow> 
+          <m:mn> 1 </m:mn> 
+          <m:mo> + </m:mo>
+          <m:mfrac linethickness="medium">
+           <m:mn> 3 </m:mn> 
+           <m:mn> 10 </m:mn> 
+          </m:mfrac> 
+          </m:mrow> 
+          
+          <m:mrow> 
+          <m:mfrac>
+           <m:mn> 2 </m:mn> 
+           <m:mn> 7 </m:mn> 
+          </m:mfrac> 
+          <m:mo> + </m:mo>
+          <m:mfrac>
+           <m:mrow>
+           <m:mfrac bevelled="true" linethickness="medium">
+             <m:mn> 8 </m:mn> 
+             <m:mn> 11 </m:mn> 
+           </m:mfrac>
+           </m:mrow>
+           <m:mn> 5 </m:mn> 
+          </m:mfrac> 
+          </m:mrow> 
+      </m:mfrac>   
+    </m:math> 
+</para>
+</example>
+</section>
+</section>
+
+
+<section id="section-3">
+<title> Radical layout elements </title>
+
+
+<para id="element-40">
+The “msqrt” and “mroot” are radical elements. The “msqrt” element renders square root, while “mroot” element represents indices with a base and index. 
+</para> 
+
+<section id="section-3a">
+<title> "msqrt" layout element </title>
+
+<para id="element-42">
+The “msqrt” element accepts zero or one argument. Its syntax is :
+</para>
+<para id="element-43">
+<code display="block" id="idp7681408">
+
+&lt;msqrt&gt; base &lt;/msqrt&gt;
+
+</code>
+</para>
+<para id="element-44">
+When there are more than one child elements, then they are considered to be enclosed within “mrow” tags. This means that the “msqrt” element draws an inferred implementation of “mrow”. This saves us from coding “mrow” tags explicitly, irrespective of numbers of arguments. 
+</para>
+
+<example id="display5">
+	<title>Square root element : msqrt</title>
+	<para id="element-45">
+	  <code display="block" id="idp9456976">
+	    
+    &lt;m:math display="block"&gt;
+         &lt;m:msqrt&gt; 
+                  &lt;m:mi&gt;x&lt;/m:mi&gt; 
+                  &lt;m:mo&gt;-&lt;/m:mo&gt; 
+                  &lt;m:mn&gt;3&lt;/m:mn&gt; 
+         &lt;/m:msqrt&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+
+<para id="element-46">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-47">
+    <m:math display="block">
+         <m:msqrt> 
+                  <m:mi>x</m:mi> 
+                  <m:mo>-</m:mo> 
+                  <m:mn>3</m:mn> 
+         </m:msqrt>
+    </m:math> 
+</para>
+</example>
+<para id="element-48">
+Like other elements in MathML, “msqrt” element supports nesting to enclose square root recursively.
+</para>
+<example id="display6">
+	<title>Nested square</title>
+	<para id="element-49">
+	  <code display="block" id="idp1253552">
+	    
+    &lt;m:math display="block"&gt;
+     &lt;m:msqrt&gt;
+       &lt;m:mi&gt;{&lt;/m:mi&gt; 
+       &lt;m:mi&gt;x&lt;/m:mi&gt; 
+       &lt;m:mi&gt;+&lt;/m:mi&gt; 
+        &lt;m:msqrt&gt;
+        &lt;m:mi&gt;(&lt;/m:mi&gt; 
+          &lt;m:mi&gt;x&lt;/m:mi&gt; 
+
+          &lt;m:mi&gt;+&lt;/m:mi&gt; 
+          &lt;m:mi&gt;10&lt;/m:mi&gt; 
+        &lt;m:mi&gt;)&lt;/m:mi&gt; 
+        &lt;/m:msqrt&gt; 
+       &lt;m:mi&gt;}&lt;/m:mi&gt; 
+     &lt;/m:msqrt&gt;     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-50">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-51">
+    <m:math display="block">
+     <m:msqrt>
+       <m:mi>{</m:mi> 
+       <m:mi>x</m:mi> 
+       <m:mi>+</m:mi> 
+        <m:msqrt>
+        <m:mi>(</m:mi> 
+          <m:mi>x</m:mi> 
+          <m:mi>+</m:mi> 
+          <m:mi>10</m:mi> 
+        <m:mi>)</m:mi> 
+        </m:msqrt> 
+       <m:mi>}</m:mi> 
+     </m:msqrt>
+     </m:math> 
+</para>
+</example>
+</section>
+<section id="section-3b">
+<title> "mroot" layout element </title>
+
+
+
+<para id="element-53">
+The “mroot” element requires exactly two arguments – the first one as the base and second as index. The syntax of the element is :
+</para>
+<para id="element-54">
+<code display="block" id="idp6503952">
+
+&lt;m:mroot&gt; base index &lt;/m:mroot&gt;
+
+</code>
+</para>
+<para id="element-55">
+Each of these arguments may be combination of elements, which must be grouped separately with the help of “mrow” element in two distinct groups.
+</para>
+
+<example id="display7">
+	<title>Indices element : mroot</title>
+	<para id="element-56">
+	  <code display="block" id="idp7322512">
+	    
+    &lt;m:math display="block"&gt;
+         &lt;m:mroot&gt;
+            &lt;m:mrow&gt;
+                  &lt;m:mi&gt;x&lt;/m:mi&gt; 
+                  &lt;m:mo&gt;-&lt;/m:mo&gt; 
+                  &lt;m:mn&gt;3&lt;/m:mn&gt;
+            &lt;/m:mrow&gt;
+             &lt;m:mfrac&gt;
+                  &lt;m:mi&gt;x&lt;/m:mi&gt; 
+                  &lt;m:mn&gt;2&lt;/m:mn&gt;
+             &lt;/m:mfrac&gt;
+         &lt;/m:mroot&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-57">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-58">
+    <m:math display="block">
+         <m:mroot>
+            <m:mrow>
+                  <m:mi>x</m:mi> 
+                  <m:mo>-</m:mo> 
+                  <m:mn>3</m:mn>
+            </m:mrow>
+             <m:mfrac>
+                  <m:mi>x</m:mi> 
+                  <m:mn>2</m:mn>
+             </m:mfrac>
+         </m:mroot>
+    </m:math> 
+</para>
+</example>
+</section>
+</section>
+
+
+ 
+  </content>
+  
+</document>

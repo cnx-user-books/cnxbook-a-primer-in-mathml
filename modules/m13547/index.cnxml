@@ -1,0 +1,322 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Presentation token elements (mi,mn)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>0260214f-db5e-4b62-aae5-c71f21b5afc1</md:uuid>
+</metadata>
+  <content>
+
+<para id="element-102">
+There are seven (7) token elements designed to serve the purpose of rendering characters to (i) display (“mi”,”mn”,”mo” and ”mtext”) mathematical content (ii) render characters for interfacing with other programs (“ms”) (iii) manage space around characters (mspace) and (iv) create new characters (mlymph).
+</para>
+<para id="element-103">
+The presentation token elements are the only elements to take and display characters in MathML. Mathematical symbols or identifiers are either single character (Example : x) or multiple characters (Example : sin). In mathematics, simple rendering of text is not sufficient. Mathematical content uses large numbers of symbols with varieties of visual forms and styles. In normal text rendering, font style does not matter, but different font styles convey different mathematical ideas and concepts and as such are treated as different characters. Besides, there are convention in mathematics about spacing around operators and relative size that needs to be negotiated with unequal size of other characters. To capture the complete spectrum of mathematical details, MathML employs about 900 characters and a specialized system of constructors that render mathematical content in consistent and coherent manner to match the precise nature of mathematical symbols and expressions. 
+</para>
+
+<para id="element-104">
+It is interesting to know that rendering of mathematical content by token elements - even if typed directly as string of characters and looking similar on browser display - is inherently different to simple text rendering in a horizontal sequence. The difference is visible when seen in the context of uses that require scripting like sub or super scripts, stretching of operators (like a parenthesis is required to grow to cover the height of expression enclosed etc) etc. 
+</para>
+
+<para id="element-105">
+In MathML, the differentiation operator <code>“&amp;DifferentialD;” </code>, for example, could have been represented by letter “d” and hence it may be argued why to include a separate character to represent the symbol of differentiation, which could be easily rendered using letter “d” from keyboard. The reason lies in the style convention of mathematics that requires this operator to have a specific style and form different to a normal character “d”. 
+</para>
+
+<para id="element-106">
+Furthermore, these token constructors provide many automatic behavior to character representation consistent with the convention in mathematics. An operator like “+” sign can be rendered with or without space depending upon the context in which the sign appears in the expression. 
+</para>
+<para id="element-107a">
+See the output of the MathML codes in the example given below. Inspect the space before and after the sign “+” in the output, the first "+" sign is very close to the identifier "a", while the second "+" is surrounded with greater amount of space in horizontal direction. These detailed display design consideration is extremely important  to reflect the preciseness required in displaying mathematics.
+</para>
+
+<example id="display101">
+	<title>Context based spacing in MathML</title>
+	<para id="element-107">
+	  <code display="block" id="idp6585648">
+	    
+   &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi&gt; x &lt;/m:mi&gt; 
+        &lt;m:mo&gt; + &lt;/m:mo&gt; 
+        &lt;m:mi&gt; y &lt;/m:mi&gt; 
+      &lt;/m:mrow&gt; 
+   &lt;/m:math&gt;
+
+	    
+	  </code>
+</para>
+<para id="element-108">
+Save the file after editing as “test3.xml”. The display looks like : 
+</para>
+<para id="element-109">
+   <m:math display="block">
+      <m:mrow> 
+        <m:mo> + </m:mo> 
+        <m:mi> x </m:mi> 
+        <m:mo> + </m:mo> 
+        <m:mi> y </m:mi> 
+      </m:mrow> 
+   </m:math>
+</para>
+</example>
+
+<para id="element-110">
+The point of specialized token construct is visually made through yet another example given belwo. Two simultaneous examples are implemented, using an entity reference <code>“&amp;RightArrow;” </code>. Note the impact of using “mover” element on the character reference <code>“&amp;RightArrow;” </code>. Compare the two outputs. Though the lay out of the arrow and text has not changed, but the arrow is stretched to accommodate the length of the text !
+</para>
+
+
+<example id="display102">
+	<title>Modified rendering</title>
+	<para id="element-111">
+	  <code display="block" id="idp8744496">
+	    
+   &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+        &lt;m:mi&gt; x &lt;/m:mi&gt; 
+          &lt;m:mo&gt; &amp;RightArrow; &lt;/m:mo&gt; 
+          &lt;m:mtext&gt; maps to &lt;/m:mtext&gt; 
+        &lt;m:mi&gt; y &lt;/m:mi&gt; 
+      &lt;/m:mrow&gt; 
+   &lt;/m:math&gt;
+
+   &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+        &lt;m:mi&gt; x &lt;/m:mi&gt; 
+        &lt;m:mover&gt; 
+          &lt;m:mo&gt; &amp;RightArrow; &lt;/m:mo&gt; 
+          &lt;m:mtext&gt; maps to &lt;/m:mtext&gt; 
+        &lt;/m:mover&gt; 
+        &lt;m:mi&gt; y &lt;/m:mi&gt; 
+      &lt;/m:mrow&gt; 
+   &lt;/m:math&gt;
+
+	    
+	  </code>
+</para>
+<para id="element-112">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-113">
+   <m:math display="block">
+      <m:mrow> 
+        <m:mi> x </m:mi> 
+          <m:mo> → </m:mo> 
+          <m:mtext> maps to </m:mtext> 
+        <m:mi> y </m:mi> 
+      </m:mrow> 
+   </m:math>
+
+   <m:math display="block">
+      <m:mrow> 
+        <m:mi> x </m:mi> 
+        <m:mover> 
+          <m:mo> → </m:mo> 
+          <m:mtext> maps to </m:mtext> 
+        </m:mover> 
+        <m:mi> y </m:mi> 
+      </m:mrow> 
+   </m:math>
+</para>
+</example>
+
+
+<section id="section-1">
+<title>"mi" token element </title>
+
+
+<para id="element-4">
+The “mi” element is used to display mathematical identifiers. Identifiers in MathML include literals, constants, name of the angle, trigonometric function etc. The example, here, displays both single and multi character identifiers. 
+</para>
+
+
+<example id="display1">
+	<title>Display with mi element</title>
+	<para id="element-5">
+	  <code display="block" id="idp8540272">
+	    
+    &lt;m:math display="block"&gt;
+       &lt;m:mtext&gt;I is displayed as :  &lt;/m:mtext&gt; 
+       &lt;m:mi&gt; I &lt;/m:mi&gt; 
+       &lt;m:mtext&gt;&amp;nbsp;&amp;nbsp;and trigonometric sine function 
+       is displayed as :  &lt;/m:mtext&gt; 
+       &lt;m:mi&gt; sin &lt;/m:mi&gt; 
+       &lt;m:mi&gt; θ &lt;/m:mi&gt; 
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-6">
+Save the file after editing as “test3.xml”. The display looks like : 
+</para>
+<para id="element-7">
+    <m:math display="block">
+       <m:mtext>I is displayed as :  </m:mtext> 
+       <m:mi> I </m:mi> 
+       <m:mtext>   and trigonometric sine function is displayed as :  </m:mtext> 
+       <m:mi> sin </m:mi> 
+       <m:mi> θ </m:mi> 
+     </m:math> 
+</para>
+</example>
+<para id="element-8">
+Here "&amp;nbsp;" has been used to create two spaces to improve readability.
+</para>
+<para id="element-8a">
+Note that default rendering of a single character by "mi" element is italic – as against "normal". Multiple characters are, however, displayed as normal. It means that if we want to have a normal display, then we would require to override the default behavior of the ‘mi” element and specify normal display, using “mathvariant” attribute as demonstrated in the example below.  
+</para>
+
+
+<example id="display2">
+	<title>Display with mi element</title>
+	<para id="element-9">
+	  <code display="block" id="idp10885888">
+	    
+    &lt;m:math display="block"&gt;
+       &lt;m:mtext&gt;Normal I  is :&amp;nbsp;&amp;nbsp;&lt;/m:mtext&gt;
+       &lt;m:mi mathvariant='normal'&gt; I &lt;/m:mi&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-10">
+Save the file after editing as “test3.xml”. The display looks like : 
+</para>
+<para id="element-11">
+    <m:math display="block">
+       <m:mtext>Normal I  is :  </m:mtext>
+       <m:mi mathvariant="normal"> I </m:mi>
+     </m:math> 
+</para>
+</example>
+
+<para id="element-12">
+The presentation style of a single character in italic form is not without any reason. This suggests that we might be using single character mostly in italic form for mathematical display. In any case, if you differ, you can change the same to normal.
+</para>
+
+<para id="element-13">
+The “mi” element renders character or sequence of characters without any surrounding space. This element together with other character rendering elements (“mn” and “mo”) forms the building blocks of mathematical display, using MathML. It must also be observed that “mi” implements common attributes available for the token element and does not implement additional attributes or attributes specific to the element. </para>
+</section>
+
+
+<section id="section-2">
+<title>"mn" token element </title>
+<para id="element-16">
+The “mn” element is a flexible constructor to display unsigned real numbers of various types and formats, including decimals or combination of characters, which convey real number. In the scheme of the rendering of mathematical content under MathML environment, it is preferred to keep sign as an operator and its rendering with "mo" element. This approach is consistent with spacing (inter elements) requirement of operator display.  
+</para>
+<example id="display3">
+	<title>Display of real numbers</title>
+	<para id="element-17">
+	  <code display="block" id="idp12501136">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mtext&gt;Forty: &lt;/m:mtext&gt; &lt;m:mn&gt; Forty ;&lt;/m:mn&gt;
+      &lt;m:mtext&gt;10 : &lt;/m:mtext&gt;&lt;m:mn&gt; 10 ; &amp;nbsp;&lt;/m:mn&gt;
+      &lt;m:mtext&gt;4.23: &lt;/m:mtext&gt; &lt;m:mn&gt; 4.23 ; &amp;nbsp;&lt;/m:mn&gt;
+      &lt;m:mtext&gt;1,000: &lt;/m:mtext&gt; &lt;m:mn&gt; 1,000 ; &amp;nbsp;&lt;/m:mn&gt;
+      &lt;m:mtext&gt;0.1e10: &lt;/m:mtext&gt; &lt;m:mn&gt; 0.1e10 ; &amp;nbsp;&lt;/m:mn&gt;
+      &lt;m:mtext&gt;CX: &lt;/m:mtext&gt; &lt;m:mn&gt; CX ; &amp;nbsp;&lt;/m:mn&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-18">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-19">
+    <m:math display="block">
+      <m:mtext>Forty: </m:mtext> <m:mn> Forty ;</m:mn>
+      <m:mtext>10 : </m:mtext><m:mn> 10 ;  </m:mn>
+      <m:mtext>4.23: </m:mtext> <m:mn> 4.23 ;  </m:mn>
+      <m:mtext>1,000: </m:mtext> <m:mn> 1,000 ;  </m:mn>
+      <m:mtext>0.1e10: </m:mtext> <m:mn> 0.1e10 ;  </m:mn>
+      <m:mtext>CX: </m:mtext> <m:mn> CX ;  </m:mn>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-20">
+Note that default rendering style of the characters are “normal” and as such, we do not need to use “mathvariant” attribute to set the display normal. The “mn” element, however, is not suitable for all kinds of numbers. For example, following constants are displayed using “mi” element :
+
+  <code display="block" id="idp13117840">
+	    
+	&lt;mi&gt; &amp;pi; &lt;/mi&gt; 
+	&lt;mi&gt; &amp;ImaginaryI; &lt;/mi&gt; 
+	&lt;mi&gt; &amp;ExponentialE; &lt;/mi&gt;
+
+	    
+	  </code>
+</para>
+
+<example id="display4">
+	<title>Numbers displayed by mi element</title>
+	<para id="element-21">
+	  <code display="block" id="idp13297760">
+	    
+    &lt;m:math display="block"&gt;
+         &lt;m:mtext&gt;Complex number : &amp;ThinSpace;&lt;/m:mtext&gt;
+         &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+         &lt;m:mo&gt; + &lt;/m:mo&gt;
+         &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+         &lt;m:mo&gt; &amp;InvisibleTimes; &lt;/m:mo&gt;
+         &lt;m:mi&gt; &amp;ImaginaryI;&lt;/m:mi&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+
+
+<para id="element-22">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-23">
+    <m:math display="block">
+         <m:mtext>Complex number :  </m:mtext>
+         <m:mn> 1 </m:mn>
+         <m:mo> + </m:mo>
+         <m:mn> 2 </m:mn>
+         <m:mo> ⁢ </m:mo>
+         <m:mi> ⅈ</m:mi> 
+    </m:math> 
+</para>
+</example>
+<para id="element-24">
+A ratio, on the other hand, is presented with the help of “mfrac” element. See the example code for displaying a ratio of the form (p/q) : 
+</para>
+
+
+<example id="display5">
+	<title>Numbers not displayed by “mfrac” element</title>
+	<para id="element-25">
+	  <code display="block" id="idp12277328">
+	    
+    &lt;m:math display="block"&gt;
+         &lt;m:mtext&gt;Ratio is :&lt;/m:mtext&gt;
+         &lt;m:mfrac&gt; 
+         &lt;m:mn&gt; 22 &lt;/m:mn&gt;
+         &lt;m:mn&gt; 7 &lt;/m:mn&gt; 
+         &lt;/m:mfrac&gt;&lt;m:mi&gt; ;  &lt;/m:mi&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-26">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-27">
+    <m:math display="block">
+         <m:mtext>Ratio is :</m:mtext>
+         <m:mfrac> 
+         <m:mn> 22 </m:mn>
+         <m:mn> 7 </m:mn> 
+         </m:mfrac><m:mi> ;  </m:mi>
+    </m:math> 
+</para>
+</example>
+</section>
+
+</content>
+  
+</document>

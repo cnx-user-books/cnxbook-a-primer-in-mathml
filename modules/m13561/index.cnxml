@@ -1,0 +1,930 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Presentation table elements</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>3b3c2d4e-ff55-4500-8e8a-0f9daa74787a</md:uuid>
+</metadata>
+  <content>
+
+<para id="element-3"> 
+Table element is applied for variety of rendering requirements, in addition to its primary use for drawing a table. The applications of table frame work include displaying two dimensional mathematical content like arrays and matrix, creation of labeled equations and enabling display of content in multiple rows equivalent to line break.
+</para><para id="element-4"> 
+Consider the task to write two rows of equations on two consecutive lines : </para><para id="element-5"> 
+</para><para id="element-6"> 
+3x + y = 6
+</para><para id="element-6a"> 
+2x – y = 5
+
+</para>
+<para id="element-6b"> 
+How would we force two lines to be displayed in a single MathML constructor? We may probably display the lines as separate rows of a table without a frame and lines. In this sense, table frame work provides a facility, which is equivalent to forcing a new line.
+</para>
+<para id="element-7"> 
+Similarly, we may be required to number important equations so that the same can be referenced subsequently like : 
+</para><para id="element-8">
+3x + y = 6  				…….. 1.1
+</para>
+<para id="element-9"> 
+In this context, the label attribute available for “mlabeledtr” element allows us to number the equation as above. A matrix, on the other hand, is implemented by a table construct without border and enclosed parentheses : 
+</para>
+<para id="element-10">  
+<m:math display="block">
+       <m:mrow> 
+        <m:mo> ( </m:mo>
+      <m:mtable>
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable>
+        <m:mo> ) </m:mo>
+      </m:mrow>
+</m:math> 
+</para>
+
+<para id="element-1a">
+The MathML employs six elements to render all sorts of table. However, there is a serious mis-match between specifications of some of these elements and implementation of the same by browsers. For this reason, we shall concentrate on three table forming elements namely "mtable", "mtr" and "mtd" elements, which together form the basic constructors for creating tables (only references to other elements has been given for other three elements). 
+</para> 
+
+<para id="element-1b">
+<list id="list-4" list-type="enumerated">
+<title> Table elements </title>
+<item>mtable  : creats table</item> 
+<item>mlabeledtr  : creats a labelled row </item> 
+<item>mtr : creates a row</item> 
+<item> mtd : creats a column</item> 
+<item> maligngroup : Grouping element</item> 
+<item> malignmark : creats alignment markings</item> 
+</list>
+</para>
+
+<section id="section-1">
+<title>“mtable” element</title>
+
+
+<para id="element-2">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> align </m:mi>
+        <m:mi> rowalign </m:mi> 
+        <m:mi> columnalign </m:mi>
+        <m:mi> groupalign </m:mi> 
+        <m:mi> alignmentscope </m:mi>
+        <m:mi> columnwidth </m:mi>  
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+        <m:mtr>
+        <m:mtd>
+	  <m:mphantom>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+	  </m:mphantom>
+
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> width </m:mi>
+        <m:mi> rowspacing </m:mi> 
+        <m:mi> columnspacing </m:mi>
+        <m:mi> rowlines </m:mi> 
+        <m:mi> columnlines </m:mi>
+        <m:mi> frame </m:mi> 
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+
+        <m:mtr>
+        <m:mtd>
+	  <m:mphantom>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+	  </m:mphantom>
+
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> framespacing </m:mi> 
+        <m:mi> equalrows </m:mi>
+        <m:mi> equalcolumns </m:mi>
+ 
+        <m:mi> displaystyle </m:mi> 
+        <m:mi> side </m:mi>
+        <m:mi> minlabelspacing </m:mi> 
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+ 
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para> 
+
+
+<para id="element-11">  
+The ‘mtable” element represents a table of rows and columns. It accepts only “mtr” or “mlabeldtr” elements as its child. Both of these define a single row in the table. The only difference between the two row elements is that “mlabeldtr” can be used to label the  particular row defined by it. The “mtr” element represents a simple row. Each of these row forming elements takes child elements to define the columns. 
+</para>
+
+<para id="element-11a"> 
+The “mtable” element requires that all rows have same numbers of columns. If the columns in any row mismatches, then that row is padded with empty column(s). For example, when one column definition in the first row involving “y” is removed, then tables is rendered as shown below :
+</para>
+
+
+<example id="display2">
+	<title>Table short of one column</title>
+	<para id="element-11c">
+	  <code display="block" id="idp7220656">
+	    
+    &lt;m:math display="block"&gt;
+&lt;m:mtable frame="solid" columnlines="solid" rowlines="solid"&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;1&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-11d">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-11e">
+    <m:math display="block">
+<m:mtable frame="solid" columnlines="solid" rowlines="solid">
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+    </m:math> 
+</para>
+</example>
+
+      
+<para id="element-11f">
+Evidently, output is not what was intended. It is, therefore, always advisable to maintain same numbers of columns in each row. If there is no content, then that column should be kept as an empty column. Introducing the column definition back without any content restores the structure of table.
+</para>
+<para id="element-11g">
+<code display="block" id="idp8199648">
+
+          &lt;m:mtd&gt;
+          &lt;/m:mtd&gt;
+
+</code>
+</para>
+<para id="element-11i">
+The out put now is :
+</para>
+<example id="display2a">
+	<title>Table with same numbers of columns</title>
+	<para id="element-29">
+	  <code display="block" id="idp8023568">
+	    
+    &lt;m:math display="block"&gt;
+  &lt;m:mtable frame="solid" columnlines="solid" rowlines="solid"&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;1&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-11j">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-11k">
+<m:math display="block">
+      <m:mtable frame="solid" columnlines="solid" rowlines="solid">
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+</m:math>
+
+</para>
+</example>
+
+
+<section id="section-1a">
+<title>Displaying table</title>
+ 
+<para id="element-13"> 
+<list id="list-1" list-type="bulleted">
+<title>Attribute value types</title>
+<item> align (default : "axis") : (top | bottom | center | baseline | axis) [ rownumber ]</item>
+<item> rowalign (default : "baseline") : (top | bottom | center | baseline | axis)+ </item>
+<item> columnalign (default : "center") : (left | center | right) + </item>
+<item> groupalign (default : "left") : group-alignment-list-list </item>
+<item> alignmentscope (default : "true") : (true | false) +</item>
+<item> columnwidth (default : "auto") : (auto | number h-unit | namedspace | fit) +</item>
+<item> width (default : "auto") : auto | number h-unit </item>
+<item> rowspacing (default : "1.0ex") : (number v-unit) +</item>
+<item> columnspacing (default : "0.8em") : (number h-unit | namedspace) +</item>
+<item> rowlines (default : "none") : (none | solid | dashed) +</item>
+<item> columnlines (default : "none") : (none | solid | dashed) +</item>
+<item> columnlines (default : "none") : none | solid | dashed </item>
+<item> frame (default : "none") : none | solid | dashed </item>
+<item> framespacing (default : 0.4em, 0.5ex) : (number h-unit | namedspace) (number v-unit | namedspace)</item>
+<item> equalrows (default : "false") : true | false</item>
+<item> equalcolumns (default : "false") : true | false </item>
+<item> displaystyle (default : "false") : true | false </item>
+<item> side (default : "right") : left | right | leftoverlap | rightoverlap </item>
+<item> minlabelspacing (default : "0.8em") : number h-unit | namedspace </item>
+
+</list>
+</para> 
+<para id="element-14"> 
+The default setting for “frame”, “rowlines” and columnlines are “none”. For this reason, the rendering of a table with bare “mtable” results in a frame-less invisible table. Only content of the columns are displayed. A 2X3 table is drawn with default values in the example given here.</para> 
+
+
+<example id="display3">
+	<title>Table with defualt values</title>
+	<para id="element-29a">
+	  <code display="block" id="idp1185616">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mtable&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;y&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;1&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-30">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-31">
+    <m:math display="block">
+      <m:mtable>
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+    </m:math> 
+</para>
+</example>
+<para id="element-32">
+The “mtable” element has large number of attributes and it would be difficult to use all of them. Good news is that we are using only few of them at the most. The dimensional attributes of table frame, rows and columns are largely determined by the implementation of a particular renderer. Also, the default values of key attributes are so chosen that default table architecture is suitable for most of the situations. For example, width controlling attributes “width” and “columnwidth” are set to “auto”. This means that width of the table as a whole and the columns shall be adjusted in accordance with the algorithm of the renderer, whereby they are expected to be set “as needed”. We may ofcourse set specific values whereby content in the table is expected to be wrapped around.
+</para>
+<para id="element-33">
+Assignment to table attributes follows a typical format. The reason for special mechanism arises out of the fact that we are required to set some the attributes on individual row or column. The format is simple. It is presented with a “+” sign at the end indicating that the attribute can be applied to individual rows and columns. A general format for columns would expand explained here  :</para>
+<para id="element-34">
+(x y z)+ : It is a sequence of values separated by space. The values can be one or more (i.e. can be repeated) of x,y and z for corresponding columns. Starting from the first, the values are applied till the last column. If there are more values than required, then remaining would be discarded and if there are less than required then the last of the sequence would be repeated.</para>
+<para id="element-35">
+This means that a large number of attributes such as “rowalign”, “columnalign”, “columnwidth”, “rowspacing”, “columnspacing”, “rowlines” and “columnlines” can be set to individual rows and columns with the valid values as specified above.
+</para>
+<para id="element-36">
+The example here illustrates setting of “columnalign” and “rowalign” elements. Note that the impact of “columnalign” is more visible than “rowalign” element.
+</para>
+<example id="display4">
+	<title>Aligning content</title>
+	<para id="element-37">
+	  <code display="block" id="idp9983184">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mtable frame="solid" columnlines="solid" rowlines="solid" 
+       rowalign="top baseline center" columnalign="right center left"&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;xyx&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;y&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;12&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3111&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-38">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-39">
+    <m:math display="block">
+      <m:mtable frame="solid" columnlines="solid" rowlines="solid" rowalign="top baseline center" columnalign="right center left">
+        <m:mtr>
+          <m:mtd>
+            <m:mi>xyx</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>12</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3111</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable>    
+    </m:math> 
+</para>
+</example>
+</section>
+</section>
+
+<section id="section-2">
+<title>"mtr" table row element</title>
+
+
+
+<para id="element-63">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> rowalign </m:mi>
+        <m:mi> columnalign </m:mi> 
+        <m:mi> denomalign </m:mi>
+        <m:mi> groupalign </m:mi> 
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+<para id="element-64">
+<list id="list-2" list-type="bulleted">
+<title>Attribute value types</title>
+<item> rowalign (default : inherited) : top | bottom | center | baseline | axis </item>
+<item> columnalign (default : inherited): (left | center | right) + </item>
+<item> groupalign (default : inherited): group-alignment-list-list </item>
+</list>
+</para>
+<para id="element-65">
+Rows are drawn from top to bottom. Entries in the row can be aligned separately on individual row. This row level setting of “rowalign” attribute shall override “rowalign” attribute setting on table level via “mtable” element. The “columnalign” attribute allows specifying individual column alignments for that particular row. 
+</para>
+
+<example id="display9">
+	<title>Alignment setting on individual row</title>
+	<para id="element-66">
+	  <code display="block" id="idp8078192">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mtable frame="solid" columnlines="solid" rowlines="solid" rowalign="top" columnalign="right"&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;xyx&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;y&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr rowalign="bottom" columnalign="left"&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;12&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3111&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt;    
+  
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-67">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-68">
+    <m:math display="block">
+      <m:mtable frame="solid" columnlines="solid" rowlines="solid" rowalign="top" columnalign="right">
+        <m:mtr>
+          <m:mtd>
+            <m:mi>xyx</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr rowalign="bottom" columnalign="left">
+          <m:mtd>
+            <m:mn>12</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3111</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable>    
+   
+    </m:math> 
+</para>
+</example>
+
+<para id="element-69">
+There appears serious gap in the specification for this element and implementation of the same by the browsers. For this reason, the "mlabeledtr" element is not described. Also related "side" and "minlabelspacing" of "mtable" elements are skipped. Instead, an example with equivalent effect for creating a labeled display is included in the next section titled “Application”. 
+</para>
+
+<para id="element-70">
+The implementation of alignment within a cell is also not implemented by browsers at present. As such,  "maligngroup" and  "malignmark" elements along with associated "groupalign" attribute of "mtable" element are not considered. 
+</para>
+</section>
+
+<section id="section-3">
+<title>Applications</title>
+
+<section id="section-3a">
+<title>Highlighting rows and columns with dashed line</title>
+
+<para id="element-42">
+Control on each column and row is not limited to alignment. The flexibility at the lowest level of creating table is extended to lines bordering table cells as well.</para>
+<para id="element-43">
+We can highlight a portion of table by assigning a particular row and column with “dashed” lines. This effect can be achieved by specifying individual row and column lines to be “dashed” as against “solid” or “none”. In the table here first row and column lines are set to none, while second row and column lines are set to “dashed”.
+</para>
+<example id="display5">
+	<title>Highlighting rows and columns</title>
+	<para id="element-44">
+	  <code display="block" id="idp1251200">
+	    
+    &lt;m:math display="block"&gt;
+     &lt;m:mtable frame="solid" rowlines="none dashed" 
+     columnlines="solid dashed"&gt;
+
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;y&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;a&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;b&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;c&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;1&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-45">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-46">
+    <m:math display="block">
+     <m:mtable frame="solid" rowlines="none dashed" columnlines="solid dashed">
+
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>a</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>b</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>c</m:mn>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+    </m:math> 
+</para>
+</example>
+</section> 
+
+<section id="section-3b">
+<title>Rows of equations</title>
+
+<para id="element-47">
+<m:math>
+<m:mstyle fontsize="12pt" fontweight="bold" fontstyle="normal" fontfamily="Helvetica">
+<m:mtext color="#f05"/>
+</m:mstyle>
+</m:math>
+</para>
+
+<para id="element-48">
+New rows in table can be introduced with “mtr” row element. This behavior is handy in displaying rows of mathematical expressions, using bare table as shown in the example :
+</para>
+<example id="display6">
+	<title>Rows of equations</title>
+	<para id="element-49">
+	  <code display="block" id="idp9658752">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mtable&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;3x + y &lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mo&gt;=&lt;/m:mo&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;6&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2x – y &lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mo&gt;=&lt;/m:mo&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;4&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-50">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-51">
+    <m:math display="block">
+      <m:mtable>
+        <m:mtr>
+          <m:mtd>
+            <m:mi>3x + y </m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mo>=</m:mo>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>6</m:mn>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>2x – y </m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mo>=</m:mo>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>4</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable> 
+    </m:math> 
+</para>
+</example>
+</section> 
+
+<section id="section-3c">
+<title>Labelled equation</title>
+
+
+
+<para id="element-53">
+The label row is convenient to write numbered equation as shown here. This special row is implemented with "mlabelmtr" element. 
+</para>
+<example id="display7">
+	<title>Labelled row : equation number</title>
+	<para id="element-54">
+	  <code display="block" id="idp14444832">
+	    
+    &lt;m:math display="block"&gt;
+&lt;m:mtable&gt; 
+        &lt;m:mlabeledtr&gt; 
+          &lt;m:mtd&gt; 
+            &lt;m:mrow&gt; 
+              &lt;m:mi&gt;E&lt;/m:mi&gt; 
+              &lt;m:mo&gt;=&lt;/m:mo&gt; 
+              &lt;m:mrow&gt; 
+                &lt;m:mi&gt;m&lt;/m:mi&gt; 
+                &lt;m:msup&gt; 
+                  &lt;m:mi&gt;c&lt;/m:mi&gt; 
+                  &lt;m:mn&gt;2&lt;/m:mn&gt; 
+                &lt;/m:msup&gt; 
+              &lt;/m:mrow&gt; 
+            &lt;/m:mrow&gt; 
+          &lt;/m:mtd&gt; 
+               &lt;m:mtd&gt; 
+               &lt;m:mtext&gt; (1.1) &lt;/m:mtext&gt; 
+              &lt;/m:mtd&gt; 
+        &lt;/m:mlabeledtr&gt; 
+      &lt;/m:mtable&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-55">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-56">
+    <m:math display="block">
+<m:mtable> 
+        <m:mlabeledtr> 
+          <m:mtd> 
+            <m:mrow> 
+              <m:mi>E</m:mi> 
+              <m:mo>=</m:mo> 
+              <m:mrow> 
+                <m:mi>m</m:mi> 
+                <m:msup> 
+                  <m:mi>c</m:mi> 
+                  <m:mn>2</m:mn> 
+                </m:msup> 
+              </m:mrow> 
+            </m:mrow> 
+          </m:mtd> 
+               <m:mtd> 
+               <m:mtext> (1.1) </m:mtext> 
+              </m:mtd> 
+        </m:mlabeledtr> 
+      </m:mtable> 
+    </m:math> 
+</para>
+</example>
+</section> 
+<section id="section-3d">
+<title>Matrix</title>
+
+
+<para id="element-58">
+Use of parentheses and table without frame can conveniently be used to represent matrix as illustrated in the example here.
+</para>
+<example id="display8">
+	<title>Matrix</title>
+	<para id="element-59">
+	  <code display="block" id="idp10339104">
+	    
+    &lt;m:math display="block"&gt;
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;
+      &lt;m:mtable&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;y&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mi&gt;z&lt;/m:mi&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+        &lt;m:mtr&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;1&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;2&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+          &lt;m:mtd&gt;
+            &lt;m:mn&gt;3&lt;/m:mn&gt;
+          &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;/m:mtable&gt;
+        &lt;m:mo&gt; ) &lt;/m:mo&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-60">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-61">
+    <m:math display="block">
+        <m:mo> ( </m:mo>
+      <m:mtable>
+        <m:mtr>
+          <m:mtd>
+            <m:mi>x</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>y</m:mi>
+          </m:mtd>
+          <m:mtd>
+            <m:mi>z</m:mi>
+          </m:mtd>
+        </m:mtr>
+        <m:mtr>
+          <m:mtd>
+            <m:mn>1</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>2</m:mn>
+          </m:mtd>
+          <m:mtd>
+            <m:mn>3</m:mn>
+          </m:mtd>
+        </m:mtr>
+      </m:mtable>
+        <m:mo> ) </m:mo>
+    </m:math> 
+</para>
+</example>
+</section>
+</section> 
+
+  </content>
+  
+</document>

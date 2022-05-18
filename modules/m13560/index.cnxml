@@ -1,0 +1,793 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Presentation scripting elements</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>17f2af24-ab8c-47d5-abd5-29f74ef2e37a</md:uuid>
+</metadata>
+  <content>
+
+<para id="element-1">
+Mathematical notation requires scripting around a base entity. The MathML provides scripting  capability through scripting elements : msub, msup and msubsup. Scripting in MathML is not limited only to putting a subscript or superscript around an expression, but vertically integrated upper and lower scripts, which are handy to display limits on integrals and to meet such other requirements of rendering structured display.
+</para>
+
+<para id="element-2">
+Rendering of script is done by manipulating certain attributes that elements acquire from the environment such as “xml” or “html” document.
+</para>
+<section id="section-1">
+<title>"msub" and "msup" layout scripting elements</title>
+
+
+
+<para id="element-4">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> superscriptshift, superscriptshift </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-105">
+<list id="list-2" list-type="bulleted">
+<title>Attribute value types</title>
+<item> superscriptshift, superscriptshift (default : automatic) : number v-unit </item>
+</list>
+</para>
+<para id="element-106">
+Each of these scripting elements takes two arguments base and subscript, which may be valid MathML expressions. Syntax of the two elements are as given here :
+</para>
+<para id="element-107">
+<code display="block" id="idp9585760">
+
+&lt;msub&gt; base subscript &lt;/msub&gt;
+&lt;msup&gt; base superscript &lt;/msup&gt;
+
+</code>
+</para>
+
+<para id="element-5">
+Each of these scripting elements takes two arguments base and subscript, which may be valid MathML expressions. Implementation of “msub” element shifts the baseline of the script, while retaining that of the base. In the case of “msup” element, the baseline shifts the script up. In both cases, display style of  the scripts are also changed
+</para>
+<para id="element-6">
+The amount of shifting can be specified by giving numerical values to “subscriptshift” and “superscriptshift” attributes preferably in "ex" unit. The example here demonstrates implementation of both “msup” and “msub” elements. 
+</para>
+  
+<example id="display1">
+	<title>Subscript and supersubscipt</title>
+	<para id="element-7">
+	  <code display="block" id="idp7052960">
+	    
+    &lt;m:math display="block"&gt;
+     &lt;m:table&gt;
+      &lt;m:mtr&gt;
+       &lt;m:mtd&gt; 
+        &lt;m:msup&gt;
+        &lt;m:mi&gt; m &lt;/m:mi&gt; 
+        &lt;m:mrow&gt; 
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+          &lt;m:mo&gt; &amp;InvisibleComma; &lt;/m:mo&gt; 
+          &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+        &lt;/m:mrow&gt; 
+        &lt;/m:msup&gt;
+        &lt;/m:mtd&gt;
+        &lt;/m:mtr&gt;
+      &lt;m:mtr&gt;
+      &lt;m:mtd&gt; 
+        &lt;m:msub subscriptshift="1.5ex"&gt; 
+        &lt;m:mi&gt; m &lt;/m:mi&gt; 
+        &lt;m:mrow&gt; 
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+           &lt;m:mo&gt; &amp;InvisibleComma; &lt;/m:mo&gt; 
+          &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+        &lt;/m:mrow&gt; 
+      &lt;/m:msub&gt;
+      &lt;/m:mtd&gt;
+       &lt;/m:mtr&gt;
+     &lt;/m:table&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-8">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-9">
+    <m:math display="block">
+     <m:mtable>
+      <m:mtr>
+       <m:mtd> 
+        <m:msup>
+        <m:mi> m </m:mi> 
+        <m:mrow> 
+          <m:mn> 1 </m:mn>
+          <m:mo> ​ </m:mo> 
+          <m:mn> 2 </m:mn> 
+        </m:mrow> 
+        </m:msup>
+        </m:mtd>
+        </m:mtr>
+      <m:mtr>
+      <m:mtd> 
+        <m:msub subscriptshift="1.5ex"> 
+        <m:mi> m </m:mi> 
+        <m:mrow> 
+          <m:mn> 1 </m:mn>
+           <m:mo> ​ </m:mo> 
+          <m:mn> 2 </m:mn> 
+        </m:mrow> 
+      </m:msub>
+      </m:mtd>
+       </m:mtr>
+     </m:mtable>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-10">
+Observe that <code>“&amp;InvisibleComma;” </code>entity reference impart the meaning that scripts is read one two and not as one multiplied by 2.
+</para>
+</section>
+
+<section id="section-2">
+<title>"msubsup" layout scripting element</title>
+
+
+
+<para id="element-12">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> subscriptshift </m:mi>
+        <m:mi> superscriptshift </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-112">
+<list id="list-3" list-type="bulleted">
+<title>Attribute value types</title>
+<item> subscriptshift (default : automatic) : number v-unit </item>
+<item> superscriptshift (default : automatic) : number v-unit </item>
+</list>
+</para>
+<para id="element-14">
+The element takes three arguments. First argument of the element is base; second argument is subscript; and third argument is superscript. The syntax of the element is :
+</para>
+<para id="element-114">
+<code>
+
+&lt;msubsup&gt; base subscript superscript &lt;/msubsup&gt;
+
+</code>
+</para>
+
+<para id="element-13">
+Scripting “msubsup” element affects simultaneous implementation of a subscript and superscript, which are vertically aligned. This is an extremely useful scripting element as this element can be used to display limit values on variety of expression, including an integral sign. 
+</para>
+
+<para id="element-15">
+The amount of shifting can be specified by giving numerical values to “subscriptshift” and “superscriptshift” attributes preferably in “ex” unit. The code below demonstrates assigning limiting values to integral with “msubsup” element, while “msup” element is used to construct exponential function.  
+</para>
+
+<example id="display2">
+	<title>Definite integral limits</title>
+	<para id="element-16">
+	  <code display="block" id="idp10699840">
+	    
+    &lt;m:math display="block"&gt;
+&lt;m:math display="block"&gt;
+    &lt;m:mrow&gt; 
+    &lt;m:mi&gt; y &lt;/m:mi&gt;
+     &lt;m:mo&gt; = &lt;/m:mo&gt;
+      &lt;m:mrow&gt; 
+        &lt;m:msubsup&gt; 
+          &lt;m:mo&gt; &amp;int; &lt;/m:mo&gt; 
+          &lt;m:mn&gt; 0 &lt;/m:mn&gt; 
+          &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+        &lt;/m:msubsup&gt; 
+        &lt;m:mrow&gt; 
+          &lt;m:msup&gt; 
+            &lt;m:mi&gt; &amp;ExponentialE; &lt;/m:mi&gt; 
+            &lt;m:mi&gt; x &lt;/m:mi&gt; 
+          &lt;/m:msup&gt; 
+          &lt;m:mo&gt; &amp;InvisibleTimes; &lt;/m:mo&gt; 
+          &lt;m:mrow&gt; 
+            &lt;m:mo&gt; &amp;DifferentialD; &lt;/m:mo&gt; 
+            &lt;m:mi&gt; x &lt;/m:mi&gt; 
+          &lt;/m:mrow&gt; 
+        &lt;/m:mrow&gt; 
+      &lt;/m:mrow&gt; 
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-17">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-18">
+    <m:math display="block">
+    <m:mrow> 
+    <m:mi> y </m:mi>
+     <m:mo> = </m:mo>
+      <m:mrow> 
+        <m:msubsup> 
+          <m:mo> ∫ </m:mo> 
+          <m:mn> 0 </m:mn> 
+          <m:mn> 1 </m:mn> 
+        </m:msubsup> 
+        <m:mrow> 
+          <m:msup> 
+            <m:mi> ⅇ </m:mi> 
+            <m:mi> x </m:mi> 
+          </m:msup> 
+          <m:mo> ⁢ </m:mo> 
+          <m:mrow> 
+            <m:mo> ⅆ </m:mo> 
+            <m:mi> x </m:mi> 
+          </m:mrow> 
+        </m:mrow> 
+      </m:mrow> 
+      </m:mrow> 
+  </m:math> 
+</para>
+
+</example>
+</section>
+
+
+<section id="section-3">
+<title>"munder" layout scripting element</title>
+
+<para id="element-20">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> accentunder </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-121">
+<list id="list-4" list-type="bulleted">
+<title>Attribute value types</title>
+<item> accentunder (default : automatic) : true | false </item>
+</list>
+</para>
+<para id="element-21">
+The “munder” takes two arguments. First one is the base and second one is the scripting character. The syntax of the element is :
+
+</para>
+<para id="element-122">
+<code>
+
+&lt;munder&gt; base underscript &lt;/munder&gt;
+
+</code>
+</para>
+
+<para id="element-22">
+The scripting character is placed below the base character/ expression. The “accentunder” attribute is either “true” or “false”, which determines whether the underscript  is implemented as accent or limit. The implementation of accent is drawn closer to the base and is of the same size as that of base. On the other hand, limit is drawn relative away from the base and is reduced in size. </para>
+<para id="element-23">
+If under-script is an “mo” element, the value of its “accent” attribute is used as the default value of “accentunder”. However, an explicitly given value overrides the default.</para>
+
+<example id="display3">
+	<title>Underscripting</title>
+	<para id="element-24">
+	  <code display="block" id="idp8148000">
+	    
+    &lt;m:math display="block"&gt;
+&lt;m:math display="block"&gt;
+          &lt;m:mrow&gt; 
+        &lt;m:munder accentunder="true"&gt; 
+          &lt;m:mrow&gt; 
+            &lt;m:mi&gt; x &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; y &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; z &lt;/m:mi&gt; 
+          &lt;/m:mrow&gt; 
+          &lt;m:mo stretchy='true'&gt; &amp;OverBar; &lt;/m:mo&gt; 
+        &lt;/m:munder&gt; 
+        &lt;m:mtext&gt; &amp;ThinSpace; vs &amp;ThinSpace; 
+        &lt;/m:mtext&gt; 
+        &lt;m:munder accentunder="false"&gt; 
+          &lt;m:mrow&gt; 
+            &lt;m:mi&gt; x &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; y &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; z &lt;/m:mi&gt; 
+          &lt;/m:mrow&gt; 
+          &lt;m:mo stretchy='true'&gt; &amp;OverBar; &lt;/m:mo&gt; 
+        &lt;/m:munder&gt; 
+      &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-25">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-26">
+    <m:math display="block">
+          <m:mrow> 
+        <m:munder accentunder="true"> 
+          <m:mrow> 
+            <m:mi> x </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> y </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> z </m:mi> 
+          </m:mrow> 
+          <m:mo stretchy="true"> ¯ </m:mo> 
+        </m:munder> 
+        <m:mtext>   vs   
+        </m:mtext> 
+        <m:munder accentunder="false"> 
+          <m:mrow> 
+            <m:mi> x </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> y </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> z </m:mi> 
+          </m:mrow> 
+          <m:mo stretchy="true"> ¯ </m:mo> 
+        </m:munder> 
+      </m:mrow>
+
+  </m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-4">
+<title>"mover" layout scripting element</title>
+
+<para id="element-28">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> accent </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-128">
+<list id="list-5" list-type="bulleted">
+<title>Attribute value types</title>
+<item> accent (default : automatic) : true | false </item>
+</list>
+</para>
+
+
+<para id="element-129">
+The “mover” takes two arguments. First one is the base and second one is the scripting character. The scripting character is placed below the base character/expression. The syntax of the element is :
+</para><para id="element-130">
+<code>
+
+&lt;munder&gt; base overscript &lt;/munder&gt;
+
+</code>
+</para>
+
+<para id="element-28b">
+The “accent” attribute is either “true” or “false”, which determines whether the underscript  is implemented as accent or limit. The implementation of accent is drawn closer to the base and is of the same size as that of base. On the other hand, limit is drawn relative away from the base and is reduced in size. </para>
+
+<example id="display4">
+	<title>Overscripting</title>
+	<para id="element-29">
+	  <code display="block" id="idp8822496">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mrow&gt; 
+        &lt;m:mover accent="true"&gt; 
+          &lt;m:mi&gt; x &lt;/m:mi&gt; 
+          &lt;m:mo&gt; &amp;Hat; &lt;/m:mo&gt; 
+        &lt;/m:mover&gt; 
+        &lt;m:mtext&gt; &amp;ensp;&amp;ensp;vs&amp;ensp;&amp;ensp; &lt;/m:mtext&gt; 
+        &lt;m:mover accent="false"&gt; 
+          &lt;m:mi&gt; x &lt;/m:mi&gt; 
+          &lt;m:mo&gt; &amp;Hat; &lt;/m:mo&gt; 
+        &lt;/m:mover&gt; 
+      &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-30">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-31">
+    <m:math display="block">
+      <m:mrow> 
+        <m:mover accent="true"> 
+          <m:mi> x </m:mi> 
+          <m:mo> ̂ </m:mo> 
+        </m:mover> 
+        <m:mtext>   vs   </m:mtext> 
+        <m:mover accent="false"> 
+          <m:mi> x </m:mi> 
+          <m:mo> ̂ </m:mo> 
+        </m:mover> 
+      </m:mrow> 
+  </m:math> 
+</para>
+</example>
+<para id="element-32">
+If over-script is an “mo” element, the value of its “accent” attribute is used as the default value of “accent”. However, an explicitly given value overrides the default.
+</para>
+
+<example id="display5">
+	<title>Overscripting</title>
+	<para id="element-33">
+	  <code display="block" id="idp8713552">
+	    
+    &lt;m:math display="block"&gt;
+        &lt;m:mrow&gt; 
+        &lt;m:mover accent="true"&gt; 
+          &lt;m:mrow&gt; 
+            &lt;m:mi&gt; x &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; y &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; z &lt;/m:mi&gt; 
+          &lt;/m:mrow&gt; 
+          &lt;m:mo stretchy='true'&gt; &amp;OverBar; &lt;/m:mo&gt; 
+        &lt;/m:mover&gt; 
+        &lt;m:mtext&gt; &amp;ThinSpace; vs &amp;ThinSpace; 
+        &lt;/m:mtext&gt; 
+        &lt;m:mover accent="false"&gt; 
+          &lt;m:mrow&gt; 
+            &lt;m:mi&gt; x &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; y &lt;/m:mi&gt; 
+            &lt;m:mo&gt; + &lt;/m:mo&gt; 
+            &lt;m:mi&gt; z &lt;/m:mi&gt; 
+          &lt;/m:mrow&gt; 
+          &lt;m:mo stretchy='true'&gt; &amp;OverBar; &lt;/m:mo&gt; 
+        &lt;/m:mover&gt; 
+      &lt;/m:mrow&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-34">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-35">
+    <m:math display="block">
+          <m:mrow> 
+        <m:mover accent="true"> 
+          <m:mrow> 
+            <m:mi> x </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> y </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> z </m:mi> 
+          </m:mrow> 
+          <m:mo stretchy="true"> ¯ </m:mo> 
+        </m:mover> 
+        <m:mtext>   vs   
+        </m:mtext> 
+        <m:mover accent="false"> 
+          <m:mrow> 
+            <m:mi> x </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> y </m:mi> 
+            <m:mo> + </m:mo> 
+            <m:mi> z </m:mi> 
+          </m:mrow> 
+          <m:mo stretchy="true"> ¯ </m:mo> 
+        </m:mover> 
+      </m:mrow>
+  </m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-5">
+<title>"munderover" layout scripting element</title>
+
+
+<para id="element-37">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> accent </m:mi>
+        <m:mi> accentunder </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-38">
+<list id="list-6" list-type="bulleted">
+<title>Attribute value types</title>
+<item> accent (default : automatic) : true | false </item>
+<item> accentunder (default : automatic) : true | false </item>
+</list>
+</para>
+
+<para id="element-39">
+The “mover” takes three arguments. First one is the base and second and third ones are the under and over scripting characters respectively. The scripting character is placed below and above the base character/expression. The syntax of the element is :
+</para>
+
+<para id="element-139">
+
+<code>
+
+&lt;munderover&gt; base underscript overscript &lt;/munderover&gt;
+
+</code>
+</para>
+
+<para id="element-40">
+This element allows simultaneous under and over scripting and is tailor-made constructor to render both scripts simultaneously. The scripting with this element suits in providing limit values to integral sign. 
+</para>
+<example id="display7">
+	<title>Simultaneous under and over scripting</title>
+	<para id="element-41">
+	  <code display="block" id="idp7959952">
+	    
+    &lt;m:math display="block"&gt;
+  &lt;m:munderover&gt;
+    &lt;m:mo&gt; &amp;int; &lt;/m:mo&gt;
+    &lt;m:mn&gt; 0 &lt;/m:mn&gt;
+    &lt;m:mi&gt; &amp;infin; &lt;/m:mi&gt;
+  &lt;/m:munderover&gt;
+
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-42">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-43">
+    <m:math display="block">
+  <m:munderover>
+    <m:mo> ∫ </m:mo>
+    <m:mn> 0 </m:mn>
+    <m:mi> ∞ </m:mi>
+  </m:munderover>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-44">
+This element is not a necessity though, as the same can be implemented using “munder” and “mover”  one after another. The reason of this equivalence is that implementing either “munder” or “mover” does not change horizontal width of the base, which is being scripted.
+</para>
+
+<example id="display8">
+	<title> Simultaneous under and over scripting </title>
+	<para id="element-45">
+	  <code display="block" id="idm1002256">
+	    
+    &lt;m:math display="block"&gt;
+  &lt;m:mover&gt;
+    &lt;m:munder&gt;
+      &lt;m:mo&gt; &amp;int; &lt;/m:mo&gt;
+      &lt;m:mn&gt; 0 &lt;/m:mn&gt;
+    &lt;/m:munder&gt;
+    &lt;m:mi&gt; &amp;infin; &lt;/m:mi&gt;
+  &lt;/m:mover&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-46">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-47">
+    <m:math display="block">
+  <m:mover>
+    <m:munder>
+      <m:mo> ∫ </m:mo>
+      <m:mn> 0 </m:mn>
+    </m:munder>
+    <m:mi> ∞ </m:mi>
+  </m:mover>
+</m:math> 
+</para>
+</example>
+</section>
+
+<section id="section-6">
+<title>"mmultiscripts" layout scripting element</title>
+
+
+
+<para id="element-49">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> subscriptshift </m:mi>
+        <m:mi> superscriptshift </m:mi>
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-50">
+<list id="list-9" list-type="bulleted">
+<title>Attribute value types</title>
+<item> subscriptshift (default : automatic) : number v-unit </item>
+<item> superscriptshift (default : automatic) : number v-unit </item>
+</list>
+</para>
+
+
+<para id="element-51">
+This element is same as “msubsup” element in that it renders vertically aligned pair of sub and super scripts, but  with one enhancement that it can render multiple pairs such scripts. The syntax of the element is as given below   :
+</para>
+
+<para id="element-52">
+
+<code>
+
+&lt;mmultiscripts&gt;
+    base
+     (subscript superscript)*
+     [ &lt;mprescripts/&gt; (presubscript presuperscript)* ]
+&lt;/mmultiscripts&gt;
+
+</code>
+</para>
+
+<para id="element-53">
+The multiple sign after pair of subscript and superscript indicates that the pair can be repeated. If it is required to render pair of scripts before the base, then the same is indicated by presence of an empty element “mprescripts” as shown in the syntax. An absence of this empty element will indicate that prescripts are not to be rendered. The pair prescripts are optional as such notation are rare in mathematics. A code for three pairs of the scripts are given in the example :
+</para>
+<example id="display9">
+	<title>Implementation of multiple script pairs </title>
+	<para id="element-54">
+	  <code display="block" id="idp13217088">
+	    
+    &lt;m:math display="block"&gt;
+    &lt;m:mmultiscripts&gt;
+      &lt;m:mi&gt; A &lt;/m:mi&gt;
+      &lt;m:mi&gt; i &lt;/m:mi&gt;
+      &lt;m:mi&gt; j &lt;/m:mi&gt;
+      &lt;m:mi&gt; k &lt;/m:mi&gt;
+      &lt;m:mi&gt; l &lt;/m:mi&gt;
+      &lt;m:mi&gt; m &lt;/m:mi&gt;
+      &lt;m:mi&gt; n &lt;/m:mi&gt;
+   &lt;/m:mmultiscripts&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-55">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-56">
+    <m:math display="block">
+    <m:mmultiscripts>
+      <m:mi> A </m:mi>
+      <m:mi> i </m:mi>
+      <m:mi> j </m:mi>
+      <m:mi> k </m:mi>
+      <m:mi> l </m:mi>
+      <m:mi> m </m:mi>
+      <m:mi> n </m:mi>
+   </m:mmultiscripts>
+    </m:math> 
+</para>
+</example>
+
+<para id="element-57">
+It is evident that the implementation of “mmultiscripts” with one pair of scripts would be equivalent to implementation of “msubsup” implementation. An implementation that requires that one of the script in any pair is missing, we may provide either an empty element &lt;none/&gt; or empty “mi”.
+</para>
+
+
+<example id="display10">
+	<title>Implementation of multiple script pairs with missing value </title>
+	<para id="element-58">
+	  <code display="block" id="idp9841312">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mmultiscripts&gt;
+       &lt;m:mi&gt; A &lt;/m:mi&gt;
+       &lt;m:mi&gt; i &lt;/m:mi&gt;
+       &lt;m:mi&gt; j &lt;/m:mi&gt;
+       &lt;m:mi&gt; k &lt;/m:mi&gt;
+       &lt;m:mi&gt; l &lt;/m:mi&gt;
+       &lt;m:mi&gt; &lt;/m:mi&gt;
+       &lt;m:mfrac&gt;
+        &lt;m:mi&gt; x &lt;/m:mi&gt;
+        &lt;m:mi&gt; y &lt;/m:mi&gt;
+       &lt;/m:mfrac&gt;
+      &lt;m:mprescripts/&gt;
+       &lt;m:mi&gt; a &lt;/m:mi&gt;
+       &lt;m:mi&gt; b &lt;/m:mi&gt;
+       &lt;m:mi&gt; c &lt;/m:mi&gt;
+       &lt;m:mi&gt; d &lt;/m:mi&gt;
+      &lt;/m:mmultiscripts&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-59">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-60">
+    <m:math display="block">
+      <m:mmultiscripts>
+       <m:mi> A </m:mi>
+       <m:mi> i </m:mi>
+       <m:mi> j </m:mi>
+       <m:mi> k </m:mi>
+       <m:mi> l </m:mi>
+       <m:mi> </m:mi>
+       <m:mfrac>
+        <m:mi> x </m:mi>
+        <m:mi> y </m:mi>
+       </m:mfrac>
+      <m:mprescripts/>
+       <m:mi> a </m:mi>
+       <m:mi> b </m:mi>
+       <m:mi> c </m:mi>
+       <m:mi> d </m:mi>
+      </m:mmultiscripts>
+    </m:math> 
+</para>
+</example>
+</section> 
+
+
+</content>
+  
+</document>

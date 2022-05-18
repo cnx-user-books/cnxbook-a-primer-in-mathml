@@ -1,0 +1,1399 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Unicode character set (A-H)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>5a1e0c20-320e-4b90-95d4-35f0a42cd9b7</md:uuid>
+</metadata>
+  <content>
+
+
+
+<para id="element-1a">
+The Unicode character set is arranged in the alphabetical order of corresponding entity reference names. We may use the characters like “β” directly (by copying and pasting the character) or may opt to reference them with entity reference as <code display="inline">
+	     “&amp;beta;” 
+	  </code> within the presentation token elements. 
+</para>
+<para id="element-2">
+
+<m:math display="block">
+
+<m:mtable>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> A </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> aacute </m:mi></m:mtd><m:mtd><m:mi> á 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Aacute </m:mi></m:mtd><m:mtd><m:mi> Á 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ac </m:mi></m:mtd><m:mtd><m:mi> ⤏ </m:mi></m:mtd>
+<m:mtd><m:mi> acd </m:mi></m:mtd><m:mtd><m:mi> ∿ </m:mi></m:mtd>
+<m:mtd><m:mi> acE </m:mi></m:mtd><m:mtd><m:mi> ⧛; </m:mi></m:mtd>
+<m:mtd><m:mi> Acirc </m:mi></m:mtd><m:mtd><m:mi> Â 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> acirc </m:mi></m:mtd><m:mtd><m:mi> â 
+</m:mi></m:mtd>
+<m:mtd><m:mi> acute </m:mi></m:mtd><m:mtd><m:mi> ´ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> acy </m:mi></m:mtd><m:mtd><m:mi> а </m:mi></m:mtd>
+<m:mtd><m:mi> Acy </m:mi></m:mtd><m:mtd><m:mi> А </m:mi></m:mtd>
+<m:mtd><m:mi> aelig </m:mi></m:mtd><m:mtd><m:mi> æ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> AElig </m:mi></m:mtd><m:mtd><m:mi> Æ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> af </m:mi></m:mtd><m:mtd><m:mi> ⁡ </m:mi></m:mtd>
+<m:mtd><m:mi> afr </m:mi></m:mtd><m:mtd><m:mi> 𝔞 </m:mi></m:mtd>
+<m:mtd><m:mi> Afr </m:mi></m:mtd><m:mtd><m:mi> 𝔄 </m:mi></m:mtd>
+<m:mtd><m:mi> Agrave </m:mi></m:mtd><m:mtd><m:mi> À 
+</m:mi></m:mtd>
+<m:mtd><m:mi> agrave </m:mi></m:mtd><m:mtd><m:mi> à 
+</m:mi></m:mtd>
+<m:mtd><m:mi> aleph </m:mi></m:mtd><m:mtd><m:mi> ℵ 
+</m:mi></m:mtd>
+</m:mtr>
+
+
+<m:mtr>
+<m:mtd><m:mi> alpha </m:mi></m:mtd><m:mtd><m:mi> α 
+</m:mi></m:mtd>
+<m:mtd><m:mi> amacr </m:mi></m:mtd><m:mtd><m:mi> ā 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Amacr </m:mi></m:mtd><m:mtd><m:mi> Ā 
+</m:mi></m:mtd>
+<m:mtd><m:mi> amalg </m:mi></m:mtd><m:mtd><m:mi> ⨿ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> amp </m:mi></m:mtd><m:mtd><m:mi> &amp; </m:mi></m:mtd>
+<m:mtd><m:mi> And </m:mi></m:mtd><m:mtd><m:mi> ⩓ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> and </m:mi></m:mtd><m:mtd><m:mi> ∧ </m:mi></m:mtd>
+<m:mtd><m:mi> andand </m:mi></m:mtd><m:mtd><m:mi> ⩕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> alpha </m:mi></m:mtd><m:mtd><m:mi> α 
+</m:mi></m:mtd>
+<m:mtd><m:mi> andd </m:mi></m:mtd><m:mtd><m:mi> ⩜ </m:mi></m:mtd>
+<m:mtd><m:mi> andslope </m:mi></m:mtd><m:mtd><m:mi> ⩘ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> andv </m:mi></m:mtd><m:mtd><m:mi> ⩚ </m:mi></m:mtd>
+</m:mtr>
+
+
+<m:mtr>
+<m:mtd><m:mi> ang </m:mi></m:mtd><m:mtd><m:mi> ∠ </m:mi></m:mtd>
+<m:mtd><m:mi> ange </m:mi></m:mtd><m:mtd><m:mi> ⦤ </m:mi></m:mtd>
+<m:mtd><m:mi> angle </m:mi></m:mtd><m:mtd><m:mi> ∠ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsd </m:mi></m:mtd><m:mtd><m:mi> ∡ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsdaa </m:mi></m:mtd><m:mtd><m:mi> ⦨ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsdab </m:mi></m:mtd><m:mtd><m:mi> ⦩ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> angmsdac </m:mi></m:mtd><m:mtd><m:mi> ⦪ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsdad </m:mi></m:mtd><m:mtd><m:mi> ⦫ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsdae </m:mi></m:mtd><m:mtd><m:mi> ⦬ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsdaf </m:mi></m:mtd><m:mtd><m:mi> ⦭ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angmsdag </m:mi></m:mtd><m:mtd><m:mi> ⦮ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angrt </m:mi></m:mtd><m:mtd><m:mi> ∟ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> angrtvb </m:mi></m:mtd><m:mtd><m:mi> ⦝︀ 
+</m:mi></m:mtd>
+
+<m:mtd><m:mi> angrtvbd </m:mi></m:mtd><m:mtd><m:mi> ⦝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angsph </m:mi></m:mtd><m:mtd><m:mi> ∢ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angst </m:mi></m:mtd><m:mtd><m:mi> Å 
+</m:mi></m:mtd>
+<m:mtd><m:mi> angzarr </m:mi></m:mtd><m:mtd><m:mi> ⍼ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> aogon </m:mi></m:mtd><m:mtd><m:mi> ą 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Aogon </m:mi></m:mtd><m:mtd><m:mi> Ą 
+</m:mi></m:mtd>
+<m:mtd><m:mi> aopf </m:mi></m:mtd><m:mtd><m:mi> 𝕒 </m:mi></m:mtd>
+<m:mtd><m:mi> Aopf </m:mi></m:mtd><m:mtd><m:mi> 𝔸 </m:mi></m:mtd>
+<m:mtd><m:mi> ap </m:mi></m:mtd><m:mtd><m:mi> ≈ </m:mi></m:mtd>
+<m:mtd><m:mi> apacir </m:mi></m:mtd><m:mtd><m:mi> ⩯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ape </m:mi></m:mtd><m:mtd><m:mi> ≊ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> apE </m:mi></m:mtd><m:mtd><m:mi> ≊ </m:mi></m:mtd>
+<m:mtd><m:mi> apid </m:mi></m:mtd><m:mtd><m:mi> ≋ </m:mi></m:mtd>
+<m:mtd><m:mi> apos </m:mi></m:mtd><m:mtd><m:mi> ' </m:mi></m:mtd>
+<m:mtd><m:mi> ApplyFunction </m:mi></m:mtd><m:mtd><m:mi> 
+⁡ </m:mi></m:mtd>
+<m:mtd><m:mi> approx </m:mi></m:mtd><m:mtd><m:mi> ≈ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> approxeq </m:mi></m:mtd><m:mtd><m:mi> ≊ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> aring </m:mi></m:mtd><m:mtd><m:mi> å 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Aring </m:mi></m:mtd><m:mtd><m:mi> Å 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ascr </m:mi></m:mtd><m:mtd><m:mi> 𝒶 </m:mi></m:mtd>
+<m:mtd><m:mi> Ascr </m:mi></m:mtd><m:mtd><m:mi> 𝒜 </m:mi></m:mtd>
+<m:mtd><m:mi> Assign </m:mi></m:mtd><m:mtd><m:mi> ≔ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ast </m:mi></m:mtd><m:mtd><m:mi> * </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> asymp </m:mi></m:mtd><m:mtd><m:mi> ≍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Atilde </m:mi></m:mtd><m:mtd><m:mi> Ã 
+</m:mi></m:mtd>
+<m:mtd><m:mi> atilde </m:mi></m:mtd><m:mtd><m:mi> ã 
+</m:mi></m:mtd>
+<m:mtd><m:mi> auml </m:mi></m:mtd><m:mtd><m:mi> ä </m:mi></m:mtd>
+<m:mtd><m:mi> Auml </m:mi></m:mtd><m:mtd><m:mi> Ä </m:mi></m:mtd>
+<m:mtd><m:mi> awconint </m:mi></m:mtd><m:mtd><m:mi> ∳ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> awconint </m:mi></m:mtd><m:mtd><m:mi> ∳ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> awint </m:mi></m:mtd><m:mtd><m:mi> ⨑ 
+</m:mi></m:mtd>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> B </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+
+<m:mtr>
+<m:mtd><m:mi> backcong </m:mi></m:mtd><m:mtd><m:mi> ≌ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> backepsilon </m:mi></m:mtd><m:mtd><m:mi> ϶ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> backprime </m:mi></m:mtd><m:mtd><m:mi> ‵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> backsim </m:mi></m:mtd><m:mtd><m:mi> ∽ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> backsimeq </m:mi></m:mtd><m:mtd><m:mi> ⋍ </m:mi></m:mtd>
+<m:mtd><m:mi> Backslash </m:mi></m:mtd><m:mtd><m:mi> ∖ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Barv </m:mi></m:mtd><m:mtd><m:mi> ⫧ </m:mi></m:mtd>
+<m:mtd><m:mi> barvee </m:mi></m:mtd><m:mtd><m:mi> ⊽ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> barwed </m:mi></m:mtd><m:mtd><m:mi> ⊼ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Barwed </m:mi></m:mtd><m:mtd><m:mi> ⌆ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> barwedge </m:mi></m:mtd><m:mtd><m:mi> ⊼ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bbrk </m:mi></m:mtd><m:mtd><m:mi> ⎵ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bcong </m:mi></m:mtd><m:mtd><m:mi> ≌ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bcy </m:mi></m:mtd><m:mtd><m:mi> б </m:mi></m:mtd>
+<m:mtd><m:mi> Bcy </m:mi></m:mtd><m:mtd><m:mi> Б </m:mi></m:mtd>
+<m:mtd><m:mi> becaus </m:mi></m:mtd><m:mtd><m:mi> ∵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> because </m:mi></m:mtd><m:mtd><m:mi> ∵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Because </m:mi></m:mtd><m:mtd><m:mi> ∵ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bemptyv </m:mi></m:mtd><m:mtd><m:mi> ⦰ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bepsi </m:mi></m:mtd><m:mtd><m:mi> ϶ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bernou </m:mi></m:mtd><m:mtd><m:mi> ℬ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Bernoullis </m:mi></m:mtd><m:mtd><m:mi> ℬ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> beta </m:mi></m:mtd><m:mtd><m:mi> β </m:mi></m:mtd>
+<m:mtd><m:mi> beth </m:mi></m:mtd><m:mtd><m:mi> ℶ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> between </m:mi></m:mtd><m:mtd><m:mi> ≬ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Bfr </m:mi></m:mtd><m:mtd><m:mi> 𝔅 </m:mi></m:mtd>
+<m:mtd><m:mi> bfr </m:mi></m:mtd><m:mtd><m:mi> 𝔟 </m:mi></m:mtd>
+<m:mtd><m:mi> bigcap </m:mi></m:mtd><m:mtd><m:mi> ⋂ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigcirc </m:mi></m:mtd><m:mtd><m:mi> ◯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigcup </m:mi></m:mtd><m:mtd><m:mi> ⋃ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bigodot </m:mi></m:mtd><m:mtd><m:mi> ⊙ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigoplus </m:mi></m:mtd><m:mtd><m:mi> ⊕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigotimes </m:mi></m:mtd><m:mtd><m:mi> ⊗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigsqcup </m:mi></m:mtd><m:mtd><m:mi> ⊔ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigcirc </m:mi></m:mtd><m:mtd><m:mi> ◯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigstar </m:mi></m:mtd><m:mtd><m:mi> ★ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bigtriangledown </m:mi></m:mtd><m:mtd><m:mi> 
+▽ </m:mi></m:mtd>
+<m:mtd><m:mi> bigtriangleup </m:mi></m:mtd><m:mtd><m:mi> 
+△ </m:mi></m:mtd>
+<m:mtd><m:mi> biguplus </m:mi></m:mtd><m:mtd><m:mi> ⊎ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigvee </m:mi></m:mtd><m:mtd><m:mi> ⋁ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bigwedge </m:mi></m:mtd><m:mtd><m:mi> ⋀ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bkarow </m:mi></m:mtd><m:mtd><m:mi> ⤍ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> blacklozenge </m:mi></m:mtd><m:mtd><m:mi> ⧫ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> blacksquare </m:mi></m:mtd><m:mtd><m:mi> ▪ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> blacktriangle </m:mi></m:mtd><m:mtd><m:mi> 
+▴ </m:mi></m:mtd>
+<m:mtd><m:mi> blacktriangledown </m:mi></m:mtd><m:mtd><m:mi> 
+▾ </m:mi></m:mtd>
+<m:mtd><m:mi> blacktriangleleft </m:mi></m:mtd><m:mtd><m:mi> 
+◂ </m:mi></m:mtd>
+<m:mtd><m:mi> blacktriangleright </m:mi></m:mtd><m:mtd><m:mi> 
+▸ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> blank </m:mi></m:mtd><m:mtd><m:mi> ␣ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> blk12 </m:mi></m:mtd><m:mtd><m:mi> ▒ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> blk14 </m:mi></m:mtd><m:mtd><m:mi> ░ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> blk34 </m:mi></m:mtd><m:mtd><m:mi> ▓ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> block </m:mi></m:mtd><m:mtd><m:mi> █ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bne </m:mi></m:mtd><m:mtd><m:mi> =⃥ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bnequiv </m:mi></m:mtd><m:mtd><m:mi> ≡⃥ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bnot </m:mi></m:mtd><m:mtd><m:mi> ⌐ </m:mi></m:mtd>
+<m:mtd><m:mi> bNot </m:mi></m:mtd><m:mtd><m:mi> ⫭ </m:mi></m:mtd>
+<m:mtd><m:mi> Bopf </m:mi></m:mtd><m:mtd><m:mi> 𝔹 </m:mi></m:mtd>
+<m:mtd><m:mi> bopf </m:mi></m:mtd><m:mtd><m:mi> 𝕓 </m:mi></m:mtd>
+<m:mtd><m:mi> bot </m:mi></m:mtd><m:mtd><m:mi> ⊥ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bottom </m:mi></m:mtd><m:mtd><m:mi> ⊥ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bowtie </m:mi></m:mtd><m:mtd><m:mi> ⋈ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> boxbox </m:mi></m:mtd><m:mtd><m:mi> ⧉ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> boxdL </m:mi></m:mtd><m:mtd><m:mi> ╕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> boxdl </m:mi></m:mtd><m:mtd><m:mi> ┐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bprime </m:mi></m:mtd><m:mtd><m:mi> ‵ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Breve </m:mi></m:mtd><m:mtd><m:mi> ˘ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> breve </m:mi></m:mtd><m:mtd><m:mi> ˘ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> brvbar </m:mi></m:mtd><m:mtd><m:mi> ¦ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bscr </m:mi></m:mtd><m:mtd><m:mi> 𝒷 </m:mi></m:mtd>
+<m:mtd><m:mi> Bscr </m:mi></m:mtd><m:mtd><m:mi> ℬ </m:mi></m:mtd>
+<m:mtd><m:mi> bsemi </m:mi></m:mtd><m:mtd><m:mi> ⁏ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bsim </m:mi></m:mtd><m:mtd><m:mi> ∽ </m:mi></m:mtd>
+<m:mtd><m:mi> bsime </m:mi></m:mtd><m:mtd><m:mi> ⋍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bsol </m:mi></m:mtd><m:mtd><m:mi> \ </m:mi></m:mtd>
+<m:mtd><m:mi> bsolb </m:mi></m:mtd><m:mtd><m:mi> ⧅ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bsolhsub </m:mi></m:mtd><m:mtd><m:mi> \⊂ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bull </m:mi></m:mtd><m:mtd><m:mi> • </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> bullet </m:mi></m:mtd><m:mtd><m:mi> • 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bump </m:mi></m:mtd><m:mtd><m:mi> ≎ </m:mi></m:mtd>
+<m:mtd><m:mi> bumpE </m:mi></m:mtd><m:mtd><m:mi> ⪮ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bumpe </m:mi></m:mtd><m:mtd><m:mi> ≏ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> bumpeq </m:mi></m:mtd><m:mtd><m:mi> ≏ 
+</m:mi></m:mtd>
+<m:mtd/><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> C </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> cacute </m:mi></m:mtd><m:mtd><m:mi> ´ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Cacute </m:mi></m:mtd><m:mtd><m:mi> Ć 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cap </m:mi></m:mtd><m:mtd><m:mi> ∩ </m:mi></m:mtd>
+<m:mtd><m:mi> Cap </m:mi></m:mtd><m:mtd><m:mi> ⋒ </m:mi></m:mtd>
+<m:mtd><m:mi> capand </m:mi></m:mtd><m:mtd><m:mi> ⩄ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> capbrcup </m:mi></m:mtd><m:mtd><m:mi> ⩉ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> capcap </m:mi></m:mtd><m:mtd><m:mi> ⩋ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> capcup </m:mi></m:mtd><m:mtd><m:mi> ⩇ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> capdot </m:mi></m:mtd><m:mtd><m:mi> ⩀ 
+</m:mi></m:mtd><m:mtd><m:mi> CapitalDifferentialD </m:mi></m:mtd><m:mtd><m:mi> 
+ⅅ </m:mi></m:mtd>
+<m:mtd><m:mi> caps </m:mi></m:mtd><m:mtd><m:mi> ∩︀ </m:mi></m:mtd>
+<m:mtd><m:mi> caret </m:mi></m:mtd><m:mtd><m:mi> ⁁ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> caron </m:mi></m:mtd><m:mtd><m:mi> ˇ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Cayleys </m:mi></m:mtd><m:mtd><m:mi> ℭ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ccaps </m:mi></m:mtd><m:mtd><m:mi> ⩍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Ccaron </m:mi></m:mtd><m:mtd><m:mi> Č 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ccaron </m:mi></m:mtd><m:mtd><m:mi> č 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Ccedil </m:mi></m:mtd><m:mtd><m:mi> Ç 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Ccirc </m:mi></m:mtd><m:mtd><m:mi> Ĉ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ccirc </m:mi></m:mtd><m:mtd><m:mi> ĉ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Cconint </m:mi></m:mtd><m:mtd><m:mi> ∰ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ccups </m:mi></m:mtd><m:mtd><m:mi> ⩌ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ccupssm </m:mi></m:mtd><m:mtd><m:mi> ⩐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cdot </m:mi></m:mtd><m:mtd><m:mi> ċ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Cdot </m:mi></m:mtd><m:mtd><m:mi> Ċ </m:mi></m:mtd>
+<m:mtd><m:mi> cedil </m:mi></m:mtd><m:mtd><m:mi> ¸ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Cedilla </m:mi></m:mtd><m:mtd><m:mi> ¸ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cemptyv </m:mi></m:mtd><m:mtd><m:mi> ⦲ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cent </m:mi></m:mtd><m:mtd><m:mi> ¢ </m:mi></m:mtd>
+<m:mtd><m:mi> centerdot </m:mi></m:mtd><m:mtd><m:mi> · 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> CenterDot </m:mi></m:mtd><m:mtd><m:mi> · 
+</m:mi></m:mtd>
+
+<m:mtd><m:mi> cfr </m:mi></m:mtd><m:mtd><m:mi> 𝔠 </m:mi></m:mtd>
+<m:mtd><m:mi> Cfr </m:mi></m:mtd><m:mtd><m:mi> ℭ </m:mi></m:mtd>
+<m:mtd><m:mi> chcy </m:mi></m:mtd><m:mtd><m:mi> ч </m:mi></m:mtd>
+<m:mtd><m:mi> CHcy </m:mi></m:mtd><m:mtd><m:mi> Ч </m:mi></m:mtd>
+<m:mtd><m:mi> check </m:mi></m:mtd><m:mtd><m:mi> ✓ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> checkmark </m:mi></m:mtd><m:mtd><m:mi> ✓ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> chi </m:mi></m:mtd><m:mtd><m:mi> χ </m:mi></m:mtd>
+<m:mtd><m:mi> cir </m:mi></m:mtd><m:mtd><m:mi> ○ </m:mi></m:mtd>
+<m:mtd><m:mi> circ </m:mi></m:mtd><m:mtd><m:mi> ^ </m:mi></m:mtd>
+<m:mtd><m:mi> circeq </m:mi></m:mtd><m:mtd><m:mi> ≗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> circlearrowleft </m:mi></m:mtd><m:mtd><m:mi> 
+↺ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> circlearrowright </m:mi></m:mtd><m:mtd><m:mi> 
+↻ </m:mi></m:mtd>
+<m:mtd><m:mi> circledast </m:mi></m:mtd><m:mtd><m:mi> ⊛ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> circledcirc </m:mi></m:mtd><m:mtd><m:mi> ⊚ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> circleddash </m:mi></m:mtd><m:mtd><m:mi> ⊝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> CircleDot </m:mi></m:mtd><m:mtd><m:mi> ⊙ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> circledR </m:mi></m:mtd><m:mtd><m:mi> ® 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> circledS </m:mi></m:mtd><m:mtd><m:mi> Ⓢ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> CircleMinus </m:mi></m:mtd><m:mtd><m:mi> ⊖ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> CirclePlus </m:mi></m:mtd><m:mtd><m:mi> ⊕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> CircleTimes </m:mi></m:mtd><m:mtd><m:mi> ⊗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cirE </m:mi></m:mtd><m:mtd><m:mi> ⧃ </m:mi></m:mtd>
+<m:mtd><m:mi> cire </m:mi></m:mtd><m:mtd><m:mi> ≗ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> cirfnint </m:mi></m:mtd><m:mtd><m:mi> ⨐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cirmid </m:mi></m:mtd><m:mtd><m:mi> ⫯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cirscir </m:mi></m:mtd><m:mtd><m:mi> ⧂ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ClockwiseContourIntegral </m:mi></m:mtd><m:mtd><m:mi> 
+∲ </m:mi></m:mtd><m:mtd><m:mi> CloseCurlyDoubleQuote </m:mi></m:mtd><m:mtd><m:mi> 
+” </m:mi></m:mtd>
+<m:mtd><m:mi> CloseCurlyQuote </m:mi></m:mtd><m:mtd><m:mi> 
+’ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> clubs </m:mi></m:mtd><m:mtd><m:mi> ♣ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> clubsuit </m:mi></m:mtd><m:mtd><m:mi> ♣ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Colon </m:mi></m:mtd><m:mtd><m:mi> ∷ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> colon </m:mi></m:mtd><m:mtd><m:mi> : 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Colone </m:mi></m:mtd><m:mtd><m:mi> ⩴ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> colone </m:mi></m:mtd><m:mtd><m:mi> ≔ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> coloneq </m:mi></m:mtd><m:mtd><m:mi> ≔ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> comma </m:mi></m:mtd><m:mtd><m:mi> , 
+</m:mi></m:mtd>
+<m:mtd><m:mi> commat </m:mi></m:mtd><m:mtd><m:mi> @ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> comp </m:mi></m:mtd><m:mtd><m:mi> ∁ </m:mi></m:mtd>
+<m:mtd><m:mi> compfn </m:mi></m:mtd><m:mtd><m:mi> ∘ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> complement </m:mi></m:mtd><m:mtd><m:mi> ∁ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> complexes </m:mi></m:mtd><m:mtd><m:mi> ℂ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cong </m:mi></m:mtd><m:mtd><m:mi> ≅ </m:mi></m:mtd>
+<m:mtd><m:mi> congdot </m:mi></m:mtd><m:mtd><m:mi> ⩭ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Congruent </m:mi></m:mtd><m:mtd><m:mi> ≡ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> conint </m:mi></m:mtd><m:mtd><m:mi> ∮ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Conint </m:mi></m:mtd><m:mtd><m:mi> ∯ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> ContourIntegral </m:mi></m:mtd><m:mtd><m:mi> 
+∮ </m:mi></m:mtd>
+<m:mtd><m:mi> Copf </m:mi></m:mtd><m:mtd><m:mi> ℂ </m:mi></m:mtd>
+<m:mtd><m:mi> copf </m:mi></m:mtd><m:mtd><m:mi> 𝕔 </m:mi></m:mtd>
+<m:mtd><m:mi> coprod </m:mi></m:mtd><m:mtd><m:mi> ∐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Coproduct </m:mi></m:mtd><m:mtd><m:mi> ∐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> copy </m:mi></m:mtd><m:mtd><m:mi> © </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> copysr </m:mi></m:mtd><m:mtd><m:mi> ℗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> CounterClockwiseContourIntegral 
+</m:mi></m:mtd><m:mtd><m:mi> ∳ </m:mi></m:mtd>
+<m:mtd><m:mi> Cross </m:mi></m:mtd><m:mtd><m:mi> ⨯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cross </m:mi></m:mtd><m:mtd><m:mi> ✗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Cscr </m:mi></m:mtd><m:mtd><m:mi> 𝒞 </m:mi></m:mtd>
+<m:mtd><m:mi> cscr </m:mi></m:mtd><m:mtd><m:mi> 𝒸 </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> csub </m:mi></m:mtd><m:mtd><m:mi> ⫏ </m:mi></m:mtd>
+<m:mtd><m:mi> csube </m:mi></m:mtd><m:mtd><m:mi> ⫑ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> csup </m:mi></m:mtd><m:mtd><m:mi> ⫐ </m:mi></m:mtd>
+<m:mtd><m:mi> csupe </m:mi></m:mtd><m:mtd><m:mi> ⫒ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ctdot </m:mi></m:mtd><m:mtd><m:mi> ⋯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cudarrl </m:mi></m:mtd><m:mtd><m:mi> ⤸ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> cudarrr </m:mi></m:mtd><m:mtd><m:mi> ⤵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cuepr </m:mi></m:mtd><m:mtd><m:mi> ⋞ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cuesc </m:mi></m:mtd><m:mtd><m:mi> ⋟ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cularr </m:mi></m:mtd><m:mtd><m:mi> ↶ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ctdot </m:mi></m:mtd><m:mtd><m:mi> ⋯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cularrp </m:mi></m:mtd><m:mtd><m:mi> ⤽ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> cup </m:mi></m:mtd><m:mtd><m:mi> ∪ </m:mi></m:mtd>
+<m:mtd><m:mi> Cup </m:mi></m:mtd><m:mtd><m:mi> ⋓ </m:mi></m:mtd>
+<m:mtd><m:mi> cupbrcap </m:mi></m:mtd><m:mtd><m:mi> ⩈ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> CupCap </m:mi></m:mtd><m:mtd><m:mi> ≍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cupcap </m:mi></m:mtd><m:mtd><m:mi> ⩆ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cupcup </m:mi></m:mtd><m:mtd><m:mi> ⩊ 
+</m:mi></m:mtd>
+</m:mtr>
+
+
+
+
+
+<m:mtr>
+<m:mtd><m:mi> cupdot </m:mi></m:mtd><m:mtd><m:mi> ⊍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cupor </m:mi></m:mtd><m:mtd><m:mi> ⩅ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cups </m:mi></m:mtd><m:mtd><m:mi> ∪︀ </m:mi></m:mtd>
+<m:mtd><m:mi> curarr </m:mi></m:mtd><m:mtd><m:mi> ↷ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> curarrm </m:mi></m:mtd><m:mtd><m:mi> ⤼ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> curlyeqprec </m:mi></m:mtd><m:mtd><m:mi> ⋞ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> curlyeqsucc </m:mi></m:mtd><m:mtd><m:mi> ⋟ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> curlyvee </m:mi></m:mtd><m:mtd><m:mi> ⋎ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> curlywedge </m:mi></m:mtd><m:mtd><m:mi> ⋏ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> curren </m:mi></m:mtd><m:mtd><m:mi> ¤ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> curvearrowleft </m:mi></m:mtd><m:mtd><m:mi> 
+↶ </m:mi></m:mtd>
+<m:mtd><m:mi> curvearrowright </m:mi></m:mtd><m:mtd><m:mi> 
+↷ </m:mi></m:mtd>
+</m:mtr>
+
+
+<m:mtr>
+<m:mtd><m:mi> cuvee </m:mi></m:mtd><m:mtd><m:mi> ⋎ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cuwed </m:mi></m:mtd><m:mtd><m:mi> ⋏ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cwconint </m:mi></m:mtd><m:mtd><m:mi> ∲ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cwint </m:mi></m:mtd><m:mtd><m:mi> ∱ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> cylcty </m:mi></m:mtd><m:mtd><m:mi> ⌭ 
+</m:mi></m:mtd>
+<m:mtd/><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> D </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> Dagger </m:mi></m:mtd><m:mtd><m:mi> ‡ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> daleth </m:mi></m:mtd><m:mtd><m:mi> ℸ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dagger </m:mi></m:mtd><m:mtd><m:mi> † 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Darr </m:mi></m:mtd><m:mtd><m:mi> ↡ </m:mi></m:mtd>
+<m:mtd><m:mi> darr </m:mi></m:mtd><m:mtd><m:mi> ↓ </m:mi></m:mtd>
+<m:mtd><m:mi> dArr </m:mi></m:mtd><m:mtd><m:mi> ⇓ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> dashv </m:mi></m:mtd><m:mtd><m:mi> ⊣ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Dashv </m:mi></m:mtd><m:mtd><m:mi> ⫤ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dbkarow </m:mi></m:mtd><m:mtd><m:mi> ⤏ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dblac </m:mi></m:mtd><m:mtd><m:mi> ˝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dcaron </m:mi></m:mtd><m:mtd><m:mi> ď 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Dcaron </m:mi></m:mtd><m:mtd><m:mi> Ď 
+</m:mi></m:mtd>
+</m:mtr>
+
+
+
+<m:mtr>
+<m:mtd><m:mi> Dcy </m:mi></m:mtd><m:mtd><m:mi> Д </m:mi></m:mtd>
+<m:mtd><m:mi> dcy </m:mi></m:mtd><m:mtd><m:mi> д </m:mi></m:mtd>
+<m:mtd><m:mi> dd </m:mi></m:mtd><m:mtd><m:mi> ⅆ </m:mi></m:mtd>
+<m:mtd><m:mi> DD </m:mi></m:mtd><m:mtd><m:mi> ⅅ </m:mi></m:mtd>
+<m:mtd><m:mi> ddagger </m:mi></m:mtd><m:mtd><m:mi> ‡ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ddarr </m:mi></m:mtd><m:mtd><m:mi> ⇊ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> deg </m:mi></m:mtd><m:mtd><m:mi> ° </m:mi></m:mtd>
+<m:mtd><m:mi> Del </m:mi></m:mtd><m:mtd><m:mi> ∇ </m:mi></m:mtd>
+<m:mtd><m:mi> Delta </m:mi></m:mtd><m:mtd><m:mi> Δ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> delta </m:mi></m:mtd><m:mtd><m:mi> δ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dharl </m:mi></m:mtd><m:mtd><m:mi> ⇃ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dharr </m:mi></m:mtd><m:mtd><m:mi> ⇂ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> diam </m:mi></m:mtd><m:mtd><m:mi> ⋄ </m:mi></m:mtd>
+<m:mtd><m:mi> diamond </m:mi></m:mtd><m:mtd><m:mi> ⋄ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Diamond </m:mi></m:mtd><m:mtd><m:mi> ⋄ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> diamondsuit </m:mi></m:mtd><m:mtd><m:mi> ♦ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> die </m:mi></m:mtd><m:mtd><m:mi> ¨ </m:mi></m:mtd>
+<m:mtd><m:mi> DifferentialD </m:mi></m:mtd><m:mtd><m:mi> 
+ⅆ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> digamma </m:mi></m:mtd><m:mtd><m:mi> Ϝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> disin </m:mi></m:mtd><m:mtd><m:mi> ⋲ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> div </m:mi></m:mtd><m:mtd><m:mi> ÷ </m:mi></m:mtd>
+<m:mtd><m:mi> divide </m:mi></m:mtd><m:mtd><m:mi> ÷ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> die </m:mi></m:mtd><m:mtd><m:mi> ¨ </m:mi></m:mtd>
+<m:mtd><m:mi> divideontimes </m:mi></m:mtd><m:mtd><m:mi> 
+⋇ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> divonx </m:mi></m:mtd><m:mtd><m:mi> ⋇ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> djcy </m:mi></m:mtd><m:mtd><m:mi> ђ </m:mi></m:mtd>
+<m:mtd><m:mi> DJcy </m:mi></m:mtd><m:mtd><m:mi> Ђ </m:mi></m:mtd>
+<m:mtd><m:mi> dlcorn </m:mi></m:mtd><m:mtd><m:mi> ⌞ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dlcrop </m:mi></m:mtd><m:mtd><m:mi> ⌍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dlcrop </m:mi></m:mtd><m:mtd><m:mi> ⌍ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> dollar </m:mi></m:mtd><m:mtd><m:mi> $ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Dopf </m:mi></m:mtd><m:mtd><m:mi> 𝔻 </m:mi></m:mtd>
+<m:mtd><m:mi> dopf </m:mi></m:mtd><m:mtd><m:mi> 𝕕 </m:mi></m:mtd>
+<m:mtd><m:mi> Dot </m:mi></m:mtd><m:mtd><m:mi> ¨ </m:mi></m:mtd>
+<m:mtd><m:mi> dot	 </m:mi></m:mtd><m:mtd><m:mi> ˙ </m:mi></m:mtd>
+<m:mtd><m:mi> DotDot </m:mi></m:mtd><m:mtd><m:mi> ⃜ 
+</m:mi></m:mtd>
+</m:mtr>
+
+
+
+
+<m:mtr>
+<m:mtd><m:mi> doteq </m:mi></m:mtd><m:mtd><m:mi> ≐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> doteqdot </m:mi></m:mtd><m:mtd><m:mi> ≑ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> DotEqual </m:mi></m:mtd><m:mtd><m:mi> ≐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dotminus </m:mi></m:mtd><m:mtd><m:mi> ∸ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dotplus	 </m:mi></m:mtd><m:mtd><m:mi> ∔ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dotsquare </m:mi></m:mtd><m:mtd><m:mi> ⊡ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> doublebarwedge </m:mi></m:mtd><m:mtd><m:mi> 
+⌆ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleContourIntegral </m:mi></m:mtd><m:mtd><m:mi> 
+∯ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleDot </m:mi></m:mtd><m:mtd><m:mi> ¨ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> DoubleDownArrow </m:mi></m:mtd><m:mtd><m:mi> 
+⇓ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleLeftArrow	 </m:mi></m:mtd><m:mtd><m:mi> 
+⇐ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleLeftRightArrow </m:mi></m:mtd><m:mtd><m:mi> 
+⇔ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> DoubleLeftTee </m:mi></m:mtd><m:mtd><m:mi> 
+⫤ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleLongLeftArrow </m:mi></m:mtd><m:mtd><m:mi> 
+ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleLongLeftRightArrow </m:mi></m:mtd><m:mtd><m:mi> 
+ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleLongRightArrow </m:mi></m:mtd><m:mtd><m:mi> 
+ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleRightArrow	 </m:mi></m:mtd><m:mtd><m:mi> 
+⇒ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleRightTee </m:mi></m:mtd><m:mtd><m:mi> 
+⊨ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> DoubleUpArrow </m:mi></m:mtd><m:mtd><m:mi> 
+⇑ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleUpDownArrow </m:mi></m:mtd><m:mtd><m:mi> 
+⇕ </m:mi></m:mtd>
+<m:mtd><m:mi> DoubleVerticalBar </m:mi></m:mtd><m:mtd><m:mi> 
+∥ </m:mi></m:mtd>
+<m:mtd><m:mi> Downarrow </m:mi></m:mtd><m:mtd><m:mi> ⇓ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> downarrow	 </m:mi></m:mtd><m:mtd><m:mi> ↓ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> DownArrow </m:mi></m:mtd><m:mtd><m:mi> ↓ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> downdownarrows </m:mi></m:mtd><m:mtd><m:mi> 
+⇊ </m:mi></m:mtd>
+<m:mtd><m:mi> downharpoonleft </m:mi></m:mtd><m:mtd><m:mi> 
+⇃ </m:mi></m:mtd>
+<m:mtd><m:mi> downharpoonright </m:mi></m:mtd><m:mtd><m:mi> 
+⇂ </m:mi></m:mtd>
+<m:mtd><m:mi> DownLeftVector </m:mi></m:mtd><m:mtd><m:mi> 
+↽ </m:mi></m:mtd>
+<m:mtd><m:mi> DownRightVector	 </m:mi></m:mtd><m:mtd><m:mi> 
+⇁ </m:mi></m:mtd>
+<m:mtd><m:mi> DownTee </m:mi></m:mtd><m:mtd><m:mi> ⊤ 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> DownTeeArrow </m:mi></m:mtd><m:mtd><m:mi> ↧ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> drbkarow </m:mi></m:mtd><m:mtd><m:mi> ⤐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> drcorn </m:mi></m:mtd><m:mtd><m:mi> ⌟ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> drcrop </m:mi></m:mtd><m:mtd><m:mi> ⌌ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dscr	 </m:mi></m:mtd><m:mtd><m:mi> 𝒹 </m:mi></m:mtd>
+<m:mtd><m:mi> Dscr </m:mi></m:mtd><m:mtd><m:mi> 𝒟 </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> DScy </m:mi></m:mtd><m:mtd><m:mi> Ѕ </m:mi></m:mtd>
+<m:mtd><m:mi> dscy </m:mi></m:mtd><m:mtd><m:mi> ѕ </m:mi></m:mtd>
+<m:mtd><m:mi> dsol </m:mi></m:mtd><m:mtd><m:mi> ⧶ </m:mi></m:mtd>
+<m:mtd><m:mi> Dstrok </m:mi></m:mtd><m:mtd><m:mi> Đ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dstrok	 </m:mi></m:mtd><m:mtd><m:mi> đ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dtdot </m:mi></m:mtd><m:mtd><m:mi> ⋱ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> dtri </m:mi></m:mtd><m:mtd><m:mi> ▿ </m:mi></m:mtd>
+<m:mtd><m:mi> dtrif </m:mi></m:mtd><m:mtd><m:mi> ▾ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> duarr </m:mi></m:mtd><m:mtd><m:mi> ⇵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> duhar </m:mi></m:mtd><m:mtd><m:mi> ⥯ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dwangle	 </m:mi></m:mtd><m:mtd><m:mi> ⦦ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> dzcy </m:mi></m:mtd><m:mtd><m:mi> џ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> E </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> eacute </m:mi></m:mtd><m:mtd><m:mi> é 
+</m:mi></m:mtd>
+<m:mtd><m:mi> easter </m:mi></m:mtd><m:mtd><m:mi> ≛ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ecaron </m:mi></m:mtd><m:mtd><m:mi> ě 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Eacute </m:mi></m:mtd><m:mtd><m:mi> É 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Ecaron </m:mi></m:mtd><m:mtd><m:mi> Ě 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ecir </m:mi></m:mtd><m:mtd><m:mi> ≖ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Ecirc </m:mi></m:mtd><m:mtd><m:mi> Ê 
+</m:mi></m:mtd><m:mtd><m:mi> ecirc </m:mi></m:mtd><m:mtd><m:mi> ê 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ecolon </m:mi></m:mtd><m:mtd><m:mi> ≕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Ecy </m:mi></m:mtd><m:mtd><m:mi> Э </m:mi></m:mtd>
+<m:mtd><m:mi> ecy </m:mi></m:mtd><m:mtd><m:mi> э </m:mi></m:mtd>
+<m:mtd><m:mi> eDDot </m:mi></m:mtd><m:mtd><m:mi> ⩷ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Edot </m:mi></m:mtd><m:mtd><m:mi> Ė </m:mi></m:mtd>
+<m:mtd><m:mi> edot </m:mi></m:mtd><m:mtd><m:mi> ė </m:mi></m:mtd>
+<m:mtd><m:mi> eDot </m:mi></m:mtd><m:mtd><m:mi> ≑ </m:mi></m:mtd>
+<m:mtd><m:mi> ee </m:mi></m:mtd><m:mtd><m:mi> ⅇ </m:mi></m:mtd>
+<m:mtd><m:mi> efDot </m:mi></m:mtd><m:mtd><m:mi> ≒ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Efr </m:mi></m:mtd><m:mtd><m:mi> 𝔈 </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> efr </m:mi></m:mtd><m:mtd><m:mi> 𝔢 </m:mi></m:mtd>
+<m:mtd><m:mi> eg </m:mi></m:mtd><m:mtd><m:mi> ⪚ </m:mi></m:mtd>
+<m:mtd><m:mi> egrave </m:mi></m:mtd><m:mtd><m:mi> è 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Egrave </m:mi></m:mtd><m:mtd><m:mi> È 
+</m:mi></m:mtd>
+<m:mtd><m:mi> egs </m:mi></m:mtd><m:mtd><m:mi> ⋝ </m:mi></m:mtd>
+<m:mtd><m:mi> egsdot </m:mi></m:mtd><m:mtd><m:mi> ⪘ 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> el </m:mi></m:mtd><m:mtd><m:mi> ⪙ </m:mi></m:mtd>
+<m:mtd><m:mi> Element </m:mi></m:mtd><m:mtd><m:mi> ∈ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ell </m:mi></m:mtd><m:mtd><m:mi> ℓ </m:mi></m:mtd>
+<m:mtd><m:mi> els </m:mi></m:mtd><m:mtd><m:mi> ⋜ </m:mi></m:mtd>
+<m:mtd><m:mi> elsdot </m:mi></m:mtd><m:mtd><m:mi> ⪗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Emacr </m:mi></m:mtd><m:mtd><m:mi> Ē 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> emacr </m:mi></m:mtd><m:mtd><m:mi> ē 
+</m:mi></m:mtd>
+<m:mtd><m:mi> empty </m:mi></m:mtd><m:mtd><m:mi> ∅︀ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> emptyset </m:mi></m:mtd><m:mtd><m:mi> ∅︀ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> EmptySmallSquare </m:mi></m:mtd><m:mtd><m:mi> 
+◽ </m:mi></m:mtd>
+<m:mtd><m:mi> emptyv </m:mi></m:mtd><m:mtd><m:mi> ∅ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> EmptyVerySmallSquare </m:mi></m:mtd><m:mtd><m:mi> 
+ </m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> emsp </m:mi></m:mtd><m:mtd><m:mi>   </m:mi></m:mtd>
+<m:mtd><m:mi> emsp13 </m:mi></m:mtd><m:mtd><m:mi>   
+</m:mi></m:mtd>
+<m:mtd><m:mi> emsp14 </m:mi></m:mtd><m:mtd><m:mi>   
+</m:mi></m:mtd>
+<m:mtd><m:mi> ENG </m:mi></m:mtd><m:mtd><m:mi> Ŋ </m:mi></m:mtd>
+<m:mtd><m:mi> eng	 </m:mi></m:mtd><m:mtd><m:mi> ŋ </m:mi></m:mtd>
+<m:mtd><m:mi> ensp </m:mi></m:mtd><m:mtd><m:mi>   </m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> eogon </m:mi></m:mtd><m:mtd><m:mi> ę 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Eogon </m:mi></m:mtd><m:mtd><m:mi> Ę 
+</m:mi></m:mtd>
+<m:mtd><m:mi> eopf </m:mi></m:mtd><m:mtd><m:mi> 𝕖 </m:mi></m:mtd>
+<m:mtd><m:mi> Eopf </m:mi></m:mtd><m:mtd><m:mi> 𝔼 </m:mi></m:mtd>
+<m:mtd><m:mi> epar </m:mi></m:mtd><m:mtd><m:mi> ⋕ </m:mi></m:mtd>
+<m:mtd><m:mi> eparsl </m:mi></m:mtd><m:mtd><m:mi> ⧣ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> eplus </m:mi></m:mtd><m:mtd><m:mi> ⩱ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> epsi </m:mi></m:mtd><m:mtd><m:mi> ε </m:mi></m:mtd>
+<m:mtd><m:mi> epsiv </m:mi></m:mtd><m:mtd><m:mi> ɛ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> eqcirc </m:mi></m:mtd><m:mtd><m:mi> ≖ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> eqcolon </m:mi></m:mtd><m:mtd><m:mi> ≕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> eqsim </m:mi></m:mtd><m:mtd><m:mi> ≂ 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> eqslantgtr </m:mi></m:mtd><m:mtd><m:mi> ⋝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> eqslantless </m:mi></m:mtd><m:mtd><m:mi> ⋜ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Equal </m:mi></m:mtd><m:mtd><m:mi> ⩵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> equals </m:mi></m:mtd><m:mtd><m:mi> = 
+</m:mi></m:mtd>
+<m:mtd><m:mi> EqualTilde </m:mi></m:mtd><m:mtd><m:mi> ≂ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> equest </m:mi></m:mtd><m:mtd><m:mi> ≟ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Equilibrium </m:mi></m:mtd><m:mtd><m:mi> ⇌ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> equiv </m:mi></m:mtd><m:mtd><m:mi> ≡ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> equivDD </m:mi></m:mtd><m:mtd><m:mi> ⩸ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> eqvparsl </m:mi></m:mtd><m:mtd><m:mi> ⧥ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> erarr </m:mi></m:mtd><m:mtd><m:mi> ⥱ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> erDot </m:mi></m:mtd><m:mtd><m:mi> ≓ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> escr </m:mi></m:mtd><m:mtd><m:mi> ℯ </m:mi></m:mtd>
+<m:mtd><m:mi> Escr </m:mi></m:mtd><m:mtd><m:mi> ℰ </m:mi></m:mtd>
+<m:mtd><m:mi> esdot </m:mi></m:mtd><m:mtd><m:mi> ≐ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Esim </m:mi></m:mtd><m:mtd><m:mi> ⩳ </m:mi></m:mtd>
+<m:mtd><m:mi> esim </m:mi></m:mtd><m:mtd><m:mi> ≂ </m:mi></m:mtd>
+<m:mtd><m:mi> eta </m:mi></m:mtd><m:mtd><m:mi> η </m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> eth </m:mi></m:mtd><m:mtd><m:mi> ð </m:mi></m:mtd>
+<m:mtd><m:mi> ETH </m:mi></m:mtd><m:mtd><m:mi> Ð </m:mi></m:mtd>
+<m:mtd><m:mi> euml </m:mi></m:mtd><m:mtd><m:mi> ë </m:mi></m:mtd>
+<m:mtd><m:mi> Euml </m:mi></m:mtd><m:mtd><m:mi> Ë </m:mi></m:mtd>
+<m:mtd><m:mi> excl </m:mi></m:mtd><m:mtd><m:mi> ! </m:mi></m:mtd>
+<m:mtd><m:mi> exist </m:mi></m:mtd><m:mtd><m:mi> ∃ 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> Exists </m:mi></m:mtd><m:mtd><m:mi> ∃ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> expectation </m:mi></m:mtd><m:mtd><m:mi> ℰ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ExponentialE </m:mi></m:mtd><m:mtd><m:mi> ⅇ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> exponentiale </m:mi></m:mtd><m:mtd><m:mi> ⅇ 
+</m:mi></m:mtd>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> F </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> fallingdotseq </m:mi></m:mtd><m:mtd><m:mi> 
+≒ </m:mi></m:mtd>
+<m:mtd><m:mi> Fcy </m:mi></m:mtd><m:mtd><m:mi> Ф </m:mi></m:mtd>
+<m:mtd><m:mi> fcy </m:mi></m:mtd><m:mtd><m:mi> ф </m:mi></m:mtd>
+<m:mtd><m:mi> female </m:mi></m:mtd><m:mtd><m:mi> ♀ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ffilig </m:mi></m:mtd><m:mtd><m:mi> ﬃ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> fflig </m:mi></m:mtd><m:mtd><m:mi> ﬀ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> ffllig </m:mi></m:mtd><m:mtd><m:mi> ﬄ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ffr </m:mi></m:mtd><m:mtd><m:mi> 𝔣 </m:mi></m:mtd>
+<m:mtd><m:mi> Ffr </m:mi></m:mtd><m:mtd><m:mi> 𝔉 </m:mi></m:mtd>
+<m:mtd><m:mi> filig </m:mi></m:mtd><m:mtd><m:mi> ﬁ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> FilledSmallSquare </m:mi></m:mtd><m:mtd><m:mi> 
+◾ </m:mi></m:mtd>
+<m:mtd><m:mi> flat </m:mi></m:mtd><m:mtd><m:mi> ♭ </m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> fllig </m:mi></m:mtd><m:mtd><m:mi> ﬂ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> fnof </m:mi></m:mtd><m:mtd><m:mi> ƒ </m:mi></m:mtd>
+<m:mtd><m:mi> Fopf </m:mi></m:mtd><m:mtd><m:mi> 𝔽 </m:mi></m:mtd>
+<m:mtd><m:mi> fopf </m:mi></m:mtd><m:mtd><m:mi> 𝕗 </m:mi></m:mtd>
+<m:mtd><m:mi> ForAll </m:mi></m:mtd><m:mtd><m:mi> ∀ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> forall </m:mi></m:mtd><m:mtd><m:mi> ∀ 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> fork </m:mi></m:mtd><m:mtd><m:mi> ⋔ </m:mi></m:mtd>
+<m:mtd><m:mi> forkv </m:mi></m:mtd><m:mtd><m:mi> ⫙ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Fouriertrf </m:mi></m:mtd><m:mtd><m:mi> ℱ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> fpartint </m:mi></m:mtd><m:mtd><m:mi> ⨍ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> frac12 </m:mi></m:mtd><m:mtd><m:mi> ½ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> frac13 </m:mi></m:mtd><m:mtd><m:mi> ⅓ 
+</m:mi></m:mtd>
+</m:mtr>
+<m:mtr>
+<m:mtd><m:mi> frac56 </m:mi></m:mtd><m:mtd><m:mi> ⅚ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> frac58 </m:mi></m:mtd><m:mtd><m:mi> ⅝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> frac78 </m:mi></m:mtd><m:mtd><m:mi> ⅞ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> frown </m:mi></m:mtd><m:mtd><m:mi> ⌢ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Fscr </m:mi></m:mtd><m:mtd><m:mi> ℱ </m:mi></m:mtd>
+<m:mtd><m:mi> fscr </m:mi></m:mtd><m:mtd><m:mi> 𝒻 </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> G </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> gacute </m:mi></m:mtd><m:mtd><m:mi> ǵ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Gamma </m:mi></m:mtd><m:mtd><m:mi> Γ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gamma </m:mi></m:mtd><m:mtd><m:mi> γ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gammad </m:mi></m:mtd><m:mtd><m:mi> Ϝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Gammad </m:mi></m:mtd><m:mtd><m:mi> Ϝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gap </m:mi></m:mtd><m:mtd><m:mi> ≳ </m:mi></m:mtd>
+</m:mtr>
+
+
+<m:mtr>
+<m:mtd><m:mi> gbreve </m:mi></m:mtd><m:mtd><m:mi> ğ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Gbreve </m:mi></m:mtd><m:mtd><m:mi> Ğ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Gcedil </m:mi></m:mtd><m:mtd><m:mi> Ģ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Gcirc </m:mi></m:mtd><m:mtd><m:mi> Ĝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gcirc </m:mi></m:mtd><m:mtd><m:mi> ĝ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gcy	 </m:mi></m:mtd><m:mtd><m:mi> г </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Gcy </m:mi></m:mtd><m:mtd><m:mi> Г </m:mi></m:mtd>
+<m:mtd><m:mi> Gdot </m:mi></m:mtd><m:mtd><m:mi> Ġ </m:mi></m:mtd>
+<m:mtd><m:mi> gdot </m:mi></m:mtd><m:mtd><m:mi> ġ </m:mi></m:mtd>
+<m:mtd><m:mi> gE </m:mi></m:mtd><m:mtd><m:mi> ≧ </m:mi></m:mtd>
+<m:mtd><m:mi> ge </m:mi></m:mtd><m:mtd><m:mi> ≥ </m:mi></m:mtd>
+<m:mtd><m:mi> gel	 </m:mi></m:mtd><m:mtd><m:mi> ⋛ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> gEl </m:mi></m:mtd><m:mtd><m:mi> ⋛ </m:mi></m:mtd>
+<m:mtd><m:mi> geq </m:mi></m:mtd><m:mtd><m:mi> ≥ </m:mi></m:mtd>
+<m:mtd><m:mi> geqq </m:mi></m:mtd><m:mtd><m:mi> ≧ </m:mi></m:mtd>
+<m:mtd><m:mi> geqslant </m:mi></m:mtd><m:mtd><m:mi> ⩾ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> ges </m:mi></m:mtd><m:mtd><m:mi> ⩾ </m:mi></m:mtd>
+<m:mtd><m:mi> gescc </m:mi></m:mtd><m:mtd><m:mi> ⪩ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Gg </m:mi></m:mtd><m:mtd><m:mi> ⋙ </m:mi></m:mtd>
+<m:mtd><m:mi> gg </m:mi></m:mtd><m:mtd><m:mi> ≫ </m:mi></m:mtd>
+<m:mtd><m:mi> ggg </m:mi></m:mtd><m:mtd><m:mi> ⋙ </m:mi></m:mtd>
+<m:mtd><m:mi> gimel </m:mi></m:mtd><m:mtd><m:mi> ℷ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> GJcy </m:mi></m:mtd><m:mtd><m:mi> Ѓ </m:mi></m:mtd>
+<m:mtd><m:mi> gjcy </m:mi></m:mtd><m:mtd><m:mi> ѓ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> gl </m:mi></m:mtd><m:mtd><m:mi> ≷ </m:mi></m:mtd>
+<m:mtd><m:mi> gla </m:mi></m:mtd><m:mtd><m:mi> ⪥ </m:mi></m:mtd>
+<m:mtd><m:mi> glE </m:mi></m:mtd><m:mtd><m:mi> ⪒ </m:mi></m:mtd>
+<m:mtd><m:mi> gne </m:mi></m:mtd><m:mtd><m:mi> ≩ </m:mi></m:mtd>
+<m:mtd><m:mi> gnE </m:mi></m:mtd><m:mtd><m:mi> ≩ </m:mi></m:mtd>
+<m:mtd><m:mi> gneq </m:mi></m:mtd><m:mtd><m:mi> ≩ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> gneqq </m:mi></m:mtd><m:mtd><m:mi> ≩ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gnsim </m:mi></m:mtd><m:mtd><m:mi> ⋧ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> grave </m:mi></m:mtd><m:mtd><m:mi> ` 
+</m:mi></m:mtd>
+<m:mtd><m:mi> GreaterEqual </m:mi></m:mtd><m:mtd><m:mi> ≥ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> GreaterEqualLess </m:mi></m:mtd><m:mtd><m:mi> 
+⋛ </m:mi></m:mtd>
+<m:mtd><m:mi> GreaterEqualLess </m:mi></m:mtd><m:mtd><m:mi> 
+⋛ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> GreaterFullEqual </m:mi></m:mtd><m:mtd><m:mi> 
+≧ </m:mi></m:mtd>
+<m:mtd><m:mi> GreaterLess </m:mi></m:mtd><m:mtd><m:mi> ≷ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> GreaterTilde </m:mi></m:mtd><m:mtd><m:mi> ≳ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gscr </m:mi></m:mtd><m:mtd><m:mi> ℊ </m:mi></m:mtd>
+<m:mtd><m:mi> gsim </m:mi></m:mtd><m:mtd><m:mi> ≳ </m:mi></m:mtd>
+<m:mtd><m:mi> gt </m:mi></m:mtd><m:mtd><m:mi> &gt; </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Gt </m:mi></m:mtd><m:mtd><m:mi> ≫ </m:mi></m:mtd>
+<m:mtd><m:mi> gtcc </m:mi></m:mtd><m:mtd><m:mi> ⪧ </m:mi></m:mtd>
+<m:mtd><m:mi> gtcir </m:mi></m:mtd><m:mtd><m:mi> ⩺ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtdot </m:mi></m:mtd><m:mtd><m:mi> ⋗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtlPar </m:mi></m:mtd><m:mtd><m:mi> ⦕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtquest </m:mi></m:mtd><m:mtd><m:mi> ⩼ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> gtdot </m:mi></m:mtd><m:mtd><m:mi> ⋗ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtlPar </m:mi></m:mtd><m:mtd><m:mi> ⦕ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtquest </m:mi></m:mtd><m:mtd><m:mi> ⩼ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtrapprox </m:mi></m:mtd><m:mtd><m:mi> ≳ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtrarr </m:mi></m:mtd><m:mtd><m:mi> ⥸ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtrdot </m:mi></m:mtd><m:mtd><m:mi> ⋗ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> gtreqless </m:mi></m:mtd><m:mtd><m:mi> ⋛ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtreqqless </m:mi></m:mtd><m:mtd><m:mi> ⋛ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtrless </m:mi></m:mtd><m:mtd><m:mi> ≷ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gtrsim </m:mi></m:mtd><m:mtd><m:mi> ≳ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gvertneqq </m:mi></m:mtd><m:mtd><m:mi> ≩︀ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> gvnE </m:mi></m:mtd><m:mtd><m:mi> ≩︀ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi mathvariant="bold"> H </m:mi></m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+<m:mtd> </m:mtd><m:mtd/>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> hairsp </m:mi></m:mtd><m:mtd><m:mi>   
+</m:mi></m:mtd>
+<m:mtd><m:mi> Hacek </m:mi></m:mtd><m:mtd><m:mi> ˇ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> half </m:mi></m:mtd><m:mtd><m:mi> ½ </m:mi></m:mtd>
+<m:mtd><m:mi> hamilt </m:mi></m:mtd><m:mtd><m:mi> ℋ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> hardcy </m:mi></m:mtd><m:mtd><m:mi> ъ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> HARDcy </m:mi></m:mtd><m:mtd><m:mi> Ъ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> harr </m:mi></m:mtd><m:mtd><m:mi> ↔ </m:mi></m:mtd>
+<m:mtd><m:mi> hArr </m:mi></m:mtd><m:mtd><m:mi> ⇔ </m:mi></m:mtd>
+<m:mtd><m:mi> harrcir </m:mi></m:mtd><m:mtd><m:mi> ⥈ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> harrw </m:mi></m:mtd><m:mtd><m:mi> ↭ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Hat </m:mi></m:mtd><m:mtd><m:mi> ̂ </m:mi></m:mtd>
+<m:mtd><m:mi> hbar </m:mi></m:mtd><m:mtd><m:mi> ℏ︀ </m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> Hcirc </m:mi></m:mtd><m:mtd><m:mi> Ĥ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> hcirc </m:mi></m:mtd><m:mtd><m:mi> ĥ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> heartsuit </m:mi></m:mtd><m:mtd><m:mi> ♡ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> hellip </m:mi></m:mtd><m:mtd><m:mi> … 
+</m:mi></m:mtd>
+<m:mtd><m:mi> hercon </m:mi></m:mtd><m:mtd><m:mi> ⊹ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> HumpEqual </m:mi></m:mtd><m:mtd><m:mi> ≏ 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> HilbertSpace </m:mi></m:mtd><m:mtd><m:mi> ℋ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> homtht </m:mi></m:mtd><m:mtd><m:mi> ∻ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> hookleftarrow </m:mi></m:mtd><m:mtd><m:mi> 
+↩ </m:mi></m:mtd>
+<m:mtd><m:mi> hookrightarrow </m:mi></m:mtd><m:mtd><m:mi> 
+↪ </m:mi></m:mtd>
+<m:mtd><m:mi> Hopf </m:mi></m:mtd><m:mtd><m:mi> ℍ </m:mi></m:mtd>
+<m:mtd><m:mi> horbar </m:mi></m:mtd><m:mtd><m:mi> ― 
+</m:mi></m:mtd>
+</m:mtr>
+
+<m:mtr>
+<m:mtd><m:mi> HorizontalLine </m:mi></m:mtd><m:mtd><m:mi> 
+─ </m:mi></m:mtd>
+<m:mtd><m:mi> Hscr </m:mi></m:mtd><m:mtd><m:mi> ℋ </m:mi></m:mtd>
+<m:mtd><m:mi> hslash </m:mi></m:mtd><m:mtd><m:mi> ℏ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> hstrok </m:mi></m:mtd><m:mtd><m:mi> ħ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> Hstrok </m:mi></m:mtd><m:mtd><m:mi> Ħ 
+</m:mi></m:mtd>
+<m:mtd><m:mi> HumpDownHump </m:mi></m:mtd><m:mtd><m:mi> ≎ 
+</m:mi></m:mtd>
+</m:mtr>
+
+
+</m:mtable>
+
+</m:math>
+
+</para>
+
+  </content>
+  
+</document>

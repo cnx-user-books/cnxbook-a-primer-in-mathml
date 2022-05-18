@@ -1,0 +1,640 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Writing MathML</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>ffc035ac-b7e0-4c4f-ba49-36697c0bfa31</md:uuid>
+</metadata>
+  <content>
+
+<para id="element-1">
+We have worked with programs like Dreamweaver and Frontpage to write HTML mark-ups. On similar lines, there are programs to generate MathML mark-ups with built in facilities for error handling and testing. Using specialized programs to generate codes is generally the fastest way to write MathML codes.
+</para>
+<para id="element-2">
+Using specialized programs has the obvious advantage, but with certain overheads. It requires that we go through the process of familiarization with the program interface and understand the working philosophy of the same. Though these programs are robust and designed to fit in with all sorts of operating systems and deal with interoperability issues, there remains a remote possibility of mismatch and one has to take appropriate safeguards against difficulties arising out of the same. Worst of this approach is the sense of working within a “block box”, which might spring surprises with regard to what we expect and what the program delivers. 
+</para>
+<para id="element-3">
+As against above, coding in the native way, using plain text editor has the disadvantages of the requirement of knowing MathML specification and relatively slower pace of coding. The first aspect, though, can be used to advantage as you have to understand the syntax,  grammar, underlying features, limitations and possibilities of the MathML, knowing fully well about what can be done and what can not be done with MathML. So, there is less likelyhood of a surprise situation.
+</para>
+<para id="element-4">
+Further, it is a real possibility that you may actually cut down on the encoding substantially (typing per se) along with a corresponding increase in the coding  speed. However, this would require a bit of planning and proficiency in copy (ctrl + c), cut (ctrl + x) and paste (ctrl + v) operations with a block of codes from one place to another. 
+</para>
+
+<section id="section-1">
+<title> Features of MathML encoding </title>
+
+
+<para id="element-6">
+Before, we get into the rhythm of encoding, let us discuss the important features of MathML coding and our mathematical content requirement that would help us formulate an efficient approach to write MathML codes.
+</para>
+<para id="element-7">
+1: There are 30 elements in total with about 50 specific attributes, apart from common attributes.
+</para>
+<para id="element-8">
+2: A MathML coding is sensitive to the context and material being encoded. If your module involves matrix operation, then we might be using the set of table forming elements more frequently.  This means that we shall be limited in using elements – may be not more than 10 to 15 of them in a given context (project). Further, we may not require to change the attributes except on few occasions.
+</para>
+<para id="element-9">
+3: Mathematical display is a two dimensional representation, but its coding is essentially linear, in which terms are connected with operators from left to write. As a consequence, codes are written progressively from left to  right of the mathematical expressions and equations.
+</para>
+<para id="element-10">
+4: The vertical expansion of mathematical expression is controlled by a central element. For example a vertical stack may be structured on a form, implemented by “mfrac” element.
+</para>
+
+</section>
+<section id="section-2">
+<title> Illustration </title>
+
+
+<para id="element-12">
+To illustrate different aspects of MathML encoding and logical sequence in which code lines are written, we undertake to write MathML codes for an equation given here :
+
+   <m:math display="block">
+         <m:mi> x </m:mi>
+         <m:mo> = </m:mo>
+         <m:mo> [ </m:mo>
+         <m:mn> 32000 </m:mn> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> - </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 10 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+              <m:mrow> 
+              <m:mfrac> 
+              <m:mn> 25 </m:mn>
+              <m:mn> 2 </m:mn>
+              </m:mfrac> 
+              </m:mrow> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ] </m:mo> 
+
+   </m:math>
+</para>
+<para id="element-13">
+Step 1 : Observe the content of the equation from left to right. Identify terms requiring expansion in vertical directions. In the given equation, there are three such terms. It is evident that  “mfrac” element suits the requirement in hand. The last of three “mfrac” based expression, matter of fact, would require nested use of “mfrac” element. 
+</para>
+<para id="element-14">
+Step 2 : Start from the left and write or insert basic construct of “mi” element (line 2).
+</para>
+<para id="element-15">
+<code display="block" id="idp4445872">
+
+1:       &lt;m:math display="block"&gt;
+2:          &lt;m:mi&gt; x &lt;/m:mi&gt;
+
+
+
+         &lt;/m:math&gt;
+
+</code>
+</para>
+<para id="element-16">
+Step 3 : Copy “mi” element construct (line 2) and paste on the following line (line 3). Change “i” to “o” in order to change the initial and final tags to “mo” tags and change “x” by “=” so that code looks like :
+</para>
+<para id="element-17">
+<code display="block" id="idm6454112">
+
+1:       &lt;m:math display="block"&gt;
+2:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+3:           &lt;m:mo&gt; = &lt;/m:mo&gt;
+
+
+         &lt;/m:math&gt;
+
+</code>
+</para>
+<para id="element-18">
+Step 4 : In this step, using the technique of Step 2, add following 5 lines at the end (4 to 8): 
+</para>
+<para id="element-19">
+<code display="block" id="idm6016192">
+
+1:       &lt;m:math display="block"&gt;
+2:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+3:           &lt;m:mo&gt; = &lt;/m:mo&gt;
+4:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+5:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+6:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+7:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+8:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+
+
+         &lt;/m:math&gt;
+
+</code>
+</para>
+<para id="element-20">
+Use appropriate token elements with identifiers, operators and numbers by modifying the newly added lines : 
+</para>
+<para id="element-21">
+<code display="block" id="idp2855440">
+
+1:       &lt;m:math display="block"&gt;
+2:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+3:           &lt;m:mo&gt; = &lt;/m:mo&gt;
+4:           &lt;m:mo&gt; [ &lt;/m:mo&gt;
+5:           &lt;m:mn&gt; 3200 &lt;/m:mn&gt;
+6:           &lt;m:mo&gt; ( &lt;/m:mo&gt;
+7:           &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+8:           &lt;m:mo&gt; - &lt;/m:mo&gt;
+
+
+         &lt;/m:math&gt;
+
+</code>
+</para>
+<para id="element-22">
+<term>What you have coded till now </term>:
+       <m:math>
+           <m:mi> x </m:mi>
+           <m:mo> = </m:mo>
+           <m:mo> [ </m:mo>
+           <m:mn> 3200 </m:mn>
+           <m:mo> ( </m:mo>
+           <m:mn> 1 </m:mn>
+           <m:mo> - </m:mo>
+         </m:math>
+</para>
+<para id="element-23">
+<term>What is to be coded ultimately </term>:
+ <m:math>
+
+         <m:mi> x </m:mi>
+         <m:mo> = </m:mo>
+
+              <m:mrow> 
+         <m:mo> [ </m:mo>
+         <m:mn> 32000 </m:mn> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> - </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 10 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+              <m:mrow> 
+              <m:mfrac> 
+              <m:mn> 25 </m:mn>
+              <m:mn> 2 </m:mn>
+              </m:mfrac> 
+              </m:mrow> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ] </m:mo> 
+              </m:mrow> 
+   </m:math>
+</para>
+<para id="element-24">
+Step 4 : In this step, we shall handle the vertical term with “mfrac” element. Insert the basic block of “mfrac” element or type at the end (9 to 12) as shown : 
+</para>
+<para id="element-25">
+<code display="block" id="idp7024288">
+
+1:       &lt;m:math display="block"&gt;
+2:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+3:           &lt;m:mo&gt; = &lt;/m:mo&gt;
+4:           &lt;m:mo&gt; [ &lt;/m:mo&gt;
+5:           &lt;m:mn&gt; 3200 &lt;/m:mn&gt;
+6:           &lt;m:mo&gt; ( &lt;/m:mo&gt;
+7:           &lt;m:mi&gt; 1 &lt;/m:mi&gt;
+8:           &lt;m:mo&gt; - &lt;/m:mo&gt;
+9:           &lt;m:mfrac&gt; 
+10:             &lt;m:mn&gt; a &lt;/m:mn&gt; 
+11:             &lt;m:mn&gt; b &lt;/m:mn&gt; 
+12:          &lt;/m:mfrac&gt;
+
+
+             &lt;/m:math&gt;
+
+</code>
+</para>
+
+<para id="element-26">
+Step 5 : Change the value of “mfrac” element’s argument as given in the equation. Copy line 6  twice and modifying the same to put a closing and opening parentheses (13 and 14). Further, add lines 15 and 16 by copying and modifying lines 7 and 8 : 
+</para>
+<para id="element-27">
+<code display="block" id="idm6163776">
+
+1:       &lt;m:math display="block"&gt;
+2:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+3:           &lt;m:mo&gt; = &lt;/m:mo&gt;
+4:           &lt;m:mo&gt; [ &lt;/m:mo&gt;
+5:           &lt;m:mn&gt; 3200 &lt;/m:mn&gt;
+6:           &lt;m:mo&gt; ( &lt;/m:mo&gt;
+7:           &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+8:           &lt;m:mo&gt; - &lt;/m:mo&gt;
+9:           &lt;m:mfrac&gt; 
+10:            &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+11:            &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+12:          &lt;/m:mfrac&gt;
+13:          &lt;m:mo&gt; ) &lt;/m:mo&gt;
+14:          &lt;m:mo&gt; ( &lt;/m:mo&gt;
+15:          &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+16:          &lt;m:mo&gt; + &lt;/m:mo&gt;
+
+
+             &lt;/m:math&gt;
+
+</code>
+</para>
+<para id="element-28">
+Step 5 : Looking at the equation, it is easy to note that we need to have two fraction term with nominator and denominator. Thus, copy the block to display vertical term i.e. copy and paste “mfrac” code lines 9 to12 and modify according to the requirement(new lines 17 to 20). Copy and paste code lines 13 to 16 and modify as required (new lines 21 to 24). Finally copy and paste code lines 9 to 12 again as shown(new lines 25 to 28).
+</para>
+<para id="element-29">
+<code display="block" id="idp256624">
+
+1:       &lt;m:math display="block"&gt;
+2:           &lt;m:mi&gt; x &lt;/m:mi&gt;
+3:           &lt;m:mo&gt; = &lt;/m:mo&gt;
+4:           &lt;m:mo&gt; [ &lt;/m:mo&gt;
+5:           &lt;m:mn&gt; 3200 &lt;/m:mn&gt;
+6:           &lt;m:mo&gt; ( &lt;/m:mo&gt;
+7:           &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+8:           &lt;m:mo&gt; - &lt;/m:mo&gt;
+9:           &lt;m:mfrac&gt; 
+10:            &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+11:            &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+12:          &lt;/m:mfrac&gt;
+13:          &lt;m:mo&gt; ) &lt;/m:mo&gt;
+14:          &lt;m:mo&gt; ( &lt;/m:mo&gt;
+15:          &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+16:          &lt;m:mo&gt; + &lt;/m:mo&gt;
+17:  9:      &lt;m:mfrac&gt; 
+18: 10:        &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+19: 11:        &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+20: 12:      &lt;/m:mfrac&gt;
+21: 13:      &lt;m:mo&gt; ) &lt;/m:mo&gt;
+22: 14:      &lt;m:mo&gt; ( &lt;/m:mo&gt;
+23: 15:      &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+24: 16:      &lt;m:mo&gt; + &lt;/m:mo&gt;
+25:  9:      &lt;m:mfrac&gt; 
+26: 10:        &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+27: 11:        &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+28: 12:      &lt;/m:mfrac&gt;
+ 
+
+             &lt;/m:math&gt;
+
+</code>
+</para>
+
+<para id="element-30">
+<term>What you have coded till now </term>:
+       <m:math>
+           <m:mi> x </m:mi>
+           <m:mo> = </m:mo>
+           <m:mo> [ </m:mo>
+           <m:mn> 3200 </m:mn>
+           <m:mo> ( </m:mo>
+           <m:mn> 1 </m:mn>
+           <m:mo> - </m:mo>
+           <m:mfrac> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+           <m:mo> ) </m:mo>
+           <m:mo> ( </m:mo>
+           <m:mn> 1 </m:mn>
+           <m:mo> + </m:mo>
+           <m:mfrac> 
+            <m:mn> 10 </m:mn> 
+            <m:mn> 100 </m:mn> 
+          </m:mfrac>
+          <m:mo> ) </m:mo>
+          <m:mo> ( </m:mo>
+          <m:mn> 1 </m:mn>
+          <m:mo> + </m:mo>
+          <m:mfrac> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+          </m:mfrac>
+         </m:math>
+</para>
+<para id="element-31">
+<term>What is to be coded ultimately </term>:
+ <m:math>
+         <m:mi> x </m:mi>
+         <m:mo> = </m:mo>
+
+              <m:mrow> 
+         <m:mo> [ </m:mo>
+         <m:mn> 32000 </m:mn> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> - </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 10 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+              <m:mrow> 
+              <m:mfrac> 
+              <m:mn> 25 </m:mn>
+              <m:mn> 2 </m:mn>
+              </m:mfrac> 
+              </m:mrow> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ] </m:mo> 
+              </m:mrow> 
+   </m:math>
+</para>
+<para id="element-32">
+Step 6 : Note that last “mfrac” display requires another “mfrac” implementation. Its numerator itself is a “mfrac” display. Thus, we would require to change the line 26 placed near bottom with a block of “mfrac” codes that shall display “25/2”. For this we replace code line 26 with code block consisting of code lines 9 to 12. In order to make this block as the numerator of the parent “mfrac” element, we need to enclose this block with “mrow” element so that “mfrac” element considers the block as one argument. Change the “mo’ content (lines 10 and 11 at the bottom) to reflect the ratio as 25/2. Finally, add a closing parenthesis and a bracket at the end (lines 29 and 30) as shown.
+</para>
+<para id="element-33">
+<code display="block" id="idp5077344">
+
+13:         &lt;m:mo&gt; ) &lt;/m:mo&gt;
+14:         &lt;m:mo&gt; ( &lt;/m:mo&gt;
+15:         &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+16:         &lt;m:mo&gt; + &lt;/m:mo&gt;
+17:  9:       &lt;m:mfrac&gt; 
+18: 10:         &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+19: 11:         &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+20: 12:     &lt;/m:mfrac&gt;
+21: 13:     &lt;m:mo&gt; ) &lt;/m:mo&gt;
+22: 14:     &lt;m:mo&gt; ( &lt;/m:mo&gt;
+23: 15:     &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+24: 16:     &lt;m:mo&gt; + &lt;/m:mo&gt;
+25:  9:     &lt;m:mfrac&gt; 
+----
+            &lt;m:mrow&gt; 
+9:              &lt;m:mfrac&gt; 
+10:              &lt;m:mn&gt; 25 &lt;/m:mn&gt; 
+11:              &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+12:             &lt;/m:mfrac&gt;
+            &lt;/m:mrow&gt; 
+-----
+27: 11:     &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+28: 12:     &lt;/m:mfrac&gt;
+29:         &lt;m:mo&gt; ) &lt;/m:mo&gt;
+30:         &lt;m:mo&gt; ] &lt;/m:mo&gt;
+
+        &lt;/m:math&gt; 
+
+</code>
+</para>
+<para id="element-34">
+Step 7 : Save the file as test.xml. The code (after renumbering for reference purpose) at this stage looks like :
+</para>
+
+<para id="element-35">
+<code display="block" id="idm5295792">
+
+13:         &lt;m:mo&gt; ) &lt;/m:mo&gt;
+14:         &lt;m:mo&gt; ( &lt;/m:mo&gt;
+15:         &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+16:         &lt;m:mo&gt; + &lt;/m:mo&gt;
+17:         &lt;m:mfrac&gt; 
+18:          &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+19:          &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+20:      &lt;/m:mfrac&gt;
+21:      &lt;m:mo&gt; ) &lt;/m:mo&gt;
+22:      &lt;m:mo&gt; ( &lt;/m:mo&gt;
+23:      &lt;m:mn&gt; 1 &lt;/m:mn&gt;
+24:      &lt;m:mo&gt; + &lt;/m:mo&gt;
+25:      &lt;m:mfrac&gt; 
+26:            &lt;m:mrow&gt; 
+27:              &lt;m:mfrac&gt; 
+28:              &lt;m:mn&gt; 25 &lt;/m:mn&gt; 
+29:              &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+30:             &lt;/m:mfrac&gt;
+31:            &lt;/m:mrow&gt; 
+32:      &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+33:      &lt;/m:mfrac&gt;
+34:         &lt;m:mo&gt; ) &lt;/m:mo&gt;
+35:         &lt;m:mo&gt; ] &lt;/m:mo&gt;
+
+       &lt;/m:math&gt; 
+
+</code>
+</para>
+
+<para id="element-36">
+<term>What you have coded till now </term>:
+       <m:math>
+           <m:mi> x </m:mi>
+           <m:mo> = </m:mo>
+           <m:mo> [ </m:mo>
+           <m:mn> 3200 </m:mn>
+           <m:mo> ( </m:mo>
+           <m:mn> 1 </m:mn>
+           <m:mo> - </m:mo>
+           <m:mfrac> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+          </m:mfrac>
+          <m:mo> ) </m:mo>
+          <m:mo> ( </m:mo>
+          <m:mn> 1 </m:mn>
+          <m:mo> + </m:mo>
+      <m:mfrac> 
+        <m:mn> 10 </m:mn> 
+        <m:mn> 100 </m:mn> 
+      </m:mfrac>
+      <m:mo> ) </m:mo>
+      <m:mo> ( </m:mo>
+      <m:mn> 1 </m:mn>
+      <m:mo> + </m:mo>
+      <m:mfrac> 
+        <m:mn> 5 </m:mn> 
+        <m:mn> 100 </m:mn> 
+      </m:mfrac>
+      <m:mo> ) </m:mo>
+      <m:mo> ] </m:mo>
+         </m:math>
+</para>
+<para id="element-37">
+<term>What is to be coded ultimately </term>:
+ <m:math>
+
+         <m:mi> x </m:mi>
+         <m:mo> = </m:mo>
+
+              <m:mrow> 
+         <m:mo> [ </m:mo>
+         <m:mn> 32000 </m:mn> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> - </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 5 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+            <m:mn> 10 </m:mn> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+   <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+           <m:mfrac linethickness="2"> 
+              <m:mrow> 
+              <m:mfrac> 
+              <m:mn> 25 </m:mn>
+              <m:mn> 2 </m:mn>
+              </m:mfrac> 
+              </m:mrow> 
+            <m:mn> 100 </m:mn> 
+           </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ] </m:mo> 
+              </m:mrow> 
+   </m:math>
+</para>
+
+<para id="element-38">
+Step 8 : Comparing what we have achieved so far and what is the expected, we need few tweaking here and there. First we see that the brackets have not grown to the vertical height of the terms, composing the equation. In order to do this, we club the part of equation in the brackets within “mrow” tags. Thus, we insert “mrow” tag before line 4 and at the end of the code after line 35. Also, the bars of the three central "mfrac" elements have to be distinguished from the nested one. We use "linethickness" attribute on "mfrac" element and set the same to "medium". The final code and display are shown in the example. 
+</para>
+
+
+<example id="display1">
+	<title>Indices element : mroot</title>
+	<para id="element-39">
+	  <code display="block" id="idp707072">
+	    
+    &lt;m:math display="block"&gt;
+         &lt;m:mi&gt; x &lt;/m:mi&gt;
+         &lt;m:mo&gt; = &lt;/m:mo&gt;
+         &lt;m:mrow&gt; 
+         &lt;m:mo&gt; [ &lt;/m:mo&gt;
+         &lt;m:mn&gt; 32000 &lt;/m:mn&gt; 
+         &lt;m:mo&gt; ( &lt;/m:mo&gt; 
+         &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+         &lt;m:mo&gt; - &lt;/m:mo&gt;
+         &lt;m:mfrac linethickness="2"&gt; 
+         &lt;m:mn&gt; 5 &lt;/m:mn&gt; 
+         &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+         &lt;/m:mfrac&gt;
+         &lt;m:mo&gt; ) &lt;/m:mo&gt; 
+         &lt;m:mo&gt; ( &lt;/m:mo&gt; 
+         &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+         &lt;m:mo&gt; + &lt;/m:mo&gt;
+         &lt;m:mfrac linethickness="2"&gt; 
+         &lt;m:mn&gt; 10 &lt;/m:mn&gt; 
+         &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+         &lt;/m:mfrac&gt;
+         &lt;m:mo&gt; ) &lt;/m:mo&gt; 
+         &lt;m:mo&gt; ( &lt;/m:mo&gt; 
+         &lt;m:mn&gt; 1 &lt;/m:mn&gt; 
+         &lt;m:mo&gt; + &lt;/m:mo&gt;
+         &lt;m:mfrac linethickness="2"&gt; 
+           &lt;m:mrow&gt; 
+           &lt;m:mfrac&gt; 
+             &lt;m:mn&gt; 25 &lt;/m:mn&gt;
+             &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+           &lt;/m:mfrac&gt; 
+           &lt;/m:mrow&gt; 
+            &lt;m:mn&gt; 100 &lt;/m:mn&gt; 
+         &lt;/m:mfrac&gt;
+         &lt;m:mo&gt; ) &lt;/m:mo&gt; 
+         &lt;m:mo&gt; ] &lt;/m:mo&gt; 
+         &lt;/m:mrow&gt; 
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-40">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-41">
+    <m:math display="block">
+         <m:mi> x </m:mi>
+         <m:mo> = </m:mo>
+         <m:mrow> 
+         <m:mo> [ </m:mo>
+         <m:mn> 32000 </m:mn> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> - </m:mo>
+         <m:mfrac linethickness="2"> 
+         <m:mn> 5 </m:mn> 
+         <m:mn> 100 </m:mn> 
+         </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+         <m:mfrac linethickness="2"> 
+         <m:mn> 10 </m:mn> 
+         <m:mn> 100 </m:mn> 
+         </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ( </m:mo> 
+         <m:mn> 1 </m:mn> 
+         <m:mo> + </m:mo>
+         <m:mfrac linethickness="2"> 
+           <m:mrow> 
+           <m:mfrac> 
+             <m:mn> 25 </m:mn>
+             <m:mn> 2 </m:mn>
+           </m:mfrac> 
+           </m:mrow> 
+            <m:mn> 100 </m:mn> 
+         </m:mfrac>
+         <m:mo> ) </m:mo> 
+         <m:mo> ] </m:mo> 
+         </m:mrow> 
+    </m:math> 
+</para>
+</example>
+</section>
+
+
+
+
+
+
+
+
+
+
+    </content>
+</document>

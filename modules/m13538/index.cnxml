@@ -1,0 +1,161 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Preparing for writing MathML</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>b5e6d2d0-3a94-4587-9375-03182a5e0aa6</md:uuid>
+</metadata>
+  <content>
+
+<para id="element-1a">This course heavily relies on practicing codes in MathML. For this reason, a frame work enabling practice in desktop environment is planned, which does not require any specialized tool or software. The requirement for practicing MathML is two fold : (i)  a text editor that composes code lines as plain text without introducing any formatting characters and (ii) a browser that is capable to implement MathML. 
+</para>
+
+<para id="element-1aa">It is recommended to use an advanced text editor like MS Word to handle the first task. We shall use it in a specialized mode to serve our purpose. Use of advanced text editor, as against editors designed to save file as plain text like notepad available on Windows platform, is recommended. This preference is mainly owing tot to the advanced editing facilities available and the ease of inserting mathematical symbols available in professional text editor. Subsequently, we shall also learn to use macros available with advanced editors to replicate basic code blocks.
+</para>
+
+<para id="element-1b">The other issue of using a MathML enabled browser is extremely important as mathML rendering would ,otherwise, be severely distorted. Most of the advanced browser has inherent capability in this regard or with available plug-ins.  This aspect, however, may not be overlooked for implementation of MathML features in its complete manifestation – particularly when such browsers are available free and takes less than 5 minutes to install on the desktop. </para>
+
+<para id="element-1c">We must understand that MathML specifications are W3C guidelines for the renderer (the product or program that displays content like browsers). It is, therefore, always likely that there are differences in details in the style of presentation by different browsers – even though they are MathML compatible.  Notwithstanding the subtle differences, the browsers should be capable to implement MathML codes and hence the requirement of one such to experiment with MathML codes. </para>
+
+<para id="element-1d">Further, we need a separate folder to work with the tutorials and experiment with MathML codes. In the following paragraphs, we enlist precise  instructions to prepare the enviorment for MathML code testing :</para>
+
+<para id="element-64">1:	Create a separate working folder for experimenting with the mathML codes (say C:/MathML/testing).</para>
+<para id="element-910">2:	In case, you do not have MathML compatible browser already installed on your desktop, download Mozilla Firefox form <link url="http://www.mozilla.org">www.mozilla.org </link>. Install the same by double clicking the Firefox executable setup file. While installing, let the set up program fetches your preferences and other parameters from the browser already installed on the desktop. The set up program shall eventually ask you to whether set Firefox as the default browser on your desktop. For the time being, you may choose to retain the already installed browser as the default one. </para>
+
+<para id="element-910a">2:	Ensure that all fonts required for rendering MathML is installed on your computer. In case, you are using Mozilla browser, visit Mozilla web page  <link url="http://www.mozilla.org/projects/mathml/fonts/">http://www.mozilla.org/projects/mathml/fonts/</link>. The page lists “Fonts to Install”. Click the “font installer” hyper link and download the font installer on your desk top. Once the installer is downloaded, just open the same to install the fonts.</para>
+
+<para id="element-114">3:	Visit <link url="http://www.w3.org/Math/testsuite"> www.w3.org/Math/testsuite </link>. It gives you vast array of MathML examples to work with. The website provides codes of hundreds of examples. At certain stage of this course, you may like to copy and paste the codes to your desktop to confirm results. Besides, it is a repository of about 900 entity references used to display symbols and implement mathematical ideas.  On the testsuite web page, click the link named "testsuite.zip" to download the same in the desktop folder created for the course. Store the zip file for use in future.</para>
+
+<para id="element-551">
+<note id="idm1720464">The official documentation of mathML is available at W3C web site <link url="http://www.w3.org/TR/MathML2">www.w3.org/TR/MathML2 </link>. 
+</note></para>
+
+<section id="section-1">
+<title> Creating a mathML enabled document </title>
+<para id="element-201">
+Here, we present the steps to generate MathML codes in MS Word desktop editor. The idea right now is not to explain MathML codes, but to show the way to create a proper document with MathML codes and implement the same in the MathML enabled browser on your desktop. 
+</para>
+
+<para id="element-201a">
+As the codes need to be free from formatting details and other encoding, the file created is saved as plain text with Unicode(UTF-8) specification. As such, the file should be saved as plain text file with extension “xml” in order to view the implementation in the browser.</para>
+
+<para id="element-711">Once the document has been created, the same can be tested in MathML supported browser like Mozilla’s Firefox. When MathML codes display the output to the satisfaction, then block of codes starting with &lt;m:math&gt; tag and ending with &lt;/m:math&gt; tag can be copied and pasted in the XML document for publication purposes or be saved for future use. Now, proceed with the steps given here to create a mathML enabled “xml” document.</para>
+
+<para id="element-764">1: Open MS Word. Open a new document. Write exactly or copy/paste the following markup lines  in the new document :</para>
+
+<para id="element-502"><code display="block" id="idm1823856">
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!DOCTYPE math 
+    PUBLIC "-//W3C//DTD MathML 2.0//EN"
+           "http://www.w3.org/Math/DTD/mathml2/mathml2.dtd"
+&gt;
+
+&lt;document xmlns:m="http://www.w3.org/1998/Math/MathML"&gt;
+
+
+&lt;/document&gt;
+	  
+</code>
+</para>
+
+<para id="element-700">2:	Write the next top most “xml” element of the document between “document” tags.</para><para id="element-893"><code display="block" id="idm8381344">
+&lt;content&gt; 
+
+
+&lt;/content&gt;
+	  
+</code></para>
+
+<para id="element-700a">Note that “document” and “content” are the only XML elements i.e. the pair of tags, used for practicing MathML code. All other code lines, as detailed below, shall be MathML codes.
+</para>
+
+<para id="element-204">3: Write “math” MathML element between “content tags” with an example coding to display mathematical construct :  <m:math display="inline">
+		<m:mrow>
+			<m:mi mathvariant="bold">v</m:mi>
+			<m:mo>=</m:mo>
+			<m:mfrac>
+				<m:mi mathvariant="bold">AB</m:mi>
+				<m:mi>t</m:mi>
+			</m:mfrac>
+		</m:mrow>
+	</m:math>.
+</para><para id="element-183">4: For the time being, write exactly or copy / paste the code lines as given below and place them between “content” tags :</para>  
+
+<example id="listexamp">
+	<title>Displaying mathematical content</title>
+	<para id="element-184">
+	  <code display="block" id="idp2161984">
+	    
+  &lt;content&gt;
+    &lt;m:math display="block"&gt;
+           &lt;m:mrow&gt; 
+              &lt;m:mi mathvariant="bold"&gt;v&lt;/m:mi&gt;
+              &lt;m:mo&gt;=&lt;/m:mo&gt; 
+              &lt;m:mfrac&gt; 
+                &lt;m:mi mathvariant="bold"&gt;AB&lt;/m:mi&gt;
+                &lt;m:mi&gt;t&lt;/m:mi&gt;
+              &lt;/m:mfrac&gt; 
+          &lt;/m:mrow&gt;
+     &lt;/m:math&gt; 
+  &lt;/content&gt;
+	    
+	  </code>
+
+	</para>
+</example>
+
+<para id="element-256">5: Click File from Word’s top menu and select “save as”. A dialog box appears. Look at the "Save as type" option. Select “Plain Text” option from the drop down menu. Give a name to the file such as “test.xml”. Ensure that you have provided “xml” extension. Click “Save” button available at the right hand corner (also visible in the figure below). </para><para id="element-170"><figure id="fig1"><title>Saving options</title>
+	<media id="idp4599792" alt=""><image src="../../media/savingoption.JPG" mime-type="image/jpeg"/></media>
+	<caption>Select “plain text” from drop-down and give a name with xml extension</caption>
+</figure></para><para id="element-430">6: "File Conversion" dialog box appears as shown below. Select the radio button “Other encoding”; Select “Unicode(UTF-8)” option as shown. Click “OK” button. Save the document to the folder you have created for the tutorial.</para><para id="element-963"><figure id="fig2"><title>File conversion</title>
+	<media id="idm9573376" alt=""><image src="../../media/fileconversion.JPG" mime-type="image/jpeg"/></media>
+	<caption>Select “other coding” radio button and "Unicode(UTF-8)" option</caption>
+</figure></para><para id="element-768">7: Using “My Computer” or Window Explorer go to the tutorial folder, where you saved the document in earlier step. Select the file and right click the mouse. Select the option “open with”.</para><para id="element-475"><figure id="fig3"><title>Opening with mathML enabled document</title>
+	<media id="idm8378256" alt=""><image src="../../media/openingwithfirefox.JPG" mime-type="image/jpeg"/></media>
+	<caption>Select “Open with” from drop-down and select the mathML compatible browser</caption>
+</figure></para><para id="element-688">8:	If MathML compatible browser is not in the list, select “Choose program” and include the browser that you have downloaded for the purpose. The executable file of the MathML compatible browser must be in the “Program files” folder on your desktop.</para><para id="element-597">9:	The mathML code is implemented by the browser as shown below :
+    </para>
+
+<para id="element-391">
+    <m:math display="block">
+	<m:mrow>
+	<m:mi mathvariant="bold">v</m:mi>
+	<m:mo>=</m:mo>
+	<m:mfrac>
+	<m:mi mathvariant="bold">AB</m:mi>
+	<m:mi>t</m:mi>
+	</m:mfrac>
+	</m:mrow>
+    </m:math>
+</para>
+<para id="element-191">This completes the basic of creating a “xml” document to implement  MathML codes. Subsequently, when you are satisfied by the implementation, you may copy the MathML code lines and paste the same in the document to be published.</para>
+</section>
+
+<section id="section-2">
+<title> Context of MathML </title>
+
+<para id="element-283">Presentation of mathematical content has been a problem for text editors and web renderers, owing largely to the requirement of  (i) arrangement of characters and symbols of different sizes (ii)  their staggered alignment and (iii) overall structural arrangement different form normal text.  As a consequence, MathML markup has been developed to address the needs of the web authors, overcoming these requirements. 
+</para>
+<para id="element-301">The marking up of MathML tags, however, itself is inherently a lengthy and error prone proposition, requiring frequent and repeated testing in order to compose a “well formed” mark up code. A simple notation such as  <m:math display="inline">
+<m:msup>
+<m:mi>x</m:mi>
+<m:mn>10</m:mn>
+</m:msup>
+</m:math>
+may require 6 lines of coding with strict adherence to the syntax and grammar of the mark up language. </para><para id="element-73">Indeed, development of MathML is not targeted for direct use. In the language of Web Consortium (W3C)  “……….. Instead, it is anticipated that authors will use equation editors, conversion programs, and other specialized software tools to generate MathML. Alternatively, some renderers and systems supporting mathematics may convert other kinds of input directly included in Web pages into MathML on the fly, in response to a cut-and-paste operation…….”. </para><para id="element-343">Though, using tailored software is the easiest way around, but a general understanding of the mathML mark up language may let you grasp the environment of mathematical content publication and at the same time let you be independent of the individual software adaptation issues; while simultaneously letting you continue with developing codes in an organized and efficient manner. If you adapt well to the MathML, there is every chance that you might not use a specialized tool at all.</para>
+</section>
+<section id="section-4">
+<title> General features of mathML coding </title>
+
+<para id="element-514">1: MathML tries to capture the requirement of both presentation and content (meaning) of mathmatical expression. Take the example of trigonometric function “sin x”. Simply stated it is an identifier “sin” and a character “x”, which are separated by a white space. From the perspective of mathematics, however, “sin” is a function, which operates on an operand “x”. The two aspects are different when perceived from the angle of presentation and interpretation. MathML provides coding frame work for both these aspects through two different sets of mark-up called “Presentation” and “Content” mark-ups. As pointed out earlier, we would, however, be limited to the presentation mark-up.</para>
+
+<para id="element-134">2: MathML elements are preceded with “m:”, specifying the namespace for implementing the codes by the renderers i.e. browsers. A namespace associates a unique global identifier (usually a URL) with a particular set of tags and their usage rules.</para>
+
+<para id="element-238">3: MathML coding is case sensitive. Mostly, it is lower case coding, unless stated otherwise. </para>
+
+<para id="element-593">4: MathML markup adheres to the HTML markup structure. Most elements begin with a start tag and end with an end tag. Example : &lt;/m:mi&gt;a&lt;/m:mi&gt;. Ofcourse, there are also few empty tags.</para>
+<para id="element-594">5: MathML implementation is very touchy about the syntax and structure. A start tag must always be closed by an end tag. There are few varieties in the manner they are closed, but then they all must be closed. Empty elements, for example, are closed in the beginning itself.</para>
+<para id="element-595">
+6: There is no white space allowed between enclosing angles of a tag. The code parser i.e. the browser would not accept a space inside the angles of the tag like &lt; mi&gt;. It should be written without white space as &lt;mi&gt;. </para>
+
+</section> 
+  </content>
+  
+</document>

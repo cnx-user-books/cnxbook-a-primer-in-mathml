@@ -1,0 +1,659 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Speeding up with MathML</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>4a7c5c2f-32e5-46af-936a-88bc2766f2c0</md:uuid>
+</metadata>
+  <content>
+<para id="element-1">
+Surprisingly, we are not always aware of things available to us. MS Word, for example, has the capability to reproduce a chunk of text with a stroke of key combination. This appears a great facility, particularly for speeding up writing any mark up codes, including MathML. This facility, though available all the time, is hardly ever used in normal text editing session with MS Word.
+</para>
+<para id="element-2">
+Using the facility to create macros in MS Word is simple. Matter of fact, this is one of the reasons for recommending an advanced text editing software like MS Word as against bare editors like Notepad for writing plane text MathML code lines. 
+</para>
+<para id="element-3">
+We need to create macros for writing a set of code lines for the basic coding forms for most of the frequently used element and assign the same to a keyboard combination like ALT  a, ALT b etc. Subsequently, when we need to write the code lines for MathML element in the basic form, we shall require to simply use the key combination and the code lines will be reproduced. It is warned that we must provide sufficient space between existing code or text lines so that the reproduced text by macros do not mix up. This techniques, involving macros, has the advantage that once a correct format is recorded, it is less likely that there would be any syntax error.
+</para>
+
+<section id="section-1">
+<title> Creating macros for MathML basic forms of elements</title>
+
+<para id="element-5">
+In this section, the exact steps to create a macro with few code lines involving “mfrac” element are given. Before we proceed, we must realize that choosing a particular size and font to write the codes in macros is extremely important. The renderer accepts MathML in mono font for the code lines. What it means that we should encode our markups in one font only. A mix of many fonts results from “copy” and “paste” operations from different sources. We must avoid font mixing so that the renderer does not report error, while displaying the content.
+</para>
+<para id="element-6">
+Now, follow the steps to create a macro for the basic form of “mfrac” element :
+</para>
+<para id="element-7">
+Step 1: Open MS Word. Create a new document. Save the document as “test.doc”, ensuring that “save as type” is a word document. Note that we can <emphasis> not </emphasis> recordand store macros in plane format, which is used for encoding MathML. 
+</para>
+<para id="element-8">
+Step 2: Select “Courier New” from the font drop down as shown here :
+</para>
+ 
+<para id="element-9">
+<figure id="fig1">
+	    <title>Font selection</title>
+	    <media id="idp2764896" alt=""><image src="../../media/fig1.GIF" mime-type="image/gif"/></media>
+	    
+	  </figure>
+</para>
+<para id="element-10">
+Select font size 12 from the adjacent drop down.
+</para>
+<para id="element-11">
+Step 3 : Write code lines for the basic form of the “mfrac” element as shown here :
+</para>
+<para id="element-12">
+<code display="block" id="idp761552">
+
+&lt;m:mfrac&gt;
+  &lt;m:mi&gt; x &lt;/m:mi&gt;
+  &lt;m:mi&gt; y &lt;/m:mi&gt;
+&lt;/m:mfrac&gt;
+
+</code>
+</para>
+<para id="element-13">
+Step 4 : Select “Tools” from the top tool bar of MS Word and choose “Record New Macro” as shown below :
+</para>
+
+<para id="element-14">
+<figure id="fig2">
+	    <title>Recording macros</title>
+	    <media id="idp4468640" alt=""><image src="../../media/fig2.GIF" mime-type="image/gif"/></media>
+	    
+	  </figure>
+</para>
+<para id="element-15">
+Step 5 : “Record macro” dialog box appears. In the “Macro name” give the name of macro, say “mfrac”. In the “Store macro in” select the name of document “test document” or the name of the document in which you are recording macro. 
+</para>
+
+<para id="element-16">
+<figure id="fig3">
+	    <title>Setting macros</title>
+	    <media id="idm6350512" alt=""><image src="../../media/fig3.GIF" mime-type="image/gif"/></media>
+	    
+	  </figure>
+</para>
+
+<para id="element-17">
+Step 6 : Press “keyboard” button. The “Customize Keyboard” dialog box appears. Put the cursor in the “Press new shortcut key” box (if not placed automatically). Press “Alt and f” to record the desired key combination to run the macro for “mfrac” code lines. Note that “Alt + F”  text with capital “F” is automatically placed inside the box. In the “unassigned” box, select “test”.
+</para>
+
+<para id="element-18">
+<figure id="fig4">
+	    <title>Assigning key combination</title>
+	    <media id="idm631248" alt=""><image src="../../media/fig4.GIF" mime-type="image/gif"/></media>
+	    
+	  </figure>
+</para>
+<para id="element-19">
+Step 7 : Press “Assign” button and then “Close” button. Macro recording has started. A pair of buttons are displayed on the margin of the document as shown in the figure below. One of the button is “Stop” button, while the other is “Pause” button for macro recording.
+</para>
+<para id="element-20">
+<figure id="fig5">
+	    <title>Recording code lines</title>
+	    <media id="idm6899152" alt=""><image src="../../media/fig5.GIF" mime-type="image/gif"/></media>
+	    
+	  </figure>
+</para>
+<para id="element-21">
+Now, looking at the code lines written in step 3, type exactly the same after one or two lines. Do not bother for key and cursor movements. It is advisable that we maintain the required indenting say between “mfrac” tag and “mi” tag. When the code lines have been reproduced, press “Stop” button to stop the recording. 
+</para>
+<para id="element-22">
+Step 8 : You are now ready to use the macro. Hold “Alt” key and simulataneously press “F” key. The code lines as recorded are reproduced instantly as shown here :
+</para>
+<para id="element-23">
+<code display="block" id="idp4005280">
+
+&lt;m:mfrac&gt;
+  &lt;m:mi&gt; x &lt;/m:mi&gt;
+  &lt;m:mi&gt; y &lt;/m:mi&gt;
+&lt;/m:mfrac&gt;
+
+</code>
+</para>
+<para id="element-24">
+Macro recording is a powerful tool to reproduce a set of code lines. However, this facility is available in the normal document mode and not in the plane text mode. As such, codes are required to be first written in a document file, say “test.doc”. Once coding is complete in a major way, we need to save the file in plane text with Unicode character format (UTF -8) for renderer to display the content. It is implied here that a repository of macros corresponding to the basic forms of element encoding be prepared in advance in order to use the same, when required. 
+</para>
+<para id="element-25">
+In the following section, we shall illustrate the use of macros and few improvisations to encode “Cauchy-Schwarz” inequality. 
+</para>
+
+</section>
+<section id="section-2">
+<title> “Cauchy-Schwarz” inequality </title>
+
+
+<para id="element-27">
+Understanding of the underlying presentation framework of MathML is just one aspect of learning process. Equally important aspect is to develop the ability to convert presentation requirement in terms of codes. There is no universal set of algorithms that would help to successfully translate visual presentation requirement into MathML code lines in a mechanical manner - unless aided by specialized program or software. Unaided, this may be achieved by developing ability to visualize the presentation requirements in some logical modular work pieces like : 
+</para>
+
+
+<para id="element-28">
+<list id="list-1" list-type="enumerated">
+
+<item>Break the presentation requirement in smaller components</item>
+<item>Write building blocks of code with the help of macros</item>
+<item>Copy and paste identical components and modify</item>
+<item>Combine the code lines to make a “whole”</item>
+</list>
+</para>
+
+<para id="element-29">
+“Cauchy-Schwarz” inequality is shown here :
+</para>
+
+<para id="element-30">
+<m:math display="block">
+    <m:mstyle displaystyle="true">
+        <m:mrow>
+        <m:msup> 
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msub> 
+        <m:mi> a </m:mi> 
+        <m:mi> k </m:mi> 
+        </m:msub>
+        <m:msub> 
+        <m:mi> b </m:mi> 
+        <m:mi> k </m:mi> 
+        </m:msub>
+        <m:mo> ) </m:mo>       
+        </m:mrow>
+        <m:mn> 2 </m:mn> 
+        </m:msup>
+
+        <m:mo> ≤ </m:mo>   
+    
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msup>
+        <m:mrow>
+        <m:msub> 
+        <m:mi> a </m:mi>
+        <m:mi> k </m:mi>
+        </m:msub>
+        </m:mrow>
+        <m:mn> 2 </m:mn>
+        </m:msup>
+        <m:mo> ) </m:mo>       
+        </m:mrow>
+
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+          <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+          <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msup>
+        <m:mrow>
+        <m:msub> 
+        <m:mi> b </m:mi>
+        <m:mi> k </m:mi>
+        </m:msub>
+        </m:mrow>
+        <m:mn> 2 </m:mn>
+        </m:msup>
+        <m:mo> ) </m:mo> 
+        </m:mrow>
+      </m:mrow>
+   </m:mstyle>
+</m:math> 
+</para>
+<para id="element-31">
+A visual inspection of the formula suggests that this inequality is built of three large blocks of similar composition. The first block is raised to apower of “2”. This can be implemented with “msup” element. Thus, we start with using macro for  “msup” element :
+</para>
+<para id="element-32">
+<code display="block" id="idp7301120">
+
+
+        &lt;m:msup&gt; 
+          &lt;m:mi&gt; x &lt;/m:mi&gt;
+          &lt;m:mi&gt; y &lt;/m:mi&gt;
+        &lt;/m:msup&gt; 
+
+</code>
+</para>
+<para id="element-33">
+The superscript is changed to “2” as required. A code line for element “mo” is written using macro for “mo” element and its content is changed to parenthesis : 
+</para>
+
+<para id="element-34">
+<code display="block" id="idp722720">
+
+   &lt;m:math display="block"&gt; 
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+        &lt;m:msup&gt; 
+          &lt;m:mi&gt; x &lt;/m:mi&gt;
+          &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+        &lt;/m:msup&gt; 
+
+   &lt;/m:math&gt;  
+
+</code>  
+</para>
+<para id="element-35">
+The base of the superscript is the large block, involving summation sign.  The base is built upon summation sign with “over” and “under” limits implemented by “munderover” element. We write  “munderover” basic code lines, using macro to replace the “base” of superscript i.e. “x” in the basic format reproduced by macro in the above step. 
+</para>
+<para id="element-36">
+<code display="block" id="idm310720">
+
+   &lt;m:math display="block"&gt; 
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+        &lt;m:msup&gt; 
+        &lt;m:munderover&gt;
+          &lt;m:mo&gt; &amp;int; &lt;/m:mo&gt;
+          &lt;m:mi&gt;x&lt;/m:mi&gt;
+          &lt;m:mi&gt;y&lt;/m:mi&gt;
+        &lt;/m:munderover&gt;
+          &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+        &lt;/m:msup&gt; 
+
+   &lt;/m:math&gt;  
+
+</code>  
+</para>
+    
+<para id="element-37">
+We replace integer symbol with summation symbol “∑” and change the limits as required. Note that we need to bunch the underscript with “mrow” tags to work as one of the argument of the “msup” element.
+</para>
+<para id="element-38">
+<code display="block" id="idp1313424">
+
+   &lt;m:math display="block"&gt; 
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+        &lt;m:msup&gt; 
+        &lt;m:munderover&gt;
+          &lt;m:mo&gt;&amp;sum;&lt;/m:mo&gt;
+          &lt;m:mrow&gt;
+          &lt;m:mi&gt; k &lt;/m:mi&gt;
+          &lt;m:mo&gt; = &lt;/m:mo&gt;
+          &lt;m:mn&gt; 1&lt;/m:mn&gt;
+          &lt;/m:mrow&gt;
+          &lt;m:mn&gt;n&lt;/m:mn&gt;
+        &lt;/m:munderover&gt;
+          &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+
+        &lt;/m:msup&gt; 
+
+   &lt;/m:math&gt;  
+
+</code>  
+</para>
+<para id="element-39">
+Now, we add codes for <m:math><m:msub> <m:mi>a</m:mi><m:mi>k</m:mi></m:msub> </m:math> and <m:math><m:msub> <m:mi>b</m:mi> <m:mi>k</m:mi> </m:msub> </m:math>, which can be implemented with “msub” element. We produce two sets of “msub” codes with macro and place them just after &lt;/m:munderover&gt;. Finally, we also insert a “mo” line to encode for closing parenthesis. Putting these code lines ahead of superscript element line &lt;m:mi&gt; 2 &lt;/m:mi&gt; is important as everything in totality is raised to the power “2”. For this reason, everything other than superscript element line is required to be bunched together with a pair of “mrow” tags as shown here :
+</para>
+<para id="element-40">
+<code display="block" id="idp1111616">
+
+   &lt;m:math display="block"&gt; 
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+        &lt;m:msup&gt;
+
+          &lt;m:mrow&gt; 
+
+          &lt;m:munderover&gt;
+            &lt;m:mo&gt;&amp;sum;&lt;/m:mo&gt;
+            &lt;m:mrow&gt;
+            &lt;m:mi&gt; k &lt;/m:mi&gt;
+            &lt;m:mo&gt; = &lt;/m:mo&gt;
+            &lt;m:mn&gt; 1&lt;/m:mn&gt;
+            &lt;/m:mrow&gt;
+            &lt;m:mn&gt;n&lt;/m:mn&gt;
+          &lt;/m:munderover&gt;
+          &lt;m:msub&gt; 
+          &lt;m:mi&gt; a &lt;/m:mi&gt; 
+          &lt;m:mi&gt; k &lt;/m:mi&gt; 
+          &lt;/m:msub&gt;
+          &lt;m:msub&gt; 
+          &lt;m:mi&gt; b &lt;/m:mi&gt; 
+          &lt;m:mi&gt; k &lt;/m:mi&gt; 
+          &lt;/m:msub&gt;
+          &lt;m:mo&gt; ) &lt;/m:mo&gt; 
+      
+          &lt;/m:mrow&gt;
+
+          &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+        &lt;/m:msup&gt; 
+
+   &lt;/m:math&gt; 
+
+</code>  
+</para>
+<para id="element-41">
+This completes the coding for the first left hand side block of the “Cauchy-Schwarz” inequality. At this stage, the display in the browser looks like :
+</para>
+<para id="element-42">
+<m:math display="block"> 
+        <m:mo> ( </m:mo>       
+        <m:msup>
+
+          <m:mrow> 
+
+          <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+          </m:munderover>
+          <m:msub> 
+          <m:mi> a </m:mi> 
+          <m:mi> k </m:mi> 
+          </m:msub>
+          <m:msub> 
+          <m:mi> b </m:mi> 
+          <m:mi> k </m:mi> 
+          </m:msub>
+          <m:mo> ) </m:mo> 
+      
+          </m:mrow>
+
+          <m:mn> 2 </m:mn>
+        </m:msup> 
+
+   </m:math> 
+</para>
+
+
+<para id="element-43">
+Now coding for two other large block is easy. We need to replicate the above code block twice and do the modification as required. Finally three blocks are joined together with the help of an “inequality” operator "≤". The display, now, looks like :
+</para>
+<para id="element-44">
+<m:math display="block">
+
+        <m:msup> 
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mi> = </m:mi>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msub> 
+        <m:mi> a </m:mi> 
+        <m:mi> k </m:mi> 
+        </m:msub>
+        <m:msub> 
+        <m:mi> b </m:mi> 
+        <m:mi> k </m:mi> 
+        </m:msub>
+        <m:mo> ) </m:mo>       
+        </m:mrow>
+        <m:mn> 2 </m:mn> 
+        </m:msup>
+
+        <m:mo> ≤ </m:mo>   
+    
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mi> = </m:mi>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msup>
+        <m:mrow>
+        <m:msub> 
+        <m:mi> a </m:mi>
+        <m:mi> k </m:mi>
+        </m:msub>
+        </m:mrow>
+        <m:mn> 2 </m:mn>
+        </m:msup>
+        <m:mo> ) </m:mo>       
+        </m:mrow>
+
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+          <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mi> = </m:mi>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+          <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msup>
+        <m:mrow>
+        <m:msub> 
+        <m:mi> b </m:mi>
+        <m:mi> k </m:mi>
+        </m:msub>
+        </m:mrow>
+        <m:mn> 2 </m:mn>
+        </m:msup>
+        <m:mo> ) </m:mo> 
+        </m:mrow>
+
+
+</m:math> 
+</para> 
+<para id="element-45">
+We observe that the parenthesis of the first term has not grown to the expected height to cover the highest term. Moreover, the parentheses are unequal in size.  To achieve the equality in size and proper coverage, we enclose all expressions involving parenthses within a pair of “mrow” tags and a “mstyle” pairs of tages to display “true”.  The complete code and display is illustrated in the example below :
+</para> 
+
+
+<example id="display1">
+	<title>“Cauchy-Schwarz” inequality</title>
+	<para id="element-46">
+	  <code display="block" id="idm6263296">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mstyle displaystyle='true'&gt;
+        &lt;m:mrow&gt;
+        &lt;m:msup&gt; 
+        &lt;m:mrow&gt;
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+	  &lt;m:munderover&gt;
+            &lt;m:mo&gt;&amp;sum;&lt;/m:mo&gt;
+            &lt;m:mrow&gt;
+            &lt;m:mi&gt; k &lt;/m:mi&gt;
+            &lt;m:mo&gt; = &lt;/m:mo&gt;
+            &lt;m:mn&gt; 1&lt;/m:mn&gt;
+            &lt;/m:mrow&gt;
+            &lt;m:mn&gt;n&lt;/m:mn&gt;
+        &lt;/m:munderover&gt;
+        &lt;m:msub&gt; 
+        &lt;m:mi&gt; a &lt;/m:mi&gt; 
+        &lt;m:mi&gt; k &lt;/m:mi&gt; 
+        &lt;/m:msub&gt;
+        &lt;m:msub&gt; 
+        &lt;m:mi&gt; b &lt;/m:mi&gt; 
+        &lt;m:mi&gt; k &lt;/m:mi&gt; 
+        &lt;/m:msub&gt;
+        &lt;m:mo&gt; ) &lt;/m:mo&gt;       
+        &lt;/m:mrow&gt;
+        &lt;m:mn&gt; 2 &lt;/m:mn&gt; 
+        &lt;/m:msup&gt;
+
+        &lt;m:mo&gt; &amp;le; &lt;/m:mo&gt;   
+    
+        &lt;m:mrow&gt;
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+	  &lt;m:munderover&gt;
+            &lt;m:mo&gt;&amp;sum;&lt;/m:mo&gt;
+            &lt;m:mrow&gt;
+            &lt;m:mi&gt; k &lt;/m:mi&gt;
+            &lt;m:mo&gt; = &lt;/m:mo&gt;
+            &lt;m:mn&gt; 1&lt;/m:mn&gt;
+            &lt;/m:mrow&gt;
+            &lt;m:mn&gt;n&lt;/m:mn&gt;
+        &lt;/m:munderover&gt;
+        &lt;m:msup&gt;
+        &lt;m:mrow&gt;
+        &lt;m:msub&gt; 
+        &lt;m:mi&gt; a &lt;/m:mi&gt;
+        &lt;m:mi&gt; k &lt;/m:mi&gt;
+        &lt;/m:msub&gt;
+        &lt;/m:mrow&gt;
+        &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+        &lt;/m:msup&gt;
+        &lt;m:mo&gt; ) &lt;/m:mo&gt;       
+        &lt;/m:mrow&gt;
+
+        &lt;m:mrow&gt;
+        &lt;m:mo&gt; ( &lt;/m:mo&gt;       
+	  &lt;m:munderover&gt;
+          &lt;m:mo&gt;&amp;sum;&lt;/m:mo&gt;
+            &lt;m:mrow&gt;
+            &lt;m:mi&gt; k &lt;/m:mi&gt;
+            &lt;m:mo&gt; = &lt;/m:mo&gt;
+            &lt;m:mn&gt; 1&lt;/m:mn&gt;
+            &lt;/m:mrow&gt;
+          &lt;m:mn&gt;n&lt;/m:mn&gt;
+        &lt;/m:munderover&gt;
+        &lt;m:msup&gt;
+        &lt;m:mrow&gt;
+        &lt;m:msub&gt; 
+        &lt;m:mi&gt; b &lt;/m:mi&gt;
+        &lt;m:mi&gt; k &lt;/m:mi&gt;
+        &lt;/m:msub&gt;
+        &lt;/m:mrow&gt;
+        &lt;m:mn&gt; 2 &lt;/m:mn&gt;
+        &lt;/m:msup&gt;
+        &lt;m:mo&gt; ) &lt;/m:mo&gt; 
+        &lt;/m:mrow&gt;
+      &lt;/m:mrow&gt;
+     &lt;/m:mstyle&gt;
+    &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-47">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-48">
+    <m:math display="block">
+      <m:mstyle displaystyle="true">
+        <m:mrow>
+        <m:msup> 
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msub> 
+        <m:mi> a </m:mi> 
+        <m:mi> k </m:mi> 
+        </m:msub>
+        <m:msub> 
+        <m:mi> b </m:mi> 
+        <m:mi> k </m:mi> 
+        </m:msub>
+        <m:mo> ) </m:mo>       
+        </m:mrow>
+        <m:mn> 2 </m:mn> 
+        </m:msup>
+
+        <m:mo> ≤ </m:mo>   
+    
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+            <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+            <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msup>
+        <m:mrow>
+        <m:msub> 
+        <m:mi> a </m:mi>
+        <m:mi> k </m:mi>
+        </m:msub>
+        </m:mrow>
+        <m:mn> 2 </m:mn>
+        </m:msup>
+        <m:mo> ) </m:mo>       
+        </m:mrow>
+
+        <m:mrow>
+        <m:mo> ( </m:mo>       
+	  <m:munderover>
+          <m:mo>∑</m:mo>
+            <m:mrow>
+            <m:mi> k </m:mi>
+            <m:mo> = </m:mo>
+            <m:mn> 1</m:mn>
+            </m:mrow>
+          <m:mn>n</m:mn>
+        </m:munderover>
+        <m:msup>
+        <m:mrow>
+        <m:msub> 
+        <m:mi> b </m:mi>
+        <m:mi> k </m:mi>
+        </m:msub>
+        </m:mrow>
+        <m:mn> 2 </m:mn>
+        </m:msup>
+        <m:mo> ) </m:mo> 
+        </m:mrow>
+      </m:mrow>
+   </m:mstyle>
+</m:math> 
+</para>
+</example>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  </content>
+  
+</document>

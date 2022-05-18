@@ -1,0 +1,332 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Presentation token elements (others)</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>9076713b-b81d-4e29-a5c8-f6acf01ddfb0</md:uuid>
+</metadata>
+  <content>
+
+<section id="section-1">
+<title> "mtext" token element </title> 
+
+
+<para id="element-2">
+The “mtext” element plays similar role of rendering characters like “mo” amd “mn” elements, but with a difference. It does not convey the notional or symbolic aspect of mathematical identities and numbers, which require specific presentation and manipulation to convey mathematical meaning. The “mtext” element is used to present plain text, which may be used for comments and clarification.
+</para>
+<para id="element-3">
+This element is also useful to deliver white space and mixing verbose mathematical rendering consisting of word string. For example, we would need to say “The presentation of alpha character in MathML looks like : α”.
+</para>
+<example id="display1">
+	<title>Display with "mtext" element</title>
+	<para id="element-4">
+	  <code display="block" id="idp4744800">
+	    
+    &lt;m:math display="block"&gt;
+        &lt;m:mtext&gt;The presentation of alpha character in
+        MathML is : &lt;/m:mtext&gt;
+        &lt;m:mi&gt;&amp;alpha;&lt;/m:mi&gt;
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-5">
+Save the file after editing as “test4.xml”. The display looks like : 
+</para>
+<para id="element-6">
+    <m:math display="block">
+      <m:mtext>The presentation of alpha character in MathML is :           </m:mtext>
+<m:mi>α</m:mi> 
+     </m:math> 
+</para>
+</example>
+
+<para id="element-14">
+Though “mtext” element manages the empty space within the string of words, but not around it. In order to enhance, readability, style and presentation, we may add empty space, using "&amp;ThinSpace" entity character.
+</para>
+
+<example id="display2">
+	<title>Display with "mtext" element</title>
+	<para id="element-7">
+	  <code display="block" id="idp2408480">
+	    
+    &lt;m:math display="block"&gt;
+     &lt;m:mtext&gt;The presentation of alpha character in MathML
+     is : &amp;ThinSpace; &lt;/m:mtext&gt;
+     &lt;m:mi&gt;&amp;alpha;&lt;/m:mi&gt;
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-8">
+Save the file after editing as “test4.xml”. The display looks like : 
+</para>
+<para id="element-9">
+    <m:math display="block">
+     <m:mtext>The presentation of alpha character in MathML is :   </m:mtext>
+     <m:mi>α</m:mi>
+     </m:math> 
+</para>
+</example>
+
+<para id="element-10">
+Color and size management of the content of “mtext” element is implemented with the common attributes of the token element i.e. mathvariant, mathsize, mathcolor and mathbackground directly on "mtext" element.
+</para>
+
+<example id="display3">
+	<title>Display with "mtext" element</title>
+	<para id="element-11">
+	  <code display="block" id="idm7944640">
+	    
+    &lt;m:math display="block"&gt;
+        &lt;m:mtext mathvariant='bold' mathcolor='#fff' mathsize='12pt' 
+        mathbackground='#f55'&gt;
+        Example : &lt;/m:mtext&gt;
+        &lt;m:mtext mathsize='10pt'&gt; The above example illustrates 
+        application of “mfrac” element. &lt;/m:mtext&gt; 
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-12">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-13">
+    <m:math display="block">
+        <m:mtext mathvariant="bold" mathcolor="#fff" mathsize="12pt" mathbackground="#f55"> Example : </m:mtext>
+        <m:mtext mathsize="10pt"> This example illustrates application of theorem. </m:mtext> 
+     </m:math> 
+</para>
+</example>
+
+<para id="element-14a">
+In general, mixing of text with mathematics may be implemented, using any of the three possibilities discussed here. First, we can rely on the rendering facility of the document in which “MathML” is embedded. This document could be any valid “xml” document, including HTML. Second, we may use the text rendering by “mtext” element as explained above. This is appropriate for text, which is neither the part of the general text flow in the document nor the part of the notional display of mathematical expression. It suits the requirement of text rendering, used for qualifying mathematical expression or comments. Third, displaying text with “mi” element, which is inline with the mathematical expression or a part of it. 
+</para>
+
+</section>
+<section id="section-2">
+<title> "mspace" token element </title> 
+
+
+<para id="element-15">
+<list id="list-1" list-type="bulleted">
+<title>Attribute value types</title>
+<item> width (default : "0em"): number h-unit | namedspace </item>
+<item> height (default : "0ex"): number v-unit </item>
+<item> depth (default : "0ex"): number v-unit </item>
+<item> linebreak (default : "auto"): auto | newline | indentingnewline | nobreak | goodbreak | badbreak </item>
+</list>
+</para>
+<para id="element-16">
+This element is provided to render a blank space of any size, which can be controlled with the help of attribute values. It is a more flexible mechanism in comparison to the space rendering characters like "&amp;nbsp", "&amp;emsp", "&amp;emsp14".
+</para>
+
+<para id="element-17">
+The “mspace” element has three attributes to control the size of the blank space (width, height and depth). Significantly, its default values are set such that its rendering does not affect normal presentation. It means that if we want to affect the layout, we would have to assign attribute values for the size. Size attribute accept numbers in variety of ways, using different units.
+</para>
+
+<para id="element-18">
+The “linebreak” attribute, on the other hand, suggests different line breaking options for the renderer to implement. </para>
+
+<para id="element-19">
+Consider the example given here,
+</para>
+
+<example id="display4">
+	<title>Using mspace element to manage space</title>
+	<para id="element-20">
+	  <code display="block" id="idp1824192">
+	    
+    &lt;m:math display="block"&gt;
+      &lt;m:mfrac&gt;
+        &lt;m:mrow&gt; 
+          &lt;m:mi&gt;a&lt;/m:mi&gt; 
+          &lt;m:mspace width="0.5in"/&gt; 
+          &lt;m:mi&gt;b&lt;/m:mi&gt; 
+        &lt;/m:mrow&gt;
+        &lt;m:mrow&gt; 
+          &lt;m:mi&gt;c&lt;/m:mi&gt; 
+          &lt;m:mspace height="1.27cm"/&gt; 
+          &lt;m:mi&gt;d&lt;/m:mi&gt; 
+        &lt;/m:mrow&gt; 
+      &lt;/m:mfrac&gt;  
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-21">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-22">
+    <m:math display="block">
+      <m:mfrac>
+        <m:mrow> 
+          <m:mi>a</m:mi> 
+          <m:mspace width="0.5in"/> 
+          <m:mi>b</m:mi> 
+        </m:mrow>
+        <m:mrow> 
+          <m:mi>c</m:mi> 
+          <m:mspace height="1.27cm"/> 
+          <m:mi>d</m:mi> 
+        </m:mrow> 
+      </m:mfrac> 
+     </m:math> 
+</para>
+</example>
+
+<para id="element-23">
+Besides, there is an important issue with regard to uses of “mspace” and also other elements, which introduce space on rendering. Space rendering has no visual lymphs or character display, but despite this, space rendering elements are counted as far as counting of arguments are concerned. The element “mfrac”, which is used to display ratio, takes only two arguments – one of which forms the numerator and other forms the denominator of the ratio. In the example below, we simply introduce “mspace” between the “mfrac” tags. The MathML parser (renderer) counts “mspace” and as such fails to implement code as there are three arguments as against the requirement of exactly two arguments for “mfrac” element. As expected, the browser notifies that the code is "invalid-markup".</para>
+
+<example id="display5">
+	<title>Counting of "mspace" as an argument</title>
+	<para id="element-24">
+	  <code display="block" id="idm1359328">
+	    
+    &lt;m:math display="block"&gt;
+       &lt;m:mfrac&gt;
+          &lt;m:mi&gt;a&lt;/m:mi&gt; 
+          &lt;m:mspace height="0.5in"/&gt; 
+          &lt;m:mi&gt;b&lt;/m:mi&gt; 
+      &lt;/m:mfrac&gt;  
+     &lt;/m:math&gt; 
+
+	    
+	  </code>
+</para>
+<para id="element-25">
+Save the file after editing as “test.xml”. The display looks like : 
+</para>
+<para id="element-26">
+    <m:math display="block">
+       <m:mfrac>
+          <m:mi>a</m:mi> 
+          <m:mspace height="0.5in"/> 
+          <m:mi>b</m:mi> 
+      </m:mfrac> 
+     </m:math> 
+</para>
+</example>
+
+<para id="element-28">
+Thus, in order to meet the requirement of elements with fixed arguments, we would have to group child elements with the help of “mrow” element. 
+</para>
+
+
+<para id="element-29">
+	  <code display="block" id="idp1958384">
+	    
+      &lt;m:mfrac&gt;
+          &lt;m:mi&gt;a&lt;/m:mi&gt; 
+        &lt;m:mrow&gt; 
+          &lt;m:mspace height="0.5in"/&gt;
+           &lt;m:mi&gt;b&lt;/m:mi&gt; 
+        &lt;/m:mrow&gt;
+      &lt;/m:mfrac&gt; 
+	    
+	  </code>
+</para>
+
+
+</section>
+<section id="section-3">
+<title> "ms" token element </title> 
+
+
+
+<para id="element-31">
+<m:math>
+<m:mstyle fontsize="12pt" fontstyle="normal" fontfamily="Helvetica">
+      <m:mtable columnalign="left">
+        <m:mtr>
+        <m:mtd>
+        <m:mtext color="#f05" fontweight="bold"> Specific attributes :  </m:mtext>
+        <m:mfenced open="" close="" separators=" ">
+        <m:mi> lquote </m:mi>
+        <m:mi> rquote </m:mi> 
+        </m:mfenced>
+        </m:mtd>
+        </m:mtr>
+     </m:mtable>
+  </m:mstyle>   
+</m:math>
+</para>
+
+<para id="element-32">
+<list id="list-2" list-type="bulleted">
+<title>Attribute value types</title>
+<item> lquote (default : “"”) : string </item>
+<item> rquote (default : “"”) : string </item>
+<item>rspace : number h-unit | namedspace</item>
+</list>
+</para>
+
+<para id="element-33">
+This is also a character rendering element, but with a double quote around. This is provided for interpretation of MathML data by other programs and may not be very useful for the authors or for the requirements limited to diplay. 
+</para><para id="element-34">
+By default, both the left and right quote characters are standard double quote character ,". We can change the surrounding characters with the lquote and rquote attributes respectively.
+</para><para id="element-35">
+</para><para id="element-36">
+Let us now work with the example given here to view the output for few cases. 
+</para>
+<example id="display6">
+	<title>Display with "ms" element</title>
+	<para id="element-37">
+	  <code display="block" id="idm1458368">
+	    
+     &lt;m:math display="block"&gt;
+        &lt;m:mrow&gt; 
+          &lt;m:ms&gt;A&lt;/m:ms&gt; 
+          &lt;m:mo&gt;+&lt;/m:mo&gt; 
+          &lt;m:ms lquote='|' rquote='|'&gt;A&lt;/m:ms&gt; 
+          &lt;m:mo&gt;+&lt;/m:mo&gt; 
+          &lt;m:ms&gt;&amp;amp;&lt;/m:ms&gt; 
+          &lt;m:mo&gt;+&lt;/m:mo&gt; 
+          &lt;m:ms&gt;Hello, I have come to meet you.&lt;/m:ms&gt; 
+          &lt;m:mo&gt;+&lt;/m:mo&gt; 
+          &lt;m:ms&gt;&amp;DifferentialD;&lt;/m:ms&gt; 
+          &lt;m:mo&gt;+&lt;/m:mo&gt; 
+          &lt;m:ms lquote='a' rquote='b'&gt;&amp;int;&lt;/m:ms&gt; 
+        &lt;/m:mrow&gt;
+     &lt;/m:math&gt; 
+	    
+	  </code>
+</para>
+<para id="element-38">
+Save the file after editing as “test4.xml”. The display looks like : 
+</para>
+<para id="element-39">
+    <m:math display="block">
+        <m:mrow> 
+          <m:ms>A</m:ms> 
+          <m:mo>+</m:mo> 
+          <m:ms lquote="|" rquote="|">A</m:ms> 
+          <m:mo>+</m:mo> 
+          <m:ms>&amp;</m:ms> 
+          <m:mo>+</m:mo> 
+          <m:ms>Hello, I have come to meet you.</m:ms> 
+          <m:mo>+</m:mo> 
+          <m:ms>ⅆ</m:ms> 
+          <m:mo>+</m:mo> 
+          <m:ms lquote="a" rquote="b">∫</m:ms> 
+        </m:mrow>
+     </m:math> 
+</para>
+</example>
+</section>
+<section id="section-4">
+<title> "mglyph" token element </title> 
+ 
+
+<para id="element-41">
+The "mglyph" element is intended for creating new character in addition to what is available with Unicode character set. With the expanding horizon of mathematics, it is possible that a character with new "glyph" is required to represent new mathematical idea or concept.
+
+On the working level, the "mglmph" element draws on the existing Unicode character or some "font style", which must be supported by the renderer. For our course, though, we feel that this topic may not be very useful. As such, this element is not discussed in any more detail here. 
+</para> 
+
+</section>
+ 
+  </content>
+  
+</document>
