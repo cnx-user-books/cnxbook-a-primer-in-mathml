@@ -443,7 +443,7 @@ Save the file after editing as “test.xml”. The display looks like :
 </para>
 <para id="element-39">
     <m:math display="block">
-      <m:mtable frame="solid" columnlines="solid" rowlines="solid" rowalign="top baseline center" columnalign="right center left">
+      <m:mtable frame="solid" columnlines="solid" rowlines="solid" columnalign="right center left">
         <m:mtr>
           <m:mtd>
             <m:mi>xyx</m:mi>
@@ -821,7 +821,7 @@ Save the file after editing as “test.xml”. The display looks like :
 <para id="element-56">
     <m:math display="block">
 <m:mtable> 
-        <m:mlabeledtr> 
+        <m:mtr><m:mtd><m:mlabeledtr> 
           <m:mtd> 
             <m:mrow> 
               <m:mi>E</m:mi> 
@@ -839,7 +839,7 @@ Save the file after editing as “test.xml”. The display looks like :
                <m:mtext> (1.1) </m:mtext> 
               </m:mtd> 
         </m:mlabeledtr> 
-      </m:mtable> 
+      </m:mtd></m:mtr></m:mtable> 
     </m:math> 
 </para>
 </example>

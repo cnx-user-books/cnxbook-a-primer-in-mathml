@@ -271,7 +271,7 @@ Save the file after editing as “test.xml”. The display looks like :
         <m:mo> + </m:mo> 
         <m:mi mathvariant="fraktur" mathsize="1cm" mathcolor="1cm"> A </m:mi> 
         <m:mo> + </m:mo> 
-        <m:mi mathvariant="sans-serif" mathsize=".2in"> A </m:mi> 
+        <m:mi mathvariant="bold-sans-serif" mathsize=".2in"> A </m:mi> 
       </m:mrow> 
     </m:math> 
 </para>

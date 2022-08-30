@@ -72,7 +72,7 @@ The display looks like :
 </para>
 <para id="element-9">
     <m:math display="block">
-<m:mtable frame="solid" columnlines="solid" rowlines="solid" rowalign="top baseline center" columnalign="left right">
+<m:mtable frame="solid" columnlines="solid" rowlines="solid" columnalign="left right">
         <m:mtr>
           <m:mtd>
             <m:mi>x</m:mi>
